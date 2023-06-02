@@ -23,8 +23,18 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 * {
 	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #faf3f2;
 }
 
 body,
@@ -32,9 +42,17 @@ ul,
 li,
 h1,
 h2,
+h3,
+h4,
 p {
 	padding: 0;
 	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
 }
 
 ul {
@@ -46,24 +64,26 @@ img {
 	max-width: 100%;
 	display: block;
 }
+
+button {
+	border: transparent;
+}
+
+p {
+	font: 400 18px/25px 'Lato', sans-serif;
+}
+
 a {
 	list-style: none;
 	text-decoration: none;
+	color: #635352;
+	transition: 0.2s;
 
+	&:hover,
 	&.router-link-exact-active {
-		color: rgba(52, 32, 31, 1);
+		color: #34201f;
+		transition: 0.2s;
 		font-weight: bold;
 	}
-}
-a:hover {
-	color: rgba(52, 32, 31, 1);
-	font-weight: bold;
-}
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
 }
 </style>

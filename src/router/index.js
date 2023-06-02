@@ -21,7 +21,11 @@ const routes = [
 ];
 
 const router = new VueRouter({
-	routes
+	mode: 'history',
+	routes,
+	scrollBehavior() {
+		return window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 });
 
 export default router;
