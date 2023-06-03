@@ -1,16 +1,14 @@
 <template>
 	<header>
-		<div>
-			<a href="#home">
+		<div id="home">
+			<router-link to="#home">
 				<img src="../assets/logo.png" alt="logo-empire-burger" />
-			</a>
+			</router-link>
 			<nav>
-				<ul>
-					<li><a href="#home" rel="noopener">Home</a></li>
-					<li><a href="#promocao" rel="noopener">Promoção</a></li>
-					<li><a href="#cardapio" rel="noopener">Cardápio</a></li>
-					<li><a href="#comentario" rel="noopener">Comentário</a></li>
-					<li><a href="#contato" rel="noopener">Contato</a></li>
+				<ul link v-for="(menu, index) in menus" :key="index">
+					<li>
+						<router-link :to="menu.hash">{{ menu.name }}</router-link>
+					</li>
 				</ul>
 			</nav>
 			<div class="social">
@@ -80,7 +78,18 @@
 
 <script>
 export default {
-	name: 'HeaderPage'
+	name: 'HeaderPage',
+	data() {
+		return {
+			menus: [
+				{ name: 'Home', hash: '#home' },
+				{ name: 'Promoçao', hash: '#promocao' },
+				{ name: 'Cardápio', hash: '#cardapio' },
+				{ name: 'Comentário', hash: '#comentario' },
+				{ name: 'Contato', hash: '#contato' }
+			]
+		};
+	}
 };
 </script>
 
@@ -117,7 +126,8 @@ header {
 			}
 		}
 
-		nav ul {
+		nav {
+			display: flex;
 			gap: 16px;
 		}
 

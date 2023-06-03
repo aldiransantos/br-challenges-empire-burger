@@ -1,22 +1,29 @@
 <template>
 	<div id="app">
 		<TheHeader />
-		<main id="main">
-			<transition mode="out-in">
-				<router-view />
-			</transition>
-		</main>
+		<HeroSection />
+		<ServicosBox />
+		<PromocaoSection />
+		<TheAddress />
 		<TheFooter />
 	</div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue';
+import HeroSection from '@/components/HeroSection.vue';
+import ServicosBox from '@/components/ServicosBox.vue';
+import PromocaoSection from '@/components/PromocaoSection.vue';
+import TheAddress from '@/components/TheAddress.vue';
 import TheFooter from '@/components/TheFooter.vue';
 
 export default {
 	components: {
 		TheHeader,
+		HeroSection,
+		ServicosBox,
+		PromocaoSection,
+		TheAddress,
 		TheFooter
 	}
 };
@@ -57,6 +64,7 @@ h3 {
 
 ul {
 	display: flex;
+	align-items: center;
 	list-style: none;
 }
 
