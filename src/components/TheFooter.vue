@@ -1,15 +1,14 @@
 <template>
 	<footer>
 		<div class="footer-menu">
-			<a href="#home">
+			<router-link to="/">
 				<img src="@/assets/logo-colorida.png" alt="logo-empire-burger" />
-			</a>
+			</router-link>
 			<nav>
 				<ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#localizacao">Localização</a></li>
-					<li><a href="#cardapio">Cardápio</a></li>
-					<li><a href="#sobre">Sobre</a></li>
+					<li v-for="(link, index) in menuFooter" :key="index">
+						<router-link :to="link.hash">{{ link.name }}</router-link>
+					</li>
 				</ul>
 				<div class="social">
 					<a href="https://www.ifood.com.br/" target="_blank" rel="noopener">
@@ -65,7 +64,17 @@
 
 <script>
 export default {
-	name: 'TheFooter'
+	name: 'TheFooter',
+	data() {
+		return {
+			menuFooter: [
+				{ name: 'Home', hash: '/' },
+				{ name: 'Localização', hash: '#localizacao' },
+				{ name: 'Cardápio', hash: '#cardapio' },
+				{ name: 'Sobre', hash: '#sobre' }
+			]
+		};
+	}
 };
 </script>
 
@@ -88,9 +97,8 @@ footer {
 			justify-content: space-between;
 			width: 50%;
 
-			ul li {
-				padding: 8px 16px;
-
+			ul {
+				gap: 32px;
 				a {
 					font: 400 18px/2px 'Lato', sans-serif;
 					color: #3a210b;
@@ -98,6 +106,11 @@ footer {
 					&:hover {
 						font-weight: 700;
 					}
+				}
+
+				.router-link-exact-active {
+					font-weight: 700;
+					color: #34201f;
 				}
 			}
 

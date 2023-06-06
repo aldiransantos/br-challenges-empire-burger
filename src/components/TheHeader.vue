@@ -1,13 +1,13 @@
 <template>
 	<header>
 		<div id="home">
-			<router-link to="#home">
+			<router-link to="/">
 				<img src="../assets/logo.png" alt="logo-empire-burger" />
 			</router-link>
 			<nav>
-				<ul link v-for="(menu, index) in menus" :key="index">
-					<li>
-						<router-link :to="menu.hash">{{ menu.name }}</router-link>
+				<ul>
+					<li v-for="(link, index) in menuHeader" :key="index">
+						<router-link :to="link.hash">{{ link.name }}</router-link>
 					</li>
 				</ul>
 			</nav>
@@ -81,9 +81,9 @@ export default {
 	name: 'HeaderPage',
 	data() {
 		return {
-			menus: [
-				{ name: 'Home', hash: '#home' },
-				{ name: 'Promoçao', hash: '#promocao' },
+			menuHeader: [
+				{ name: 'Home', hash: '/' },
+				{ name: 'Promoção', hash: '#promocao' },
 				{ name: 'Cardápio', hash: '#cardapio' },
 				{ name: 'Comentário', hash: '#comentario' },
 				{ name: 'Contato', hash: '#contato' }
@@ -96,12 +96,13 @@ export default {
 <style lang="scss" scoped>
 header {
 	display: flex;
-	position: absolute;
 	width: 100%;
 	height: 64px;
 	background: rgba(59, 32, 11, 0.05);
 	backdrop-filter: blur(5px);
 	border: 1px solid rgba(60, 33, 12, 0.15);
+	position: fixed;
+	z-index: 99;
 
 	> div {
 		display: flex;
@@ -126,9 +127,14 @@ header {
 			}
 		}
 
-		nav {
+		nav ul {
 			display: flex;
 			gap: 16px;
+
+			.router-link-exact-active {
+				font-weight: 700;
+				color: #34201f;
+			}
 		}
 
 		.social {

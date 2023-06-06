@@ -4,6 +4,8 @@
 		<HeroSection />
 		<ServicosBox />
 		<PromocaoSection />
+		<CardapioSection />
+		<TestimonialsSection />
 		<TheAddress />
 		<TheFooter />
 	</div>
@@ -14,6 +16,8 @@ import TheHeader from '@/components/TheHeader.vue';
 import HeroSection from '@/components/HeroSection.vue';
 import ServicosBox from '@/components/ServicosBox.vue';
 import PromocaoSection from '@/components/PromocaoSection.vue';
+import CardapioSection from '@/components/CardapioSection.vue';
+import TestimonialsSection from '@/components/TestimonialsSection.vue';
 import TheAddress from '@/components/TheAddress.vue';
 import TheFooter from '@/components/TheFooter.vue';
 
@@ -23,6 +27,8 @@ export default {
 		HeroSection,
 		ServicosBox,
 		PromocaoSection,
+		CardapioSection,
+		TestimonialsSection,
 		TheAddress,
 		TheFooter
 	}
@@ -88,10 +94,10 @@ a {
 	transition: 0.2s;
 
 	&:hover,
-	&.router-link-exact-active {
+	.router-link-exact-active {
 		color: #34201f;
 		transition: 0.2s;
-		font-weight: bold;
+		font-weight: 700;
 	}
 }
 </style>
