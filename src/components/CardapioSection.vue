@@ -1,11 +1,25 @@
 <template>
 	<section id="cardapio">
-		<p>Cardapio</p>
-		<button @click="getCardapio">Click</button>
-		<div id="menuBoard" v-for="(burger, index) in cardapio" :key="index">
-			<p>{{ burger.plate }}</p>
-			<p>{{ burger.price }}</p>
-			<p>{{ burger.ingredients }}</p>
+		<div class="container">
+			<div class="left">
+				<h1>Escolha o seu combo imperial, <span>peça agora!</span></h1>
+				<p>
+					Temos vários tipos de pratos para a nossa realeza, fique esperto porque temos
+					sempre promoção!
+				</p>
+				<!-- fazer botao abrir um modal com o cardapio -->
+				<button>Ver Cardápio Completo</button>
+			</div>
+			<div class="right">
+				<h2>Cardápio imperial | Burger</h2>
+				<div class="board" v-for="(burger, index) in cardapio" :key="index">
+					<h3 class="plate">{{ burger.plate }}</h3>
+					<h3 class="price">
+						{{ formatPrice(burger.price) }}
+					</h3>
+					<p class="ingredients">{{ burger.ingredients }}</p>
+				</div>
+			</div>
 		</div>
 	</section>
 </template>
@@ -25,6 +39,16 @@ export default {
 				.then((resp) => {
 					this.cardapio = resp;
 				});
+		},
+
+		formatPrice(value) {
+			value = Number(value);
+			if (!isNaN(value)) {
+				return new Intl.NumberFormat('pt-BR', {
+					style: 'currency',
+					currency: 'BRL'
+				}).format(value);
+			} else return '';
 		}
 	},
 	created() {
@@ -33,4 +57,96 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+#cardapio {
+	background: url('@/assets/banner-menu.png') no-repeat left center, #3b200b;
+	width: 100%;
+	height: 575px;
+	margin-bottom: 72px;
+
+	p {
+		font-size: 16px;
+		line-height: 22.4px;
+	}
+
+	.container {
+		width: 1170px;
+		max-width: 100%;
+		height: inherit;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-content: center;
+
+		.left {
+			h1 {
+				font: 400 41.42px/ 45.56px 'Lilita One', cursive;
+				color: #3b200b;
+
+				span {
+					background: #f59a1b;
+					border-radius: 8px;
+					padding: 2px 5px;
+				}
+			}
+			p {
+				width: 437.88px;
+				margin-top: 9.66px;
+				color: rgba(29, 6, 5, 0.69);
+			}
+			button {
+				background: #f43127;
+				border-radius: 5.21535px;
+				margin-top: 18.16px;
+				padding: 10.43px 20.86px;
+				font: 700 16px/22px 'Lato', sans-serif;
+				color: #fff;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		.right {
+			padding-left: 30px;
+
+			h2 {
+				font: 400 32px/35px 'Lilita One', cursive;
+				text-transform: uppercase;
+				color: #f59a1b;
+				margin-bottom: 16px;
+			}
+			.board {
+				margin-bottom: 32px;
+
+				h3 {
+					text-transform: uppercase;
+					color: #fae4d0;
+					float: left;
+					margin-bottom: 4px;
+
+					&.plate {
+						width: 472px;
+						overflow: hidden;
+						white-space: nowrap;
+						&::after {
+							content: '........................................................................................................................';
+							letter-spacing: 1px;
+							margin-left: 4px;
+						}
+					}
+					&.price {
+						margin-left: 4px;
+					}
+				}
+				p {
+					color: rgba(255, 255, 255, 0.9);
+					width: 464px;
+				}
+			}
+		}
+	}
+}
+</style>

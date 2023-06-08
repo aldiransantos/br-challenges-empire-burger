@@ -25,7 +25,8 @@ export default {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 50px;
+	// margin-top: 104px;
+	margin-top: 64px;
 
 	h1 {
 		font: 400 32px/35px 'Lilita One', cursive;
