@@ -49,7 +49,7 @@ export default {
 	display: grid;
 	width: 1170px;
 	max-width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 64px;
 
 	h1 {
 		font: 400 32px/35px 'Lilita One', cursive;
@@ -130,7 +130,6 @@ export default {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 30px;
-		margin-bottom: 50px;
 
 		div:first-child {
 			display: flex;

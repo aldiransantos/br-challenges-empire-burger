@@ -121,6 +121,10 @@ export default {
 			.board {
 				margin-bottom: 32px;
 
+				&:last-child {
+					margin-bottom: 0;
+				}
+
 				h3 {
 					text-transform: uppercase;
 					color: #fae4d0;

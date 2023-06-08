@@ -8,6 +8,7 @@
 		<AtendimentoSection />
 		<TestimonialsSection />
 		<PublicacoesSection />
+		<DeliverySection />
 		<TheAddress />
 		<TheFooter />
 	</div>
@@ -22,6 +23,7 @@ import CardapioSection from '@/components/CardapioSection.vue';
 import AtendimentoSection from '@/components/AtendimentoSection.vue';
 import TestimonialsSection from '@/components/TestimonialsSection.vue';
 import PublicacoesSection from '@/components/PublicacoesSection.vue';
+import DeliverySection from '@/components/DeliverySection.vue';
 import TheAddress from '@/components/TheAddress.vue';
 import TheFooter from '@/components/TheFooter.vue';
 
@@ -35,6 +37,7 @@ export default {
 		AtendimentoSection,
 		TestimonialsSection,
 		PublicacoesSection,
+		DeliverySection,
 		TheAddress,
 		TheFooter
 	}

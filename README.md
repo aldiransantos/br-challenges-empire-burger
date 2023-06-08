@@ -32,11 +32,11 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 ### Nível Médio
 
--   [ ] Todos os requisitos do nivel fácil.
+-   [x] Todos os requisitos do nivel fácil.
 
 -   [ ] Criar as seguintes seções: Cardápio, Atendimento, Nossas entregas.
 
--   [ ] Na seção Cardápio os preços devem ser formatados com o método Intl.NumberFormat.
+-   [x] Na seção Cardápio os preços devem ser formatados com o método Intl.NumberFormat.
 
 -   [ ] O card Horário de funcionamento deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
 
@@ -46,17 +46,17 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 -   [ ] Criar as seguintes seções: Nossa realeza, Publicações do instagram.
 
--   [ ] Buscar a lista de itens do cardápio via api.
+-   [x] Buscar a lista de itens do cardápio via api.
 
--   [ ] Buscar a lista de depoimentos via api.
+-   [x] Buscar a lista de depoimentos via api.
 
 -   [ ] Na seção Nossa realeza os depoimentos deverão estar em um carrousel funcional.
 
--   [ ] O texto de cada depoimento deverá estar limitado em quatro linhas, você pode usar a propriedade clamp do css.
+-   [x] O texto de cada depoimento deverá estar limitado em quatro linhas, você pode usar a propriedade clamp do css.
 
 ---
 
-## Project setup
+## Configurações do Projeto
 
 ```
 npm install
