@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="horario-funcionamento">
-			<div>
+			<div class="card">
 				<img src="../assets/icons/timer.svg" alt="horario" />
 				<span class="separador"></span>
 				<div class="info">
@@ -40,7 +40,39 @@
 
 <script>
 export default {
-	name: 'PromocaoSection'
+	name: 'PromocaoSection',
+
+	methods: {
+		dateNow() {
+			const weekday = [
+				'Sunday',
+				'Monday',
+				'Tuesday',
+				'Wednesday',
+				'Thursday',
+				'Friday',
+				'Saturday'
+			];
+			let dayNumber = new Date().getDay();
+			let day = weekday[dayNumber];
+			let hours = new Date().getHours();
+			let minutes = new Date().getMinutes();
+			let seconds = new Date().getSeconds();
+
+			if (day === 'Sunday' || day == 'Saturday') {
+				if (hours > 17 && minutes >= 30 && hours <= 22 && minutes < 60 && seconds < 60) {
+					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
+				}
+			} else {
+				if (hours > 16 && hours <= 22 && minutes < 60 && seconds < 60) {
+					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
+				}
+			}
+		}
+	},
+	mounted() {
+		this.dateNow();
+	}
 };
 </script>
 
@@ -131,8 +163,9 @@ export default {
 		grid-template-columns: 1fr 1fr;
 		gap: 30px;
 
-		div:first-child {
+		.card {
 			display: flex;
+			align-items: center;
 			justify-content: flex-start;
 			width: 570px;
 			height: 130.93px;

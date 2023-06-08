@@ -48,6 +48,7 @@ export default {
 		width: 100%;
 		margin-bottom: -1px;
 		background: linear-gradient(270.22deg, #21201b 7.41%, rgba(33, 32, 27, 0) 91.38%);
+		overflow: hidden;
 
 		img {
 			width: 270px;
