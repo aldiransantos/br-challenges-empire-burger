@@ -5,7 +5,9 @@
 		<ServicosBox />
 		<PromocaoSection />
 		<CardapioSection />
+		<AtendimentoSection />
 		<TestimonialsSection />
+		<PublicacoesSection />
 		<TheAddress />
 		<TheFooter />
 	</div>
@@ -17,7 +19,9 @@ import HeroSection from '@/components/HeroSection.vue';
 import ServicosBox from '@/components/ServicosBox.vue';
 import PromocaoSection from '@/components/PromocaoSection.vue';
 import CardapioSection from '@/components/CardapioSection.vue';
+import AtendimentoSection from '@/components/AtendimentoSection.vue';
 import TestimonialsSection from '@/components/TestimonialsSection.vue';
+import PublicacoesSection from '@/components/PublicacoesSection.vue';
 import TheAddress from '@/components/TheAddress.vue';
 import TheFooter from '@/components/TheFooter.vue';
 
@@ -28,7 +32,9 @@ export default {
 		ServicosBox,
 		PromocaoSection,
 		CardapioSection,
+		AtendimentoSection,
 		TestimonialsSection,
+		PublicacoesSection,
 		TheAddress,
 		TheFooter
 	}
@@ -85,6 +91,10 @@ button {
 
 p {
 	font: 400 18px/25px 'Lato', sans-serif;
+}
+
+h3 {
+	font: 400 20px/22px 'Lilita One', cursive;
 }
 
 a {
