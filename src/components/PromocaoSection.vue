@@ -41,7 +41,6 @@
 <script>
 export default {
 	name: 'PromocaoSection',
-
 	methods: {
 		dateNow() {
 			const weekday = [
