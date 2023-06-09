@@ -9,8 +9,8 @@
 ## 📝 Conteúdo
 - [Visão Geral do Projeto](#-visão-geral-do-projeto)
   - [Tecnologias](#-tecnologias)
-  - [Critérios de Aceite](#-critério-de-aceite)
-- [Configurações do Projeto](#-configurações-do-projeto)
+  - [Critérios de Aceite](#-critérios-de-aceite)
+- [Configurações do Projeto](#%EF%B8%8F-configurações-do-projeto)
   - [Informações Iniciais](#informações-iniciais)
   - [Clonando o Repositório](#clonando-o-repositório)
   - [Instalando as Dependências](#instalando-as-dependências)
