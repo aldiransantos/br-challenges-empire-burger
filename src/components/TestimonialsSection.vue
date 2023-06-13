@@ -2,8 +2,17 @@
 	<section id="testimonials">
 		<h1>Nossa realeza</h1>
 		<p>A satisfação de nossos clientes em primeiro lugar!</p>
-		<div class="card">
-			<div class="card-body" v-for="(testimonial, index) in users" :key="index">
+		<swiper-container
+			class="card"
+			thumbs-swiper=".my-thumbs"
+			pagination="true"
+			pagination-clickable="true"
+			slides-per-view="3"
+			slides-per-group="3"
+			keyboard-enabled="true"
+			:style="styles"
+		>
+			<swiper-slide class="card-body" v-for="(testimonial, index) in users" :key="index">
 				<p>{{ testimonial.testimonial }}</p>
 				<div class="avatar">
 					<img :src="testimonial.image" :alt="testimonial.name" />
@@ -12,17 +21,49 @@
 						<h4>{{ testimonial.age }} Anos</h4>
 					</div>
 				</div>
-			</div>
-		</div>
+			</swiper-slide>
+		</swiper-container>
 	</section>
 </template>
 
 <script>
+import { SwiperSlide } from 'swiper/vue';
+
+import 'swiper/css';
+import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper';
+
 export default {
 	name: 'TestimonialsSection',
+	components: {
+		SwiperSlide
+	},
+	setup() {
+		return {
+			modules: [Keyboard, Scrollbar, Navigation, Pagination]
+		};
+	},
 	data() {
 		return {
-			users: ''
+			users: '',
+			styles: {
+				'--swiper-pagination-display': 'flex',
+				'--swiper-pagination-align-items': 'center',
+				'--swiper-pagination-justify-content': 'center',
+				'--swiper-pagination-color': '#ffba08',
+
+				'--swiper-pagination-bullet-width': '47.46px',
+				'--swiper-pagination-bullet-height': '4px',
+				'--swiper-pagination-bullet-horizontal-gap': '3.8px',
+				'--swiper-pagination-bullet-border-radius': '0',
+				'--swiper-pagination-bullet-background': '#fff',
+
+				'--swiper-pagination-bullet-inactive-color': '#fff',
+				'--swiper-pagination-bullet-inactive-opacity': 1
+			}
 		};
 	},
 	methods: {
@@ -42,6 +83,8 @@ export default {
 
 <style lang="scss" scoped>
 #testimonials {
+	position: relative;
+	height: 100%;
 	width: 1170px;
 	max-width: 100%;
 	margin: 0 auto;
@@ -56,22 +99,26 @@ export default {
 	}
 
 	.card {
-		display: flex;
-		gap: 12px;
 		overflow: hidden;
+		position: relative;
+		width: 1145px;
 
 		.card-body {
-			width: 370px;
+			width: 370px !important;
 			height: 177.83px;
 			padding: 12.4px 16.8px;
 			background: #fff;
 			border-radius: 10px;
 			margin-top: 16px;
-			margin-bottom: 42px;
+			margin-right: 12px;
+			margin-bottom: 32px;
+			opacity: 0.6;
 			transition: all 0.3s;
 
-			&:hover {
+			&:hover,
+			&.swiper-slide-active {
 				box-shadow: 0px 4px 25px rgba(60, 35, 13, 0.1);
+				opacity: 1;
 				cursor: pointer;
 			}
 			p {

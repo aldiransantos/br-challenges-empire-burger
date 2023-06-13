@@ -2,8 +2,7 @@
 	<section id="promocao">
 		<h1>Ofertas Especiais</h1>
 		<p>
-			Aproveite todas as nossas ofertas, fiquem de olhos abertos, porque sempre estamos
-			mudando o nosso cardapio.
+			Aproveite todas as nossas ofertas, fiquem de olhos abertos, porque sempre estamos mudando o nosso cardápio.
 		</p>
 		<div class="produtos">
 			<div>
@@ -26,8 +25,8 @@
 				<span class="separador"></span>
 				<div class="info">
 					<h2>Horário de Funcionamento</h2>
-					<p>Segunda-feira a sexta-feira: <span>17h00 - 23h00</span></p>
-					<p>Sabado a Domíngo: <span>18h00 - 23h00</span></p>
+					<p>Segunda-feira a Sexta-feira: <span>17h00 - 23h00</span></p>
+					<p>Sábado a Domingo: <span>18h00 - 23h00</span></p>
 				</div>
 			</div>
 			<div>
@@ -59,7 +58,7 @@ export default {
 			let seconds = new Date().getSeconds();
 
 			if (day === 'Sunday' || day == 'Saturday') {
-				if (hours > 17 && minutes >= 30 && hours <= 22 && minutes < 60 && seconds < 60) {
+				if (hours > 17 && hours <= 22 && minutes < 60 && seconds < 60) {
 					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
 				}
 			} else {

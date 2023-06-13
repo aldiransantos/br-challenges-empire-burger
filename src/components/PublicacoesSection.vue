@@ -2,7 +2,7 @@
 	<section id="publicacoes">
 		<h1>Publicações do instagram</h1>
 		<p>
-			Todos os nossos clientes são tratados como rei e rainha, com a nossa colunaria
+			Todos os nossos clientes são tratados como rei e rainha, com a nossa culinária
 			artesanal.
 		</p>
 		<div class="galery">
@@ -70,7 +70,7 @@ export default {
 
 		&::after {
 			content: '• #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger ';
-			animation: marquee 48s linear infinite;
+			animation: marquee 60s linear infinite;
 		}
 
 		@keyframes marquee {
