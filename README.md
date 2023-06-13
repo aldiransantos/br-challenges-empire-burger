@@ -10,7 +10,7 @@
 - [Visão Geral do Projeto](#-visão-geral-do-projeto)
   - [Tecnologias](#-tecnologias)
   - [Critérios de Aceite](#-critérios-de-aceite)
-- [Configurações do Projeto](#%EF%B8%8F-configurações-do-projeto)
+- [Configurações do Projeto](#-configurações-do-projeto)
   - [Informações Iniciais](#informações-iniciais)
   - [Clonando o Repositório](#clonando-o-repositório)
   - [Instalando as Dependências](#instalando-as-dependências)
@@ -33,6 +33,10 @@ Para facilitar a codificação do projeto foi usado um protótipo do Figma como 
   - [Sass](https://sass-lang.com/)
 - Javascript
   - [Vue.js](https://vuejs.org/)
+  - [Swiper](https://swiperjs.com/)
+
+
+
 
 ## ✅ Critérios de Aceite
 
@@ -78,13 +82,13 @@ Para facilitar a codificação do projeto foi usado um protótipo do Figma como 
 
 -   [x] Buscar a lista de depoimentos via [API](https://api.brchallenges.com/api/empire-burger/testimonials);
 
--   [ ] Na seção Nossa Realeza os depoimentos deverão estar em um carrousel funcional;
+-   [x] Na seção Nossa Realeza os depoimentos deverão estar em um carrossel funcional;
 
--   [x] O texto de cada depoimento deverá estar limitado em quatro linhas, você pode usar a propriedade clamp do css.
+-   [x] O texto de cada depoimento deverá estar limitado em quatro linhas. Você pode usar a propriedade clamp do css.
 
 ---
 
-## ⚙️ Configurações do Projeto
+## 🔧 Configurações do Projeto
 
 ### Informações Iniciais
 Para que você possa iniciar o projeto é necessário ter em sua máquina o **Git** e o **Node.js** previamente instalados. Caso não possua-os em seu computador, aqui estão os links para você baixar e realizar a instalação:
