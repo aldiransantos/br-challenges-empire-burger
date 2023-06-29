@@ -27,7 +27,7 @@ export default {
 	justify-content: center;
 	width: 1170px;
 	max-width: 100%;
-	margin: 0 auto 128px;
+	margin: 0 auto 64px;
 	padding-bottom: 128px;
 	border-bottom: 1px solid rgba(29, 6, 5, 0.15);
 

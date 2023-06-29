@@ -88,6 +88,7 @@ export default {
 	width: 1170px;
 	max-width: 100%;
 	margin: 0 auto;
+	padding-top: 64px;
 
 	h1 {
 		font: 400 41.42px/ 45.56px 'Lilita One', cursive;

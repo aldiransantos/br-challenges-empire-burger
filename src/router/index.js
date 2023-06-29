@@ -18,7 +18,7 @@ const router = new VueRouter({
 	scrollBehavior(to) {
 		if (to.hash) {
 			return window.scrollTo({
-				top: document.querySelector(to.hash).offsetTop,
+				top: document.querySelector(to.hash).offsetTop + -64,
 				behavior: 'smooth'
 			});
 		} else {

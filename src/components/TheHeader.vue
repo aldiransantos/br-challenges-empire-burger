@@ -1,13 +1,13 @@
 <template>
 	<header>
 		<div id="home">
-			<router-link to="/">
-				<img src="../assets/logo.png" alt="logo-empire-burger" />
-			</router-link>
 			<nav>
+				<router-link to="/">
+					<img src="../assets/logo.png" alt="logo-empire-burger" />
+				</router-link>
 				<ul>
 					<li v-for="(link, index) in menuHeader" :key="index">
-						<router-link :to="link.hash">{{ link.name }}</router-link>
+						<router-link :to="link.hash" class="link">{{ link.name }}</router-link>
 					</li>
 				</ul>
 			</nav>
@@ -85,15 +85,48 @@ export default {
 				{ name: 'Home', hash: '/' },
 				{ name: 'Promoção', hash: '#promocao' },
 				{ name: 'Cardápio', hash: '#cardapio' },
-				{ name: 'Comentário', hash: '#comentario' },
+				{ name: 'Comentário', hash: '#testimonials' },
 				{ name: 'Contato', hash: '#contato' }
-			]
+			],
+			activeLink: ''
 		};
+	},
+	methods: {
+		scrollingSection() {
+			const sections = document.querySelectorAll('section');
+			const navAnchor = document.querySelectorAll('nav ul li a');
+			window.onscroll = () => {
+				var current = '';
+
+				sections.forEach((section) => {
+					const sectionTop = section.offsetTop;
+					if (scrollY >= sectionTop - 60) {
+						current = section.getAttribute('id');
+					}
+				});
+
+				navAnchor.forEach((a) => {
+					a.classList.remove('router-link-active');
+					if (a.classList.contains(current)) {
+						a.classList.add('router-link-active');
+					}
+				});
+
+				
+			};
+		}
+	},
+	created() {
+		this.scrollingSection();
 	}
 };
 </script>
 
 <style lang="scss" scoped>
+.active {
+	background-color: blue;
+	color: red;
+}
 header {
 	display: flex;
 	width: 100%;
@@ -124,16 +157,26 @@ header {
 
 			img {
 				height: 35.19px;
+				margin-right: 61.35px;
 			}
 		}
 
-		nav ul {
+		nav {
 			display: flex;
-			gap: 16px;
+			justify-content: center;
 
-			.router-link-exact-active {
-				font-weight: 700;
-				color: #34201f;
+			ul {
+				display: flex;
+				gap: 16px;
+
+				.router-link-exact-active {
+					font-weight: 700;
+					color: #34201f;
+				}
+
+				li {
+					margin-top: 6px;
+				}
 			}
 		}
 
