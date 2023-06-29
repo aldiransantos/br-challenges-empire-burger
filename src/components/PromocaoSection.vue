@@ -28,6 +28,7 @@
 					<p>Segunda-feira a Sexta-feira: <span>17h00 - 23h00</span></p>
 					<p>Sábado a Domingo: <span>18h00 - 23h00</span></p>
 				</div>
+				<div class="tarja">{{ status }}</div>
 			</div>
 			<div>
 				<p>Não esqueça de marcar a gente no Instagram:</p>
@@ -40,6 +41,15 @@
 <script>
 export default {
 	name: 'PromocaoSection',
+	data() {
+		return {
+			day: 0,
+			hours: 0,
+			minutes: 0,
+			seconds: 0,
+			status: 'fechado'
+		};
+	},
 	methods: {
 		dateNow() {
 			const weekday = [
@@ -52,17 +62,29 @@ export default {
 				'Saturday'
 			];
 			let dayNumber = new Date().getDay();
-			let day = weekday[dayNumber];
-			let hours = new Date().getHours();
-			let minutes = new Date().getMinutes();
-			let seconds = new Date().getSeconds();
+			this.day = weekday[dayNumber];
+			this.hours = new Date().getHours();
+			this.minutes = new Date().getMinutes();
+			this.seconds = new Date().getSeconds();
 
-			if (day === 'Sunday' || day == 'Saturday') {
-				if (hours > 17 && hours <= 22 && minutes < 60 && seconds < 60) {
+			if (this.day == 'Saturday' || this.day === 'Sunday') {
+				if (
+					this.hours >= 17 &&
+					this.hours <= 22 &&
+					this.minutes < 60 &&
+					this.seconds < 60
+				) {
+					this.status = 'aberto';
 					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
 				}
 			} else {
-				if (hours > 16 && hours <= 22 && minutes < 60 && seconds < 60) {
+				if (
+					this.hours >= 18 &&
+					this.hours <= 22 &&
+					this.minutes < 60 &&
+					this.seconds < 60
+				) {
+					this.status = 'aberto';
 					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
 				}
 			}
@@ -170,6 +192,21 @@ export default {
 			background: #f43127;
 			border-radius: 10px;
 			padding: 18px 22px;
+			position: relative;
+
+			.tarja {
+				width: 120px;
+				height: 20px;
+				background-color: rgb(250 243 242 / 60%);
+				position: absolute;
+				top: 25px;
+				left: -25px;
+				transform: rotate(315deg);
+				font: 400 12px/13px 'Lilita One', cursive;
+				color: rgba(29, 6, 5, 0.69);
+				text-align: center;
+				text-transform: uppercase;
+			}
 
 			img {
 				grid-area: img;
