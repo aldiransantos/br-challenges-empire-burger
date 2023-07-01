@@ -5,9 +5,9 @@
 				<router-link to="/">
 					<img src="../assets/logo.png" alt="logo-empire-burger" />
 				</router-link>
-				<ul>
+				<ul class="header-menu">
 					<li v-for="(link, index) in menuHeader" :key="index">
-						<router-link :to="link.hash" class="link">{{ link.name }}</router-link>
+						<router-link :to="link.hash" :ref="link">{{ link.name }}</router-link>
 					</li>
 				</ul>
 			</nav>
@@ -86,47 +86,14 @@ export default {
 				{ name: 'Promoção', hash: '#promocao' },
 				{ name: 'Cardápio', hash: '#cardapio' },
 				{ name: 'Comentário', hash: '#testimonials' },
-				{ name: 'Contato', hash: '#contato' }
-			],
-			activeLink: ''
+				{ name: 'Contato', hash: '#delivery' }
+			]
 		};
-	},
-	methods: {
-		scrollingSection() {
-			const sections = document.querySelectorAll('section');
-			const navAnchor = document.querySelectorAll('nav ul li a');
-			window.onscroll = () => {
-				var current = '';
-
-				sections.forEach((section) => {
-					const sectionTop = section.offsetTop;
-					if (scrollY >= sectionTop - 60) {
-						current = section.getAttribute('id');
-					}
-				});
-
-				navAnchor.forEach((a) => {
-					a.classList.remove('router-link-active');
-					if (a.classList.contains(current)) {
-						a.classList.add('router-link-active');
-					}
-				});
-
-				
-			};
-		}
-	},
-	created() {
-		this.scrollingSection();
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.active {
-	background-color: blue;
-	color: red;
-}
 header {
 	display: flex;
 	width: 100%;

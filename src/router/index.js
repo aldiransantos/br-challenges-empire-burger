@@ -8,13 +8,15 @@ const routes = [
 	{
 		path: '/',
 		name: 'home',
-		component: App
+		component: App,
+		meta: { toTop: true, smoothScroll: true }
 	}
 ];
 
 const router = new VueRouter({
 	mode: 'history',
 	routes,
+	linkActiveClass: 'active',
 	scrollBehavior(to) {
 		if (to.hash) {
 			return window.scrollTo({
