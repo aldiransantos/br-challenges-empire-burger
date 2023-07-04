@@ -22,8 +22,9 @@ export default {
 
 <style lang="scss" scoped>
 #hero {
-	background: url(../assets/banner-hero.png) no-repeat center center;
 	height: 545px;
+	background: url(../assets/banner-hero.png) no-repeat center center;
+	padding: 0 20px;
 
 	> div {
 		display: flex;

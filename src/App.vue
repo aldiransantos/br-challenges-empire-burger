@@ -77,27 +77,18 @@ h3 {
 	text-transform: uppercase;
 }
 
-ul {
-	display: flex;
-	align-items: center;
-	list-style: none;
-}
-
-img {
-	max-width: 100%;
-	display: block;
-}
-
-button {
-	border: transparent;
-}
-
 p {
 	font: 400 18px/25px 'Lato', sans-serif;
 }
 
 h3 {
 	font: 400 20px/22px 'Lilita One', cursive;
+}
+
+ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
 }
 
 a {
@@ -112,5 +103,21 @@ a {
 		transition: 0.2s;
 		font-weight: 700;
 	}
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+button {
+	border: transparent;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: minmax(100%, 1170px);
+	margin: 0 auto;
+	padding: 0 20px;
 }
 </style>

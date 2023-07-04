@@ -1,38 +1,41 @@
 <template>
 	<section id="promocao">
-		<h1>Ofertas Especiais</h1>
-		<p>
-			Aproveite todas as nossas ofertas, fiquem de olhos abertos, porque sempre estamos mudando o nosso cardápio.
-		</p>
-		<div class="produtos">
-			<div>
-				<h1>Burger imperial+batata</h1>
-				<p>250kg</p>
-				<p class="destaque">Apenas <span>hoje</span></p>
-			</div>
-			<div>
-				<h1>Batata</h1>
-				<p>150kg</p>
-			</div>
-			<div>
-				<h1>Sorvete</h1>
-				<p>50kg</p>
-			</div>
-		</div>
-		<div class="horario-funcionamento">
-			<div class="card">
-				<img src="../assets/icons/timer.svg" alt="horario" />
-				<span class="separador"></span>
-				<div class="info">
-					<h2>Horário de Funcionamento</h2>
-					<p>Segunda-feira a Sexta-feira: <span>17h00 - 23h00</span></p>
-					<p>Sábado a Domingo: <span>18h00 - 23h00</span></p>
+		<div class="container">
+			<h1>Ofertas Especiais</h1>
+			<p>
+				Aproveite todas as nossas ofertas, fiquem de olhos abertos, porque sempre estamos
+				mudando o nosso cardápio.
+			</p>
+			<div class="produtos">
+				<div>
+					<h1>Burger imperial+batata</h1>
+					<p>250kg</p>
+					<p class="destaque">Apenas <span>hoje</span></p>
 				</div>
-				<div class="tarja">{{ status }}</div>
+				<div>
+					<h1>Batata</h1>
+					<p>150kg</p>
+				</div>
+				<div>
+					<h1>Sorvete</h1>
+					<p>50kg</p>
+				</div>
 			</div>
-			<div>
-				<p>Não esqueça de marcar a gente no Instagram:</p>
-				<h3>#empireburger</h3>
+			<div class="horario-funcionamento">
+				<div class="card">
+					<img src="../assets/icons/timer.svg" alt="horario" />
+					<span class="separador"></span>
+					<div class="info">
+						<h2>Horário de Funcionamento</h2>
+						<p>Segunda-feira a Sexta-feira: <span>17h00 - 23h00</span></p>
+						<p>Sábado a Domingo: <span>18h00 - 23h00</span></p>
+					</div>
+					<div class="tarja">{{ status }}</div>
+				</div>
+				<div>
+					<p>Não esqueça de marcar a gente no Instagram:</p>
+					<h3>#empireburger</h3>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -98,8 +101,7 @@ export default {
 
 <style lang="scss" scoped>
 #promocao {
-	display: grid;
-	width: 1170px;
+	display: flex;
 	max-width: 100%;
 	margin: 0 auto 64px;
 
@@ -116,7 +118,7 @@ export default {
 	}
 	.produtos {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 2fr auto;
 		gap: 30px;
 		margin-bottom: 64px;
 
@@ -127,9 +129,10 @@ export default {
 
 		div:first-child {
 			grid-row: span 2;
-			width: 770px;
+			width: min(100%, 770px);
 			height: 430px;
 			background: url(../assets/ofertas/oferta-1.png) no-repeat center center;
+			border-radius: 10px;
 
 			h1 {
 				margin: 0;

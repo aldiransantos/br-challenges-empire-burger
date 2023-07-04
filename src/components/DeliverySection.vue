@@ -1,6 +1,6 @@
 <template>
-	<section id="delivery">
-		<div class="container">
+	<section id="contato">
+		<div class="wrap-content">
 			<img src="@/assets/card-phone.png" alt="delivery" />
 			<div>
 				<h1>Nossas entregas</h1>
@@ -59,12 +59,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#delivery {
-	width: 1170px;
+#contato {
+	width: 1210px;
 	max-width: 100%;
 	margin: 0 auto;
+	padding: 0 20px;
 
-	.container {
+	.wrap-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;

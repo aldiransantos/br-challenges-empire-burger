@@ -22,14 +22,25 @@ export default {
 #atendimento {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 30px;
 	align-items: center;
 	justify-content: center;
-	width: 1170px;
+	width: 1210px;
 	max-width: 100%;
+	gap: 30px;
 	margin: 0 auto 64px;
-	padding-bottom: 128px;
-	border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+	padding: 0 20px 128px;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: grid;
+		position: absolute;
+		grid-template-columns: minmax(1170px, 100%);
+		bottom: 0;
+		left: 20px;
+		border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+		overflow: hidden;
+	}
 
 	h1 {
 		font: 400 41.42px/ 45.56px 'Lilita One', cursive;

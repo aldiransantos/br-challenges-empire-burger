@@ -1,6 +1,6 @@
 <template>
 	<section id="cardapio">
-		<div class="container">
+		<div class="wrap-content">
 			<div class="left">
 				<h1>Escolha o seu combo imperial, <span>peça agora!</span></h1>
 				<p>
@@ -11,13 +11,15 @@
 				<button>Ver Cardápio Completo</button>
 			</div>
 			<div class="right">
-				<h2>Cardápio imperial | Burger</h2>
-				<div class="board" v-for="(burger, index) in cardapio" :key="index">
-					<h3 class="plate">{{ burger.plate }}</h3>
-					<h3 class="price">
-						{{ formatPrice(burger.price) }}
-					</h3>
-					<p class="ingredients">{{ burger.ingredients }}</p>
+				<div class="imperial-menu">
+					<h2>Cardápio imperial | Burger</h2>
+					<div class="board" v-for="(burger, index) in cardapio" :key="index">
+						<h3 class="plate">{{ burger.plate }}</h3>
+						<h3 class="price">
+							{{ formatPrice(burger.price) }}
+						</h3>
+						<p class="ingredients">{{ burger.ingredients }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -59,27 +61,35 @@ export default {
 
 <style lang="scss" scoped>
 #cardapio {
-	background: url('@/assets/banner-menu.png') no-repeat left center, #3b200b;
-	width: 100%;
 	height: 575px;
+	background: url('@/assets/banner-menu.png') no-repeat left center, #3b200b;
 	margin-bottom: 72px;
+	padding: 0 20px;
 
 	p {
 		font-size: 16px;
 		line-height: 22.4px;
 	}
 
-	.container {
-		width: 1170px;
-		max-width: 100%;
-		height: inherit;
-		margin: 0 auto;
+	.wrap-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		width: 1170px;
+		height: inherit;
+		margin: 0 auto;
 		align-items: center;
-		justify-content: center;
 
+		@media (max-width: 1680px) {
+			.left {
+				background-color: rgba(255, 255, 255, 0.5);
+				box-shadow: -8px 4px 20px 24px rgba(255, 255, 255, 0.5);
+				width: 472px;
+				transition: ease-in 0.2s;
+			}
+		}
 		.left {
+			transition: ease-out 0.2s;
+
 			h1 {
 				font: 400 41.42px/ 45.56px 'Lilita One', cursive;
 				color: #3b200b;
@@ -111,43 +121,49 @@ export default {
 
 		.right {
 			padding-left: 30px;
+			display: flex;
+			align-items: center;
+			height: 575px;
+			background-color: #3b200b;
 
-			h2 {
-				font: 400 32px/35px 'Lilita One', cursive;
-				text-transform: uppercase;
-				color: #f59a1b;
-				margin-bottom: 16px;
-			}
-			.board {
-				margin-bottom: 32px;
-
-				&:last-child {
-					margin-bottom: 0;
-				}
-
-				h3 {
+			.imperial-menu {
+				h2 {
+					font: 400 32px/35px 'Lilita One', cursive;
 					text-transform: uppercase;
-					color: #fae4d0;
-					float: left;
-					margin-bottom: 4px;
+					color: #f59a1b;
+					margin-bottom: 16px;
+				}
+				.board {
+					margin-bottom: 32px;
 
-					&.plate {
-						width: 472px;
-						overflow: hidden;
-						white-space: nowrap;
-						&::after {
-							content: '........................................................................................................................';
-							letter-spacing: 1px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					h3 {
+						text-transform: uppercase;
+						color: #fae4d0;
+						float: left;
+						margin-bottom: 4px;
+
+						&.plate {
+							width: 472px;
+							overflow: hidden;
+							white-space: nowrap;
+							&::after {
+								content: '........................................................................................................................';
+								letter-spacing: 1px;
+								margin-left: 4px;
+							}
+						}
+						&.price {
 							margin-left: 4px;
 						}
 					}
-					&.price {
-						margin-left: 4px;
+					p {
+						color: rgba(255, 255, 255, 0.9);
+						width: 464px;
 					}
-				}
-				p {
-					color: rgba(255, 255, 255, 0.9);
-					width: 464px;
 				}
 			}
 		}

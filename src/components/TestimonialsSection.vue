@@ -1,28 +1,30 @@
 <template>
-	<section id="testimonials">
-		<h1>Nossa realeza</h1>
-		<p>A satisfação de nossos clientes em primeiro lugar!</p>
-		<swiper-container
-			class="card"
-			thumbs-swiper=".my-thumbs"
-			pagination="true"
-			pagination-clickable="true"
-			slides-per-view="3"
-			slides-per-group="3"
-			keyboard-enabled="true"
-			:style="styles"
-		>
-			<swiper-slide class="card-body" v-for="(testimonial, index) in users" :key="index">
-				<p>{{ testimonial.testimonial }}</p>
-				<div class="avatar">
-					<img :src="testimonial.image" :alt="testimonial.name" />
-					<div class="user-info">
-						<h3>{{ testimonial.name }}</h3>
-						<h4>{{ testimonial.age }} Anos</h4>
+	<section id="comentarios">
+		<div class="container">
+			<h1>Nossa realeza</h1>
+			<p>A satisfação de nossos clientes em primeiro lugar!</p>
+			<swiper-container
+				class="card"
+				thumbs-swiper=".my-thumbs"
+				pagination="true"
+				pagination-clickable="true"
+				slides-per-view="3"
+				slides-per-group="3"
+				keyboard-enabled="true"
+				:style="styles"
+			>
+				<swiper-slide class="card-body" v-for="(testimonial, index) in users" :key="index">
+					<p>{{ testimonial.testimonial }}</p>
+					<div class="avatar">
+						<img :src="testimonial.image" :alt="testimonial.name" />
+						<div class="user-info">
+							<h3>{{ testimonial.name }}</h3>
+							<h4>{{ testimonial.age }} Anos</h4>
+						</div>
 					</div>
-				</div>
-			</swiper-slide>
-		</swiper-container>
+				</swiper-slide>
+			</swiper-container>
+		</div>
 	</section>
 </template>
 
@@ -82,11 +84,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#testimonials {
-	position: relative;
-	height: 100%;
-	width: 1170px;
-	max-width: 100%;
+#comentarios {
+	display: flex;
 	margin: 0 auto;
 	padding-top: 64px;
 
@@ -102,10 +101,11 @@ export default {
 	.card {
 		overflow: hidden;
 		position: relative;
-		width: 1145px;
+		display: grid;
+		grid-template-columns: minmax(1170px, 100%);
 
 		.card-body {
-			width: 370px !important;
+			width: 378px !important;
 			height: 177.83px;
 			padding: 12.4px 16.8px;
 			background: #fff;
@@ -116,12 +116,12 @@ export default {
 			opacity: 0.6;
 			transition: all 0.3s;
 
-			&:hover,
-			&.swiper-slide-active {
-				box-shadow: 0px 4px 25px rgba(60, 35, 13, 0.1);
+			&:hover {
+				box-shadow: 0px 4px 25px 0px rgba(60, 35, 13, 0.1);
 				opacity: 1;
 				cursor: pointer;
 			}
+
 			p {
 				display: -webkit-box;
 				-webkit-line-clamp: 4;
