@@ -2,16 +2,18 @@
 	<section id="cardapio">
 		<div class="wrap-content">
 			<div class="left">
-				<h1>Escolha o seu combo imperial, <span>peça agora!</span></h1>
-				<p>
-					Temos vários tipos de pratos para a nossa realeza, fique esperto porque temos
-					sempre promoção!
-				</p>
-				<!-- fazer botao abrir um modal com o cardapio -->
-				<button>Ver Cardápio Completo</button>
+				<div class="ver-cardapio">
+					<h1>Escolha o seu combo imperial, <span>peça agora!</span></h1>
+					<p>
+						Temos vários tipos de pratos para a nossa realeza, fique esperto porque
+						temos sempre promoção!
+					</p>
+					<!-- fazer botao abrir um modal com o cardapio -->
+					<button>Ver Cardápio Completo</button>
+				</div>
 			</div>
 			<div class="right">
-				<div class="imperial-menu">
+				<div class="cardapio-imperial">
 					<h2>Cardápio imperial | Burger</h2>
 					<div class="board" v-for="(burger, index) in cardapio" :key="index">
 						<h3 class="plate">{{ burger.plate }}</h3>
@@ -83,11 +85,11 @@ export default {
 			.left {
 				background-color: rgba(255, 255, 255, 0.5);
 				box-shadow: -8px 4px 20px 24px rgba(255, 255, 255, 0.5);
-				width: 472px;
 				transition: ease-in 0.2s;
 			}
 		}
 		.left {
+			width: 472px;
 			transition: ease-out 0.2s;
 
 			h1 {
@@ -126,7 +128,7 @@ export default {
 			height: 575px;
 			background-color: #3b200b;
 
-			.imperial-menu {
+			.cardapio-imperial {
 				h2 {
 					font: 400 32px/35px 'Lilita One', cursive;
 					text-transform: uppercase;
