@@ -119,6 +119,7 @@ footer {
 			.social {
 				display: flex;
 				align-items: center;
+				margin-left: 32px;
 
 				a:last-child {
 					margin-left: 17.5px;

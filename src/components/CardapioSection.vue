@@ -76,18 +76,12 @@ export default {
 	.wrap-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		width: 1170px;
+		width: 100%;
+		max-width: 1170px;
 		height: inherit;
 		margin: 0 auto;
 		align-items: center;
 
-		@media (max-width: 1680px) {
-			.left {
-				background-color: rgba(255, 255, 255, 0.5);
-				box-shadow: -8px 4px 20px 24px rgba(255, 255, 255, 0.5);
-				transition: ease-in 0.2s;
-			}
-		}
 		.left {
 			width: 472px;
 			transition: ease-out 0.2s;
@@ -137,6 +131,11 @@ export default {
 				}
 				.board {
 					margin-bottom: 32px;
+					display: grid;
+					grid-template-columns: minmax(380px, auto) 1fr;
+					grid-template-areas:
+						'plate price'
+						'ingredients ingredients';
 
 					&:last-child {
 						margin-bottom: 0;
@@ -152,6 +151,8 @@ export default {
 							width: 472px;
 							overflow: hidden;
 							white-space: nowrap;
+							grid-area: plate;
+
 							&::after {
 								content: '........................................................................................................................';
 								letter-spacing: 1px;
@@ -159,16 +160,31 @@ export default {
 							}
 						}
 						&.price {
-							margin-left: 4px;
+							display: grid;
+							grid-area: price;
+							justify-content: end;
+							width: 96px;
+							padding-left: 4px;
+							background-color: #3b200b;
 						}
 					}
 					p {
 						color: rgba(255, 255, 255, 0.9);
 						width: 464px;
+						grid-area: ingredients;
 					}
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 1680px) {
+	.left {
+		background-color: rgba(255, 255, 255, 0.5);
+		color: rgba(29, 6, 5, 1);
+		box-shadow: -8px 4px 20px 24px rgba(255, 255, 255, 0.5);
+		transition: ease-in 0.2s;
 	}
 }
 </style>
