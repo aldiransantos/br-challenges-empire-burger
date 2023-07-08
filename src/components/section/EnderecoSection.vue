@@ -1,5 +1,5 @@
 <template>
-	<section id="endereco">
+	<section id="localizacao">
 		<h1>Onde fica o nosso castelo</h1>
 		<p>Estaremos de portas abertas para a nossa realeza.</p>
 		<iframe
@@ -16,12 +16,12 @@
 
 <script>
 export default {
-	name: 'TheAddress'
+	name: 'EnderecoSection'
 };
 </script>
 
 <style lang="scss" scoped>
-#endereco {
+#localizacao {
 	display: flex;
 	align-items: center;
 	flex-direction: column;

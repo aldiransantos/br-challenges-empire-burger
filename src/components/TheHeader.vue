@@ -82,7 +82,7 @@
 
 <script>
 export default {
-	name: 'HeaderPage',
+	name: 'TheHeader',
 	data() {
 		return {
 			menuHeader: [

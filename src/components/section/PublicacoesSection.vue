@@ -1,5 +1,5 @@
 <template>
-	<section id="publicacoes">
+	<section class="publicacoes">
 		<h1>Publicações do instagram</h1>
 		<p>
 			Todos os nossos clientes são tratados como rei e rainha, com a nossa culinária
@@ -9,7 +9,7 @@
 			<img
 				v-for="i in 8"
 				:key="i"
-				:src="require('../assets/publicacoes/burger' + i + '.png')"
+				:src="require('@/assets/publicacoes/burger' + i + '.png')"
 			/>
 		</div>
 		<div class="marquee"></div>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#publicacoes {
+.publicacoes {
 	display: flex;
 	align-items: center;
 	flex-direction: column;

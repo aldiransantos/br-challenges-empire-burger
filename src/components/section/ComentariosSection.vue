@@ -1,5 +1,5 @@
 <template>
-	<section id="comentarios">
+	<section id="comentarios" class="nossa-realeza">
 		<div class="container">
 			<h1>Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>
@@ -39,7 +39,7 @@ import 'swiper/css/pagination';
 import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper';
 
 export default {
-	name: 'TestimonialsSection',
+	name: 'ComentariosSection',
 	components: {
 		SwiperSlide
 	},
@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#comentarios {
+.nossa-realeza {
 	display: flex;
 	margin: 0 auto;
 	padding-top: 64px;

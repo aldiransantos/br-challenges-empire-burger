@@ -1,5 +1,5 @@
 <template>
-	<section id="hero">
+	<section class="hero">
 		<div>
 			<p>Uma nova experiência!</p>
 			<h1>King <span>burger</span></h1>
@@ -21,9 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#hero {
+.hero {
 	height: 545px;
-	background: url(../assets/banner-hero.png) no-repeat center center;
+	background: url('@/assets/banner-hero.png') no-repeat center center;
 	padding: 0 20px;
 
 	> div {

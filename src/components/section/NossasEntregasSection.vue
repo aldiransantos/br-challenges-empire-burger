@@ -1,5 +1,5 @@
 <template>
-	<section id="contato">
+	<section id="contato" class="nossas-entregas">
 		<div class="wrap-content">
 			<img src="@/assets/card-phone.png" alt="delivery" />
 			<div>
@@ -54,12 +54,12 @@
 
 <script>
 export default {
-	name: 'DeliverySection'
+	name: 'NossasEntregasSection'
 };
 </script>
 
 <style lang="scss" scoped>
-#contato {
+.nossas-entregas {
 	width: 1210px;
 	max-width: 100%;
 	margin: 0 auto;

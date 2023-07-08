@@ -23,7 +23,7 @@
 			</div>
 			<div class="horario-funcionamento">
 				<div class="card">
-					<img src="../assets/icons/timer.svg" alt="horario" />
+					<img src="@/assets/icons/timer.svg" alt="horario" />
 					<span class="separador"></span>
 					<div class="info">
 						<h2>Horário de Funcionamento</h2>
@@ -131,7 +131,7 @@ export default {
 			grid-row: span 2;
 			width: min(100%, 770px);
 			height: 430px;
-			background: url(../assets/ofertas/oferta-1.png) no-repeat center center;
+			background: url('@/assets/ofertas/oferta-1.png') no-repeat center center;
 			border-radius: 10px;
 
 			h1 {
@@ -173,11 +173,11 @@ export default {
 		}
 
 		div:nth-child(2) {
-			background: url(../assets/ofertas/oferta-2.png) no-repeat center center;
+			background: url('@/assets/ofertas/oferta-2.png') no-repeat center center;
 		}
 
 		div:last-child {
-			background: url(../assets/ofertas/oferta-3.png) no-repeat center center;
+			background: url('@/assets/ofertas/oferta-3.png') no-repeat center center;
 		}
 	}
 

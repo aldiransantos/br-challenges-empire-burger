@@ -1,45 +1,15 @@
 <template>
 	<div id="app">
-		<TheHeader />
-		<HeroSection />
-		<ServicosBox />
-		<PromocaoSection />
-		<CardapioSection />
-		<AtendimentoSection />
-		<TestimonialsSection />
-		<PublicacoesSection />
-		<DeliverySection />
-		<TheAddress />
-		<TheFooter />
+		<HomePage />
 	</div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue';
-import HeroSection from '@/components/HeroSection.vue';
-import ServicosBox from '@/components/ServicosBox.vue';
-import PromocaoSection from '@/components/PromocaoSection.vue';
-import CardapioSection from '@/components/CardapioSection.vue';
-import AtendimentoSection from '@/components/AtendimentoSection.vue';
-import TestimonialsSection from '@/components/TestimonialsSection.vue';
-import PublicacoesSection from '@/components/PublicacoesSection.vue';
-import DeliverySection from '@/components/DeliverySection.vue';
-import TheAddress from '@/components/TheAddress.vue';
-import TheFooter from '@/components/TheFooter.vue';
+import HomePage from '@/components/HomePage.vue';
 
 export default {
 	components: {
-		TheHeader,
-		HeroSection,
-		ServicosBox,
-		PromocaoSection,
-		CardapioSection,
-		AtendimentoSection,
-		TestimonialsSection,
-		PublicacoesSection,
-		DeliverySection,
-		TheAddress,
-		TheFooter
+		HomePage
 	}
 };
 </script>
