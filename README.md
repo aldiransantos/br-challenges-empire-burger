@@ -1,11 +1,11 @@
 <h1 align="center">
-  <a href="https://aldiransantos-empireburger.netlify.app/" target="blank">
+  <a href="https://aldiransantos-empireburger.netlify.app/" target="_blank">
     <img src=".github/logo.png" width="300px" />
   </a>
 </h1>
 
 <p align="center">
-  <a href="https://aldiransantos-empireburger.netlify.app/" target="blank">
+  <a href="https://aldiransantos-empireburger.netlify.app/" target="_blank">
     <img src=".github/preview.jpeg" width="100%" />
   </a>
 </p>
