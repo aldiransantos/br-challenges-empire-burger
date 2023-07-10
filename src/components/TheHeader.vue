@@ -122,6 +122,7 @@ header {
 	> div {
 		a {
 			display: flex;
+			justify-content: center;
 			font: 400 18px/25px 'Lato', sans-serif;
 			color: #635352;
 

@@ -115,6 +115,7 @@ footer {
 				gap: 32px;
 				a {
 					display: flex;
+					justify-content: center;
 					font: 400 18px/2px 'Lato', sans-serif;
 					color: #3a210b;
 
