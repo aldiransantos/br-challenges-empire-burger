@@ -47,15 +47,12 @@ export default {
 			}
 
 			span {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 201.85px;
 				height: 30.67px;
-				background: #f59a1b;
-				border-radius: 6.35029px;
-				font-weight: 700;
+				padding: 0 4px;
 				margin-left: 2px;
+				background: #f59a1b;
+				border-radius: 6px;
+				font-weight: 700;
 			}
 		}
 

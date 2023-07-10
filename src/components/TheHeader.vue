@@ -93,6 +93,17 @@ export default {
 				{ name: 'Contato', hash: '#contato' }
 			]
 		};
+	},
+	methods: {
+		getWidthElements() {
+			const anchorsList = document.querySelectorAll(".header-menu ul li a");
+			anchorsList.forEach(anchor => {
+				anchor.style.width = anchor.offsetWidth + 'px';
+			})
+		}
+	},
+	mounted() {
+		this.getWidthElements();
 	}
 };
 </script>
@@ -110,6 +121,7 @@ header {
 
 	> div {
 		a {
+			display: flex;
 			font: 400 18px/25px 'Lato', sans-serif;
 			color: #635352;
 

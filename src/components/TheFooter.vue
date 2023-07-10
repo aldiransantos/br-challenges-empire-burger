@@ -76,6 +76,18 @@ export default {
 				{ name: 'Sobre', hash: '#sobre' }
 			]
 		};
+	},
+	methods: {
+		getWidthElements() {
+			const anchorsList = document.querySelectorAll(".footer-menu nav ul li a");
+			anchorsList.forEach(anchor => {
+				console.log(anchor);
+				anchor.style.width = anchor.offsetWidth + 'px';
+			})
+		}
+	},
+	mounted() {
+		this.getWidthElements();
 	}
 };
 </script>
@@ -102,6 +114,7 @@ footer {
 			ul {
 				gap: 32px;
 				a {
+					display: flex;
 					font: 400 18px/2px 'Lato', sans-serif;
 					color: #3a210b;
 
