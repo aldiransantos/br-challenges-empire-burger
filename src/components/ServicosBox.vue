@@ -36,15 +36,22 @@ export default {
 .servicos {
 	display: grid;
 	padding: 0 20px;
+	width: 100%;
+	max-width: 970px;
+	height: 118.538px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 657.98px) {
+		width: 355px;
+		max-width: 100%;
+	}
 
 	.wrap-content {
 		display: grid;
-		grid-auto-flow: column;
-		width: 100%;
-		max-width: 970px;
-		height: 118.538px;
+		--auto-grid-min-size: 17rem;
+		grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+		grid-gap: 1rem;
 		align-items: center;
-		margin: 0 auto;
 		padding: 17.5px 21px;
 		background-color: #fff;
 		box-shadow: 0px 4px 40px rgba(179, 155, 132, 0.5);
@@ -52,7 +59,19 @@ export default {
 		position: relative;
 		top: -50px;
 
-		div {
+		@media screen and (max-width: 657.98px) {
+			top: -108px;
+		}
+
+		& > * {
+			max-width: 400px;
+		}
+
+		& > * + * {
+			margin-top: 1rem;
+		}
+
+		> div {
 			display: grid;
 			grid-template-areas:
 				'img title'
@@ -60,6 +79,10 @@ export default {
 			align-items: center;
 			justify-content: center;
 			position: relative;
+
+			&:nth-of-type(2) img {
+				margin-left: 21px;
+			}
 
 			&:nth-of-type(2):before,
 			&:nth-of-type(2):after {
@@ -72,6 +95,47 @@ export default {
 
 			&:nth-of-type(2):after {
 				right: 0;
+			}
+
+			@media screen and (max-width: 657.98px) {
+				&:nth-of-type(2) {
+					height: 101px;
+					grid-template-rows: 1fr;
+
+					div {
+						align-items: center;
+					}
+				}
+				&:nth-of-type(2) img {
+					margin-left: 0;
+				}
+				&:nth-of-type(2):before {
+					border-left: 0 solid;
+					border-right: 0 solid;
+				}
+				&:nth-of-type(2):before,
+				&:nth-of-type(2):after {
+					content: '';
+					width: 100%;
+					height: inherit;
+					position: absolute;
+					border-top: 1px solid rgba(73, 46, 21, 0.15);
+					border-bottom: 1px solid rgba(73, 46, 21, 0.15);
+				}
+			}
+
+			@media (min-width: 657.98px) and (max-width: 945.98px) {
+				&:last-child {
+					grid-column: span 2;
+					grid-row: 2;
+					margin-top: 8px;
+				}
+			}
+
+			@media (max-width: 946px) {
+				&:nth-of-type(2):after {
+					display: none;
+				}
 			}
 
 			img {
@@ -98,6 +162,20 @@ export default {
 					opacity: 0.6;
 				}
 			}
+		}
+	}
+
+	@supports (display: grid) {
+		.wrap-content {
+			grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
+		}
+
+		.wrap-content > * {
+			max-width: unset;
+		}
+
+		.wrap-content > * + * {
+			margin-top: unset;
 		}
 	}
 }

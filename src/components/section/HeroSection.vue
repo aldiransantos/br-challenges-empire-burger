@@ -38,7 +38,10 @@ export default {
 
 		p {
 			display: flex;
-			font: 400 23px/32px 'Lato', sans-serif;
+			font-family: 'Lato', sans-serif;
+			font-weight: 400;
+			font-size: clamp(18px, 2.5vw, 23px);
+			line-height: 32px;
 			color: rgba(29, 6, 5, 0.9);
 
 			&:first-child {
@@ -48,8 +51,8 @@ export default {
 
 			span {
 				height: 30.67px;
-				padding: 0 4px;
 				margin-left: 2px;
+				padding: 0 4px;
 				background: #f59a1b;
 				border-radius: 6px;
 				font-weight: 700;
@@ -57,7 +60,10 @@ export default {
 		}
 
 		h1 {
-			font: 400 78px/85px 'Lilita One', cursive;
+			font-family: 'Lilita One', cursive;
+			font-weight: 400;
+			font-size: clamp(54px, 8vw, 78px);
+			line-height: clamp(58px, 8vw, 85px);
 			color: #3b200b;
 
 			span {
@@ -66,16 +72,34 @@ export default {
 		}
 
 		a {
-			display: flex;
+			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			width: 198.64px;
-			height: 52.32px;
 			margin-top: 14px;
-			background: #f43127;
+			padding: 10.16px 20.321px;
 			border-radius: 5px;
-			font: 700 23px/32px 'Lato', sans-serif;
+			background: #f43127;
+			font-family: 'Lato', sans-serif;
+			font-weight: 700;
+			font-size: clamp(16px, 2.5vw, 23px);
+			line-height: clamp(22px, 3.125vw, 32px);
 			color: #fff;
+		}
+	}
+
+	@media screen and (max-width: 763.98px) {
+		height: 855.465px;
+		background: url('@/assets/banner-hero-mobile.png') no-repeat center center;
+		background-size: cover;
+
+		> div {
+			height: auto;
+			position: relative;
+			top: 102px;
+
+			a {
+				margin-top: 16px;
+			}
 		}
 	}
 }

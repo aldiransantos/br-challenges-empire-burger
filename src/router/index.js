@@ -16,7 +16,6 @@ const routes = [
 const router = new VueRouter({
 	mode: 'history',
 	routes,
-	linkActiveClass: 'active',
 	scrollBehavior(to) {
 		if (to.hash) {
 			return window.scrollTo({

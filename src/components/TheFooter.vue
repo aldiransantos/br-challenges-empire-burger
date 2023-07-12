@@ -79,11 +79,10 @@ export default {
 	},
 	methods: {
 		getWidthElements() {
-			const anchorsList = document.querySelectorAll(".footer-menu nav ul li a");
-			anchorsList.forEach(anchor => {
-				console.log(anchor);
+			const anchorsList = document.querySelectorAll('.footer-menu nav ul li a');
+			anchorsList.forEach((anchor) => {
 				anchor.style.width = anchor.offsetWidth + 'px';
-			})
+			});
 		}
 	},
 	mounted() {
