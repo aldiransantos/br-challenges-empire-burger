@@ -41,11 +41,6 @@ export default {
 	height: 118.538px;
 	margin: 0 auto;
 
-	@media screen and (max-width: 657.98px) {
-		width: 355px;
-		max-width: 100%;
-	}
-
 	.wrap-content {
 		display: grid;
 		--auto-grid-min-size: 17rem;
@@ -58,10 +53,6 @@ export default {
 		border-radius: 10px;
 		position: relative;
 		top: -50px;
-
-		@media screen and (max-width: 657.98px) {
-			top: -108px;
-		}
 
 		& > * {
 			max-width: 400px;
@@ -97,47 +88,6 @@ export default {
 				right: 0;
 			}
 
-			@media screen and (max-width: 657.98px) {
-				&:nth-of-type(2) {
-					height: 101px;
-					grid-template-rows: 1fr;
-
-					div {
-						align-items: center;
-					}
-				}
-				&:nth-of-type(2) img {
-					margin-left: 0;
-				}
-				&:nth-of-type(2):before {
-					border-left: 0 solid;
-					border-right: 0 solid;
-				}
-				&:nth-of-type(2):before,
-				&:nth-of-type(2):after {
-					content: '';
-					width: 100%;
-					height: inherit;
-					position: absolute;
-					border-top: 1px solid rgba(73, 46, 21, 0.15);
-					border-bottom: 1px solid rgba(73, 46, 21, 0.15);
-				}
-			}
-
-			@media (min-width: 657.98px) and (max-width: 945.98px) {
-				&:last-child {
-					grid-column: span 2;
-					grid-row: 2;
-					margin-top: 8px;
-				}
-			}
-
-			@media (max-width: 946px) {
-				&:nth-of-type(2):after {
-					display: none;
-				}
-			}
-
 			img {
 				grid-area: img;
 				background: #fae2cb;
@@ -164,8 +114,67 @@ export default {
 			}
 		}
 	}
+}
 
-	@supports (display: grid) {
+@media screen and (max-width: 657.98px) {
+	.servicos {
+		width: 100%;
+		height: 236px;
+		padding: 0 36.21px;
+
+		.wrap-content {
+			top: -108px;
+
+			> div {
+				&:nth-of-type(2) {
+					height: 101px;
+					grid-template-rows: 1fr;
+
+					div {
+						align-items: center;
+					}
+				}
+				&:nth-of-type(2) img {
+					margin-left: 0;
+				}
+				&:nth-of-type(2):before {
+					border-left: 0 solid;
+					border-right: 0 solid;
+				}
+				&:nth-of-type(2):before,
+				&:nth-of-type(2):after {
+					content: '';
+					width: 100%;
+					height: inherit;
+					position: absolute;
+					border-top: 1px solid rgba(73, 46, 21, 0.15);
+					border-bottom: 1px solid rgba(73, 46, 21, 0.15);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 657.98px) and (max-width: 945.98px) {
+	.servicos {
+		height: 183px;
+
+		.wrap-content > div:last-child {
+			grid-column: span 2;
+			grid-row: 2;
+			margin-top: 8px;
+		}
+	}
+}
+
+@media (max-width: 945.98px) {
+	.servicos .wrap-content > div:nth-of-type(2):after {
+		display: none;
+	}
+}
+
+@supports (display: grid) {
+	.servicos {
 		.wrap-content {
 			grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
 		}

@@ -88,6 +88,6 @@ button {
 	display: grid;
 	grid-template-columns: minmax(100%, 1170px);
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 24px;
 }
 </style>
