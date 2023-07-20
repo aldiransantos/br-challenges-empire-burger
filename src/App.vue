@@ -75,11 +75,6 @@ a {
 	}
 }
 
-img {
-	width: 100%;
-	display: block;
-}
-
 button {
 	border: transparent;
 }
@@ -89,5 +84,28 @@ button {
 	grid-template-columns: minmax(100%, 1170px);
 	margin: 0 auto;
 	padding: 0 24px;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.medias a {
+	background-color: #f59a1b;
+}
+.logo-ifood {
+	width: 27px;
+	height: 14.269px;
+	-webkit-mask: url('@/assets/icons/ifood.svg') no-repeat center;
+	mask: url('@/assets/icons/ifood.svg') no-repeat center;
+}
+
+.logo-instagram {
+	width: 19px;
+	height: 19px;
+
+	-webkit-mask: url('@/assets/icons/instagram.svg') no-repeat center;
+	mask: url('@/assets/icons/instagram.svg') no-repeat center;
 }
 </style>

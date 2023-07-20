@@ -1,13 +1,9 @@
 <h1 align="center">
-  <a href="https://aldiransantos-empireburger.netlify.app/" target="_blank">
     <img src=".github/logo.png" width="300px" />
-  </a>
 </h1>
 
 <p align="center">
-  <a href="https://aldiransantos-empireburger.netlify.app/" target="_blank">
     <img src=".github/preview.jpeg" width="100%" />
-  </a>
 </p>
 
 ## 📝 Conteúdo
@@ -25,7 +21,7 @@
 
 ## 💻 Visão Geral do Projeto
 
-Esse projeto é uma Landing Page de uma hamburgueria fictícia chamada **Empire Burger**. Nela há seções sobre as Ofertas Especiais, Horário de Funcionamento, cardápio contendo os ingredientes e preços, cards com os feedbacks dos clientes e a localização do estabelecimento.
+Esse projeto é uma Landing Page de uma hamburgueria fictícia chamada [**Empire Burger**](https://www.brchallenges.com/desafio/empire-burger). Nela há seções sobre as Ofertas Especiais, Horário de Funcionamento, cardápio contendo os ingredientes e preços, cards com os feedbacks dos clientes e a localização do estabelecimento.
 
 Para facilitar a codificação do projeto foi usado um protótipo do Figma como base, o autor do layout é o Designer [**Tiago Alves**](https://www.behance.net/tiagoalvesuiux). [Clique aqui](https://www.figma.com/file/ag4Az50adOF53pBrwI0wFg/Empire-Burger?node-id=0%3A1) para abrir o protótipo no Figma.
 
@@ -46,10 +42,10 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 ### Nível Fácil
 
--   [ ] Criar as seguintes seções: **Menu**, **Banner Hero**, **Ofertas Especiais**, **Onde fica o Nosso Castelo** e **Footer**;
+-   [x] Criar as seguintes seções: **Menu**, **Banner Hero**, **Ofertas Especiais**, **Onde fica o Nosso Castelo** e **Footer**;
 
     -   [x] Desktop
-    -   [ ] Mobile
+    -   [x] Mobile
 
 -   [x] Ao clicar em um item do menu, o usuário deverá ser levado para a seção correspondente;
 
@@ -61,10 +57,10 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 ### Nível Médio
 
--   [ ] Todos os requisitos do Nivel Fácil;
+-   [x] Todos os requisitos do Nivel Fácil;
 
     -   [x] Desktop
-    -   [ ] Mobile
+    -   [x] Mobile
 
 -   [ ] Criar as seguintes seções: **Cardápio**, **Atendimento** e **Nossas Entregas**;
 

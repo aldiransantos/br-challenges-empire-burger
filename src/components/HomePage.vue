@@ -9,7 +9,7 @@
 		<Comentarios />
 		<PublicacoesSection />
 		<NossasEntregasSection />
-		<EnderecoSection />
+		<NossoCasteloSection />
 		<TheFooter />
 	</div>
 </template>
@@ -24,7 +24,7 @@ import AtendimentoSection from '@/components/section/AtendimentoSection.vue';
 import Comentarios from '@/components/section/ComentariosSection.vue';
 import PublicacoesSection from '@/components/section/PublicacoesSection.vue';
 import NossasEntregasSection from '@/components/section/NossasEntregasSection.vue';
-import EnderecoSection from '@/components/section/EnderecoSection.vue';
+import NossoCasteloSection from '@/components/section/NossoCasteloSection.vue';
 import TheFooter from '@/components/TheFooter.vue';
 
 export default {
@@ -39,7 +39,7 @@ export default {
 		Comentarios,
 		PublicacoesSection,
 		NossasEntregasSection,
-		EnderecoSection,
+		NossoCasteloSection,
 		TheFooter
 	}
 };

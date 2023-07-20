@@ -1,5 +1,5 @@
 <template>
-	<section id="localizacao">
+	<section id="localizacao" class="nosso-castelo">
 		<h1>Onde fica o nosso castelo</h1>
 		<p>Estaremos de portas abertas para a nossa realeza.</p>
 		<iframe
@@ -16,27 +16,42 @@
 
 <script>
 export default {
-	name: 'EnderecoSection'
+	name: 'NossoCasteloSection'
 };
 </script>
 
 <style lang="scss" scoped>
-#localizacao {
+.nosso-castelo {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	margin-top: 64px;
+	text-align: center;
 
 	h1 {
-		font: 400 32px/35px 'Lilita One', cursive;
+		font-family: 'Lilita One', cursive;
+		font-weight: 400;
+		font-size: clamp(25px, 3.125vw, 32px);
+		line-height: 140%;
 		color: rgba(29, 6, 5, 0.9);
 		margin-bottom: 4px;
 	}
 
 	p {
-		font: 400 16px/19px 'Lato', sans-serif;
+		font: 400 16px/140% 'Lato', sans-serif;
 		color: rgba(29, 6, 5, 0.69);
 		margin-bottom: 32px;
+	}
+}
+
+@media screen and (max-width: 657.98px) {
+	.nosso-castelo p {
+		margin-bottom: 16px;
+	}
+}
+@media (min-width: 657.98px) and (max-width: 945.98px) {
+	.nosso-castelo p {
+		margin-bottom: 24px;
 	}
 }
 </style>
