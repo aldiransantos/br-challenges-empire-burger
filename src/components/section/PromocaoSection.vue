@@ -216,6 +216,9 @@ export default {
 				position: relative;
 
 				.tarja {
+					display: flex;
+					align-items: center;
+					justify-content: center;
 					width: 120px;
 					height: 20px;
 					background-color: rgb(250 243 242 / 60%);
@@ -295,6 +298,13 @@ export default {
 	}
 }
 
+@media screen and (max-width: 399.98px) {
+	#promocao .container .horario-funcionamento .card img {
+		width: clamp(78px, 8vw, 94.83px);
+		height: clamp(70px, 8vw, 94.83px);
+	}
+}
+
 @media screen and (max-width: 657.98px) {
 	#promocao .container {
 		width: 100%;
@@ -324,14 +334,14 @@ export default {
 			gap: 64px;
 
 			.card {
-				height: 110.704px;
+				height: auto;
 				padding: 20px 16px;
 
 				img {
 					padding: 14px;
 				}
 				.separador::before {
-					margin: 0 12px;
+					margin: 0 8px;
 				}
 				.info {
 					h2 {
@@ -382,11 +392,14 @@ export default {
 
 @media screen and (max-width: 945.98px) {
 	#promocao .container .horario-funcionamento {
-		grid-template-columns: 1fr;
+		grid-template-columns: 100%;
 
 		.seguir {
 			align-items: center;
 
+			p {
+				text-align: center;
+			}
 			h3 {
 				font-size: 2.563rem;
 			}

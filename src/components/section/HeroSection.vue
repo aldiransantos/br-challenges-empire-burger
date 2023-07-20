@@ -65,6 +65,7 @@ export default {
 			font-size: clamp(54px, 8vw, 78px);
 			line-height: clamp(58px, 8vw, 85px);
 			color: #3b200b;
+			inline-size: 326px;
 
 			span {
 				color: #f59a1b;

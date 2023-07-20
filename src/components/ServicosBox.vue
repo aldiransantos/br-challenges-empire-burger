@@ -44,7 +44,7 @@ export default {
 	.wrap-content {
 		display: grid;
 		--auto-grid-min-size: 17rem;
-		grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
 		grid-gap: 1rem;
 		align-items: center;
 		padding: 17.5px 21px;
@@ -55,11 +55,11 @@ export default {
 		top: -50px;
 
 		& > * {
-			max-width: 400px;
+			max-width: unset;
 		}
 
 		& > * + * {
-			margin-top: 1rem;
+			margin-top: unset;
 		}
 
 		> div {
@@ -123,6 +123,7 @@ export default {
 		padding: 0 36.21px;
 
 		.wrap-content {
+			grid-template-columns: repeat(auto, minmax(var(--auto-grid-min-size), 1fr));
 			top: -108px;
 
 			> div {
@@ -170,22 +171,6 @@ export default {
 @media (max-width: 945.98px) {
 	.servicos .wrap-content > div:nth-of-type(2):after {
 		display: none;
-	}
-}
-
-@supports (display: grid) {
-	.servicos {
-		.wrap-content {
-			grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
-		}
-
-		.wrap-content > * {
-			max-width: unset;
-		}
-
-		.wrap-content > * + * {
-			margin-top: unset;
-		}
 	}
 }
 </style>
