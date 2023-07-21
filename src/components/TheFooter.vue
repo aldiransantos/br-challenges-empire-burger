@@ -192,7 +192,7 @@ footer {
 			.medias {
 				right: 0;
 				position: absolute;
-				bottom: 72px;
+				bottom: 64px;
 			}
 		}
 	}

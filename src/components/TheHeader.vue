@@ -85,7 +85,9 @@ export default {
 	},
 	mounted() {
 		this.getWidthElements();
-		document.addEventListener('click', this.handleClickOutside);
+		this.$nextTick(() => {
+			document.addEventListener('click', this.handleClickOutside);
+		});
 	},
 	beforeUnmount() {
 		document.removeEventListener('click', this.handleClickOutside);
@@ -101,7 +103,11 @@ export default {
 			this.isMenuOpen = !this.isMenuOpen;
 		},
 		handleClickOutside(e) {
-			if (this.isMenuOpen && !this.$refs.menuContainer.contains(e.target))
+			if (
+				this.isMenuOpen &&
+				this.$refs.menuContainer &&
+				!this.$refs.menuContainer.contains(e.target)
+			)
 				this.isMenuOpen = false;
 		}
 	}
