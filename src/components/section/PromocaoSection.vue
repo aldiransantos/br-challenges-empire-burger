@@ -298,7 +298,7 @@ export default {
 	}
 }
 
-@media screen and (max-width: 399.98px) {
+@media screen and (max-width: 389.98px) {
 	#promocao .container .horario-funcionamento .card img {
 		width: clamp(78px, 8vw, 94.83px);
 		height: clamp(70px, 8vw, 94.83px);

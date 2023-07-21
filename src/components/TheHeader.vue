@@ -195,6 +195,7 @@ header {
 						font-weight: 700;
 						font-size: 16px;
 						line-height: 25px;
+						color: #34201f;
 						cursor: pointer;
 
 						img {
@@ -239,7 +240,7 @@ header {
 
 			nav .header-menu {
 				width: 100%;
-				padding: 64px 24px 24px;
+				padding: 68px 24px 24px;
 				gap: 16px;
 				opacity: 0;
 				visibility: hidden;

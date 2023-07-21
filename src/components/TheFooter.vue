@@ -129,6 +129,13 @@ footer {
 	}
 }
 
+@media screen and (max-width: 389.98px) {
+	footer .copyright {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 @media (max-width: 657.98px) {
 	footer .footer-menu {
 		grid-template-columns: 1fr;

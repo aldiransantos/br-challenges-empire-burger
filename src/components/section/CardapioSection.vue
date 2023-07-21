@@ -14,13 +14,15 @@
 			</div>
 			<div class="right">
 				<div class="cardapio-imperial">
-					<h2>Cardápio imperial | Burger</h2>
-					<div class="board" v-for="(burger, index) in cardapio" :key="index">
-						<h3 class="plate">{{ burger.plate }}</h3>
-						<h3 class="price">
-							{{ formatPrice(burger.price) }}
-						</h3>
-						<p class="ingredients">{{ burger.ingredients }}</p>
+					<h2>Cardápio imperial <span>| Burger</span></h2>
+					<div class="board">
+						<div class="item" v-for="(burger, index) in cardapio" :key="index">
+							<h3 class="plate">{{ burger.plate }}</h3>
+							<h3 class="price">
+								{{ formatPrice(burger.price) }}
+							</h3>
+							<p class="ingredients">{{ burger.ingredients }}</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -68,11 +70,6 @@ export default {
 	margin-bottom: 72px;
 	padding: 0 20px;
 
-	p {
-		font-size: 16px;
-		line-height: 22.4px;
-	}
-
 	.wrap-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -87,7 +84,11 @@ export default {
 			transition: ease-out 0.2s;
 
 			h1 {
-				font: 400 41.42px/ 45.56px 'Lilita One', cursive;
+				font: 400 41.42px/ 45.56px;
+				font-family: 'Lilita One', cursive;
+				font-weight: 400;
+				font-size: clamp(25px, 3.5vw, 42px);
+				line-height: 100%;
 				color: #3b200b;
 
 				span {
@@ -99,6 +100,8 @@ export default {
 			p {
 				width: 437.88px;
 				margin-top: 9.66px;
+				font-size: clamp(14px, 1.367vw, 16px);
+				line-height: 110%;
 				color: rgba(29, 6, 5, 0.69);
 			}
 			button {
@@ -123,55 +126,123 @@ export default {
 			background-color: #3b200b;
 
 			.cardapio-imperial {
+				width: 100%;
+
 				h2 {
-					font: 400 32px/35px 'Lilita One', cursive;
+					font-family: 'Lilita One', cursive;
+					font-weight: 400;
+					font-size: clamp(25px, 2.5vw, 32px);
+					line-height: 110%;
 					text-transform: uppercase;
 					color: #f59a1b;
 					margin-bottom: 16px;
 				}
 				.board {
-					margin-bottom: 32px;
 					display: grid;
-					grid-template-columns: minmax(380px, auto) 1fr;
-					grid-template-areas:
-						'plate price'
-						'ingredients ingredients';
+					gap: 32px;
 
-					&:last-child {
-						margin-bottom: 0;
-					}
+					.item {
+						display: grid;
+						grid-template-columns: minmax(380px, auto) 1fr;
+						grid-template-areas:
+							'plate price'
+							'ingredients ingredients';
 
-					h3 {
-						text-transform: uppercase;
-						color: #fae4d0;
-						float: left;
-						margin-bottom: 4px;
+						&:last-child {
+							margin-bottom: 0;
+						}
 
-						&.plate {
-							width: 472px;
-							overflow: hidden;
-							white-space: nowrap;
-							grid-area: plate;
+						h3 {
+							text-transform: uppercase;
+							color: #fae4d0;
+							float: left;
+							margin-bottom: 4px;
 
-							&::after {
-								content: '........................................................................................................................';
-								letter-spacing: 1px;
-								margin-left: 4px;
+							&.plate {
+								width: 472px;
+								width: 100%;
+								overflow: hidden;
+								white-space: nowrap;
+								grid-area: plate;
+
+								&::after {
+									content: '..............................................................................................................................................';
+									letter-spacing: 1px;
+									margin-left: 4px;
+								}
+							}
+							&.price {
+								display: grid;
+								grid-area: price;
+								justify-content: end;
+								width: 84px;
+								background-color: #3b200b;
 							}
 						}
-						&.price {
-							display: grid;
-							grid-area: price;
-							justify-content: end;
-							width: 96px;
-							padding-left: 4px;
-							background-color: #3b200b;
+						p {
+							grid-area: ingredients;
+							width: 464px;
+							font-size: clamp(14px, 1.367vw, 16px);
+							line-height: 140%;
+							color: rgba(255, 255, 255, 0.9);
 						}
 					}
-					p {
-						color: rgba(255, 255, 255, 0.9);
-						width: 464px;
-						grid-area: ingredients;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1023.98px) {
+	#cardapio {
+		height: initial;
+		background: none;
+		padding: 0;
+
+		.wrap-content {
+			grid-template-columns: 1fr;
+
+			.left,
+			.right {
+				width: 100vw;
+			}
+
+			.left {
+				background: url('@/assets/banner-menu-mobile.png') no-repeat center center;
+				background-size: cover;
+				padding: 40px 24px;
+
+				h1 span {
+					padding: 1px 4px;
+					text-wrap: nowrap;
+				}
+
+				p {
+					width: 100%;
+				}
+			}
+
+			.right {
+				height: auto;
+				padding: 55px 24px 48px;
+
+				.cardapio-imperial {
+					h2 {
+						margin-bottom: 24px;
+						span {
+							display: none;
+						}
+					}
+					.board {
+						gap: 16px;
+
+						.item {
+							grid-template-columns: auto;
+
+							p {
+								width: initial;
+							}
+						}
 					}
 				}
 			}
