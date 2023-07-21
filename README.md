@@ -62,10 +62,10 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
     -   [x] Desktop
     -   [x] Mobile
 
--   [ ] Criar as seguintes seções: **Cardápio**, **Atendimento** e **Nossas Entregas**;
+-   [x] Criar as seguintes seções: **Cardápio**, **Atendimento** e **Nossas Entregas**;
 
     -   [x] Desktop
-    -   [ ] Mobile
+    -   [x] Mobile
 
 -   [x] Na seção **Cardápio** os preços devem ser formatados com o método Intl.NumberFormat;
 
@@ -73,10 +73,10 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 ### Nível Difícil
 
--   [ ] Todos os requisitos do Nivel Fácil e Médio;
+-   [x] Todos os requisitos do Nivel Fácil e Médio;
 
     -   [x] Desktop
-    -   [ ] Mobile
+    -   [x] Mobile
 
 -   [ ] Criar as seguintes seções: **Nossa Realeza** e **Publicações do Instagram**;
 
