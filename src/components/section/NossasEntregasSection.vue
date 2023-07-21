@@ -1,40 +1,38 @@
 <template>
 	<section id="contato" class="nossas-entregas">
-		<div class="wrap-content">
-			<img src="@/assets/card-phone.png" alt="delivery" />
-			<div>
-				<h1>Nossas entregas</h1>
-				<ul>
-					<li>
-						<img src="@/assets/icons/whatsapp.svg" alt="Whatsapp" />
-						<div class="descricao">
-							<h3>Whatsapp</h3>
-							<p>Vamos direto ao ponto, sem perder tempo!</p>
-						</div>
-					</li>
-					<li>
-						<img src="@/assets/icons/delivery.svg" alt="Entrega" />
-						<div class="descricao">
-							<h3>Entrega</h3>
-							<p>Entregamos menos de 45 minutos na porta da sua casa!</p>
-						</div>
-					</li>
-					<li>
-						<img src="@/assets/icons/ice-cream.svg" alt="Sobremesa" />
-						<div class="descricao">
-							<h3>Sobremesa</h3>
-							<p>Pedidos assima de 100 reais, ganham brindes.</p>
-						</div>
-					</li>
-					<li>
-						<img src="@/assets/icons/ifood.svg" alt="iFood" />
-						<div class="descricao">
-							<h3>iFood</h3>
-							<p>Nossa loja é Top 1 da região!</p>
-						</div>
-					</li>
-				</ul>
-			</div>
+		<img src="@/assets/card-phone.png" alt="delivery" />
+		<div class="informacoes">
+			<h1>Nossas entregas</h1>
+			<ul>
+				<li>
+					<img src="@/assets/icons/whatsapp.svg" alt="Whatsapp" />
+					<div class="descricao">
+						<h3>Whatsapp</h3>
+						<p>Vamos direto ao ponto, sem perder tempo!</p>
+					</div>
+				</li>
+				<li>
+					<img src="@/assets/icons/delivery.svg" alt="Entrega" />
+					<div class="descricao">
+						<h3>Entrega</h3>
+						<p>Entregamos menos de 45 minutos na porta da sua casa!</p>
+					</div>
+				</li>
+				<li>
+					<img src="@/assets/icons/ice-cream.svg" alt="Sobremesa" />
+					<div class="descricao">
+						<h3>Sobremesa</h3>
+						<p>Pedidos assima de 100 reais, ganham brindes.</p>
+					</div>
+				</li>
+				<li>
+					<img src="@/assets/icons/ifood.svg" alt="iFood" />
+					<div class="descricao">
+						<h3>iFood</h3>
+						<p>Nossa loja é Top 1 da região!</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 		<div class="pedido">
 			<div class="chamada">
@@ -60,27 +58,28 @@ export default {
 
 <style lang="scss" scoped>
 .nossas-entregas {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
 	width: 1210px;
-	max-width: 100%;
+	max-width: calc(100% - 40px);
+	gap: 32px;
 	margin: 0 auto;
-	padding: 0 20px;
 
-	.wrap-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: center;
-		gap: 29px;
-
-		div h1 {
-			font: 400 32px/35px 'Lilita One', cursive;
-			color: rgba(29, 6, 5, 0.9);
+	.informacoes {
+		h1 {
 			margin-bottom: 16px;
+			font-family: 'Lilita One', cursive;
+			font-weight: 400;
+			font-size: clamp(25px, 3.4vw, 32px);
+			line-height: 110%;
+			color: rgba(29, 6, 5, 0.9);
 		}
 
-		div ul {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
+		ul {
+			display: grid;
+			grid-template-columns: 1fr;
 			gap: 8px;
 
 			li {
@@ -102,7 +101,7 @@ export default {
 					background: #fae2cb;
 					clip-path: circle(50%);
 					height: 60px;
-					width: 60px;
+					max-width: 60px;
 					object-fit: none;
 				}
 
@@ -117,12 +116,18 @@ export default {
 
 					h3 {
 						margin-bottom: 4px;
-						font: 400 20px/22px 'Lilita One', cursive;
+						font-family: 'Lilita One', cursive;
+						font-weight: 400;
+						font-size: clamp(18px, 2.7vw, 20px);
+						line-height: 110%;
 						color: rgba(29, 6, 5, 0.9);
 					}
 
 					p {
-						font: 400 16px/19px 'Lato', sans-serif;
+						font-family: 'Lato', sans-serif;
+						font-weight: 400;
+						font-size: clamp(14px, 2vw, 16px);
+						line-height: 140%;
 						color: rgba(29, 6, 5, 0.69);
 					}
 				}
@@ -134,7 +139,8 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: 99.12px;
+		grid-column: span 2;
+		margin-top: 68px;
 		padding: 14.11px 35.86px 14.11px 22.3px;
 		background: #f43127;
 		border-radius: 10px;
@@ -161,7 +167,10 @@ export default {
 				border-left: 1px solid rgba(29, 6, 5, 0.4);
 
 				h3 {
-					font: 400 25px/28px 'Lilita One', cursive;
+					font-family: 'Lilita One', cursive;
+					font-weight: 400;
+					font-size: clamp(18px, 2.7vw, 25px);
+					line-height: 140%;
 					text-transform: uppercase;
 					color: rgba(29, 6, 5, 0.69);
 					margin-bottom: 5.57px;
@@ -169,7 +178,11 @@ export default {
 
 				p {
 					width: 466.27px;
-					font: 400 16px/19px 'Lato', sans-serif;
+					padding-right: 24px;
+					font-family: 'Lato', sans-serif;
+					font-weight: 400;
+					font-size: clamp(14px, 1.7vw, 16px);
+					line-height: 140%;
 					color: rgba(255, 255, 255, 0.9);
 
 					span {
@@ -178,16 +191,115 @@ export default {
 				}
 			}
 		}
+
 		button {
 			padding: 9px 16px 7px 16px;
 			background: #fae4d0;
 			border-radius: 4px;
-			font: 900 18px/25px 'Lato', sans-serif;
+			font-family: 'Lato', sans-serif;
 			text-transform: uppercase;
+			font-weight: 900;
+			font-size: clamp(16px, 1.95vw, 18px);
 			color: #f43127;
 
 			&:hover {
 				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 657.98px) {
+	.nossas-entregas .pedido,
+	.nossas-entregas .pedido .chamada {
+		flex-direction: column;
+	}
+
+	.nossas-entregas {
+		gap: 40px;
+
+		.informacoes ul li .descricao {
+			height: 69.558px;
+		}
+
+		.pedido {
+			margin-top: 24px;
+			padding: 12px 24px 16px;
+
+			.chamada div {
+				height: auto;
+				margin-top: 8px;
+				margin-left: 0;
+				padding-top: 8px;
+				padding-left: 0;
+				border-left: none;
+				border-top: 1px solid rgba(29, 6, 5, 0.4);
+				text-align: center;
+
+				p {
+					width: 300px;
+					padding: 0 0 16px;
+				}
+			}
+
+			button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 657.98px) and (max-width: 945.98px) {
+	.nossas-entregas {
+		.informacoes ul {
+			grid-template-columns: 1fr 1fr;
+			gap: 12px;
+		}
+
+		.pedido {
+			flex-wrap: wrap;
+
+			.chamada {
+				img {
+					clip-path: circle(48%);
+					height: 83.83px;
+					width: 100.83px;
+				}
+				div {
+					width: 100%;
+
+					p {
+						padding: 0;
+					}
+				}
+			}
+
+			button {
+				margin: 12px auto 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 945.98px) {
+	.nossas-entregas {
+		grid-template-columns: 1fr;
+		max-width: calc(100% - 48px);
+
+		> img {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.informacoes ul li {
+			width: 100%;
+		}
+
+		.pedido {
+			grid-column: 1;
+
+			.chamada div p {
+				width: 100%;
 			}
 		}
 	}

@@ -159,7 +159,6 @@ export default {
 							margin-bottom: 4px;
 
 							&.plate {
-								width: 472px;
 								width: 100%;
 								overflow: hidden;
 								white-space: nowrap;
@@ -197,6 +196,7 @@ export default {
 	#cardapio {
 		height: initial;
 		background: none;
+		margin-bottom: 48px;
 		padding: 0;
 
 		.wrap-content {
@@ -224,7 +224,7 @@ export default {
 
 			.right {
 				height: auto;
-				padding: 55px 24px 48px;
+				padding: 54px 24px 48px;
 
 				.cardapio-imperial {
 					h2 {

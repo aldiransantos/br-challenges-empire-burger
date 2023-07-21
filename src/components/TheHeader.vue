@@ -227,6 +227,7 @@ header {
 			width: -webkit-fill-available;
 			grid-template-columns: auto;
 			padding: 0;
+			width: 100%;
 
 			nav {
 				justify-content: space-between;
@@ -271,13 +272,16 @@ header {
 					.medias {
 						justify-content: flex-end;
 						gap: 32px;
+						position: relative;
 
 						&::after {
 							width: calc(100vw - 48px);
+							position: absolute;
+							height: 1px;
+							top: 31px;
+							margin: 0;
 							border-left: none;
 							border-bottom: 1px solid #b50b04;
-							position: absolute;
-							margin: 0;
 						}
 
 						a.logo-ifood,
