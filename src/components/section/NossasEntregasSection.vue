@@ -62,7 +62,7 @@ export default {
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	justify-content: center;
-	width: 1210px;
+	width: 1170px;
 	max-width: calc(100% - 40px);
 	gap: 32px;
 	margin: 0 auto;
@@ -85,7 +85,6 @@ export default {
 			li {
 				display: flex;
 				align-items: center;
-				width: 569.44px;
 				height: 90px;
 				padding: 15px 23px;
 				background: #fff;

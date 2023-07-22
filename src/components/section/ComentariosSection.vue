@@ -89,72 +89,89 @@ export default {
 	margin: 0 auto;
 	padding-top: 64px;
 
-	h1 {
-		font: 400 41.42px/ 45.56px 'Lilita One', cursive;
+	.container {
+		grid-template-columns: minmax(100%, 1210px);
+
+		h1 {
+			font-family: 'Lilita One', cursive;
+			font-size: clamp(25px, 3.4vw, 32px);
+			line-height: 110%;
+			color: rgba(29, 6, 5, 0.9);
+		}
+
+		p {
+			font: 400 16px/22px 'Lato', sans-serif;
+			color: rgba(29, 6, 5, 0.69);
+		}
+
+		.card {
+			overflow: hidden;
+			position: relative;
+			display: grid;
+			grid-template-columns: minmax(1170px, 100%);
+
+			.card-body {
+				width: 392px !important;
+				height: 177.83px;
+				padding: 12.4px 16.8px;
+				background: #fff;
+				border-radius: 10px;
+				margin-top: 16px;
+				margin-right: 12px;
+				margin-bottom: 32px;
+				opacity: 0.6;
+				transition: all 0.3s;
+
+				&:hover {
+					box-shadow: 0px 4px 25px 0px rgba(60, 35, 13, 0.1);
+					opacity: 1;
+					cursor: pointer;
+				}
+
+				p {
+					display: -webkit-box;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					width: 334.19px;
+					height: 90px;
+					margin-bottom: 12.67px;
+					color: #635352;
+				}
+
+				.avatar {
+					display: flex;
+					align-items: center;
+
+					img {
+						height: 48.5px;
+						width: 48.5px;
+						margin-right: 8px;
+						-webkit-clip-path: circle(50%);
+						clip-path: circle(50%);
+						-o-object-fit: cover;
+						object-fit: cover;
+					}
+					h3 {
+						font: 400 18px/ 25px 'Lilita One', cursive;
+						color: rgba(29, 6, 5, 0.9);
+					}
+					h4 {
+						font: 400 12px/17px 'Lato', sans-serif;
+						color: rgba(29, 6, 5, 0.69);
+					}
+				}
+			}
+		}
 	}
+}
 
-	p {
-		font: 400 16px/22px 'Lato', sans-serif;
-		color: rgba(29, 6, 5, 0.69);
-	}
+@media screen and (max-width: 945.98px) {
+	.nossa-realeza {
+		padding-top: 0;
 
-	.card {
-		overflow: hidden;
-		position: relative;
-		display: grid;
-		grid-template-columns: minmax(1170px, 100%);
-
-		.card-body {
-			width: 378px !important;
-			height: 177.83px;
-			padding: 12.4px 16.8px;
-			background: #fff;
-			border-radius: 10px;
-			margin-top: 16px;
-			margin-right: 12px;
-			margin-bottom: 32px;
-			opacity: 0.6;
-			transition: all 0.3s;
-
-			&:hover {
-				box-shadow: 0px 4px 25px 0px rgba(60, 35, 13, 0.1);
-				opacity: 1;
-				cursor: pointer;
-			}
-
-			p {
-				display: -webkit-box;
-				-webkit-line-clamp: 4;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-				width: 334.19px;
-				height: 90px;
-				margin-bottom: 12.67px;
-				color: #635352;
-			}
-
-			.avatar {
-				display: flex;
-				align-items: center;
-
-				img {
-					height: 48.5px;
-					width: 48.5px;
-					margin-right: 8px;
-					-webkit-clip-path: circle(50%);
-					clip-path: circle(50%);
-					-o-object-fit: cover;
-					object-fit: cover;
-				}
-				h3 {
-					font: 400 18px/ 25px 'Lilita One', cursive;
-					color: rgba(29, 6, 5, 0.9);
-				}
-				h4 {
-					font: 400 12px/17px 'Lato', sans-serif;
-					color: rgba(29, 6, 5, 0.69);
-				}
-			}
+		.card {
+			width: 100%;
 		}
 	}
 }

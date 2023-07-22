@@ -45,11 +45,12 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 -   [x] Criar as seguintes seções: **Menu**, **Banner Hero**, **Ofertas Especiais**, **Onde fica o Nosso Castelo** e **Footer**;
 
     -   [x] Desktop
+    -   [x] Tablet
     -   [x] Mobile
 
 -   [x] Ao clicar em um item do menu, o usuário deverá ser levado para a seção correspondente;
 
--   [x] Na seção **Ofertas Especiais** os elementos devem ser organizados com o uso da propriedade "display:grid" do CSS;
+-   [x] Na seção **Ofertas Especiais** os elementos devem ser organizados com o uso da propriedade "display: grid" do CSS;
 
 -   [x] As informações do card da oferta (nome do prato e gramagem) devem estar no HTML, a única imagem deve ser a foto do prato com o preço;
 
@@ -60,11 +61,13 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 -   [x] Todos os requisitos do Nivel Fácil;
 
     -   [x] Desktop
+    -   [x] Tablet
     -   [x] Mobile
 
 -   [x] Criar as seguintes seções: **Cardápio**, **Atendimento** e **Nossas Entregas**;
 
     -   [x] Desktop
+    -   [x] Tablet
     -   [x] Mobile
 
 -   [x] Na seção **Cardápio** os preços devem ser formatados com o método Intl.NumberFormat;
@@ -76,11 +79,13 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 -   [x] Todos os requisitos do Nivel Fácil e Médio;
 
     -   [x] Desktop
+    -   [x] Tablet
     -   [x] Mobile
 
 -   [ ] Criar as seguintes seções: **Nossa Realeza** e **Publicações do Instagram**;
 
     -   [x] Desktop
+    -   [ ] Tablet
     -   [ ] Mobile
 
 -   [x] Buscar a lista de itens do cardápio via [API](https://api.brchallenges.com/api/empire-burger/menu);

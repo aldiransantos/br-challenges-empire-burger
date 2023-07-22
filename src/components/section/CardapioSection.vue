@@ -204,7 +204,7 @@ export default {
 
 			.left,
 			.right {
-				width: 100vw;
+				width: 100%;
 			}
 
 			.left {
