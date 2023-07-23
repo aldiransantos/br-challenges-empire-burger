@@ -90,7 +90,7 @@ export default {
 	padding-top: 64px;
 
 	.container {
-		grid-template-columns: minmax(100%, 1210px);
+		grid-template-columns: minmax(100%, 1170px);
 
 		h1 {
 			font-family: 'Lilita One', cursive;

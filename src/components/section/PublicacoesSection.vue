@@ -29,25 +29,31 @@ export default {
 	flex-direction: column;
 	width: 100%;
 	margin: 86px auto 68px;
+	text-align: center;
 
 	h1 {
-		font: 400 32px/35px 'Lilita One', cursive;
+		width: 100%;
+		margin-bottom: 4px;
+		padding: 0 24px;
+		font-family: 'Lilita One', cursive;
+		font-size: clamp(25px, 2.3vw, 32px);
+		line-height: 110%;
 		text-transform: uppercase;
 		color: rgba(29, 6, 5, 0.9);
-		margin-bottom: 4px;
 	}
 
 	p {
-		font: 400 16px/22px 'Lato', sans-serif;
-		color: rgba(29, 6, 5, 0.69);
 		margin-bottom: 16px;
+		padding: 0 24px;
+		font: 400 16px/140% 'Lato', sans-serif;
+		color: rgba(29, 6, 5, 0.69);
 	}
 
 	.galery {
 		display: flex;
+		justify-content: center;
 		width: 100%;
 		margin-bottom: -1px;
-		background: linear-gradient(270.22deg, #21201b 7.41%, rgba(33, 32, 27, 0) 91.38%);
 		overflow: hidden;
 
 		img {
@@ -62,11 +68,13 @@ export default {
 		width: 100%;
 		height: 50px;
 		background: #f59a1b;
-		font: 400 28px/28px 'Lilita One', cursive;
+		font-family: 'Lilita One', cursive;
+		font-size: clamp(14px, 2.8vw, 28px);
+		line-height: 100%;
 		text-transform: uppercase;
+		white-space: nowrap;
 		color: rgba(29, 6, 5, 0.9);
 		overflow: hidden;
-		white-space: nowrap;
 
 		&::after {
 			content: '• #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger ';
@@ -80,6 +88,19 @@ export default {
 			100% {
 				transform: translate(-100%, 0);
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 657.98px) {
+	.publicacoes {
+		.galery img {
+			width: 123.79px;
+			height: 99.95px;
+		}
+
+		.marquee {
+			height: 24.39px;
 		}
 	}
 }

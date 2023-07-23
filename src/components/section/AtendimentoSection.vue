@@ -28,7 +28,7 @@ export default {
 	align-items: center;
 	justify-content: center;
 	gap: 32px;
-	width: 1210px;
+	width: 1170px;
 	max-width: calc(100% - 40px);
 	margin: 0 auto 64px;
 	padding-bottom: 128px;

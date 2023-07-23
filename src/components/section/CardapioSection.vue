@@ -8,7 +8,6 @@
 						Temos vários tipos de pratos para a nossa realeza, fique esperto porque
 						temos sempre promoção!
 					</p>
-					<!-- fazer botao abrir um modal com o cardapio -->
 					<button>Ver Cardápio Completo</button>
 				</div>
 			</div>
@@ -165,7 +164,7 @@ export default {
 								grid-area: plate;
 
 								&::after {
-									content: '..............................................................................................................................................';
+									content: '.........................................................................................................................................................................................';
 									letter-spacing: 1px;
 									margin-left: 4px;
 								}

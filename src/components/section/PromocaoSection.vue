@@ -364,7 +364,7 @@ export default {
 	}
 }
 
-@media (min-width: 658px) and (max-width: 945.98px) {
+@media (min-width: 658px) and (max-width: 946px) {
 	#promocao .container {
 		width: 100%;
 

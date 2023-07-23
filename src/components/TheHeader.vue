@@ -133,7 +133,6 @@ header {
 
 			a {
 				display: flex;
-				justify-content: center;
 				font: 400 18px/25px 'Lato', sans-serif;
 				color: #635352;
 
@@ -145,6 +144,7 @@ header {
 				img.logo {
 					width: 264.69px;
 					height: 35.187px;
+					margin-left: 0;
 					margin-right: 61.35px;
 					z-index: 300;
 				}
@@ -233,8 +233,7 @@ header {
 				justify-content: space-between;
 
 				.logo {
-					margin-left: 20px;
-					padding-left: 20px;
+					padding-left: 24px;
 				}
 			}
 
