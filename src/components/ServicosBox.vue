@@ -156,7 +156,7 @@ export default {
 	}
 }
 
-@media (min-width: 658px) and (max-width: 946px) {
+@media (min-width: 658px) and (max-width: 946.98px) {
 	.servicos {
 		height: 183px;
 
@@ -168,7 +168,7 @@ export default {
 	}
 }
 
-@media (max-width: 946px) {
+@media (max-width: 946.98px) {
 	.servicos .wrap-content > div:nth-of-type(2):after {
 		display: none;
 	}

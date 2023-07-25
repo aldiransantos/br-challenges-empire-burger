@@ -90,10 +90,9 @@ export default {
 	padding-top: 64px;
 
 	.container {
-		grid-template-columns: minmax(100%, 1170px);
-
 		h1 {
 			font-family: 'Lilita One', cursive;
+			font-weight: 400;
 			font-size: clamp(25px, 3.4vw, 32px);
 			line-height: 110%;
 			color: rgba(29, 6, 5, 0.9);
@@ -105,13 +104,10 @@ export default {
 		}
 
 		.card {
-			overflow: hidden;
-			position: relative;
-			display: grid;
-			grid-template-columns: minmax(1170px, 100%);
+			width: 100%;
 
 			.card-body {
-				width: 392px !important;
+				flex-basis: 378px;
 				height: 177.83px;
 				padding: 12.4px 16.8px;
 				background: #fff;
@@ -133,7 +129,7 @@ export default {
 					-webkit-line-clamp: 4;
 					-webkit-box-orient: vertical;
 					overflow: hidden;
-					width: 334.19px;
+					max-width: 334.19px;
 					height: 90px;
 					margin-bottom: 12.67px;
 					color: #635352;
@@ -166,13 +162,9 @@ export default {
 	}
 }
 
-@media screen and (max-width: 945.98px) {
+@media screen and (max-width: 946.98px) {
 	.nossa-realeza {
 		padding-top: 0;
-
-		.card {
-			width: 100%;
-		}
 	}
 }
 </style>

@@ -36,7 +36,8 @@ export default {
 		margin-bottom: 4px;
 		padding: 0 24px;
 		font-family: 'Lilita One', cursive;
-		font-size: clamp(25px, 2.3vw, 32px);
+		font-weight: 400;
+		font-size: clamp(25px, 3.4vw, 32px);
 		line-height: 110%;
 		text-transform: uppercase;
 		color: rgba(29, 6, 5, 0.9);

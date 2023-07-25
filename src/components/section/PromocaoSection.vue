@@ -364,7 +364,7 @@ export default {
 	}
 }
 
-@media (min-width: 658px) and (max-width: 946px) {
+@media (min-width: 658px) and (max-width: 946.98px) {
 	#promocao .container {
 		width: 100%;
 
@@ -390,7 +390,7 @@ export default {
 	}
 }
 
-@media screen and (max-width: 945.98px) {
+@media screen and (max-width: 946.98px) {
 	#promocao .container .horario-funcionamento {
 		grid-template-columns: 100%;
 

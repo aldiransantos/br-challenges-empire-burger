@@ -172,7 +172,7 @@ footer {
 	}
 }
 
-@media (min-width: 657.98px) and (max-width: 945.98px) {
+@media (min-width: 658px) and (max-width: 946.98px) {
 	footer .footer-menu {
 		grid-template-columns: 1fr;
 		gap: 16px;

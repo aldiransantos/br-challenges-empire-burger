@@ -49,7 +49,7 @@ export default {
 		margin-bottom: 16px;
 	}
 }
-@media (min-width: 657.98px) and (max-width: 945.98px) {
+@media (min-width: 658px) and (max-width: 946.98px) {
 	.nosso-castelo p {
 		margin-bottom: 24px;
 	}
