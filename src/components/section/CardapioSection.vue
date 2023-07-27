@@ -83,10 +83,9 @@ export default {
 			transition: ease-out 0.2s;
 
 			h1 {
-				font: 400 41.42px/ 45.56px;
 				font-family: 'Lilita One', cursive;
 				font-weight: 400;
-				font-size: clamp(25px, 3.5vw, 42px);
+				font-size: clamp(25px, 3.6vw, 42px);
 				line-height: 100%;
 				color: #3b200b;
 

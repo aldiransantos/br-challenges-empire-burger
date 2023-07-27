@@ -40,7 +40,7 @@ export default {
 		width: fit-content;
 		font-family: 'Lilita One', cursive;
 		font-weight: 400;
-		font-size: clamp(25px, 3.2vw, 42px);
+		font-size: clamp(25px, 3.6vw, 42px);
 		line-height: 110%;
 		color: #3b200b;
 

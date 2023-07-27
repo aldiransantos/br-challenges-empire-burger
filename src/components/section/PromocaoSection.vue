@@ -1,7 +1,7 @@
 <template>
 	<section id="promocao">
 		<div class="container">
-			<h1>Ofertas Especiais</h1>
+			<h1 class="heading">Ofertas Especiais</h1>
 			<p>
 				Aproveitem todas as nossas ofertas, fiquem de olhos abertos, pois sempre mudamos o
 				nosso cardápio.
@@ -111,11 +111,6 @@ export default {
 
 	.container {
 		> h1 {
-			font-family: 'Lilita One', cursive;
-			font-weight: 400;
-			font-size: clamp(25px, 2.6vw, 32px);
-			line-height: 110%;
-			color: rgba(29, 6, 5, 0.9);
 			margin-top: 14px;
 			margin-bottom: 4px;
 		}

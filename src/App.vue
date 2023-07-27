@@ -55,6 +55,14 @@ h3 {
 	font: 400 20px/22px 'Lilita One', cursive;
 }
 
+.heading {
+	font-family: 'Lilita One', cursive;
+	font-weight: 400;
+	font-size: clamp(25px, 3.4vw, 32px);
+	line-height: 110%;
+	color: rgba(29, 6, 5, 0.9);
+}
+
 ul {
 	display: flex;
 	align-items: center;

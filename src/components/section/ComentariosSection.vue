@@ -1,48 +1,39 @@
 <template>
 	<section id="comentarios" class="nossa-realeza">
 		<div class="container">
-			<h1>Nossa realeza</h1>
+			<h1 class="heading">Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>
-			<swiper-container
-				class="card"
-				thumbs-swiper=".my-thumbs"
-				pagination="true"
-				pagination-clickable="true"
-				slides-per-view="3"
-				slides-per-group="3"
-				keyboard-enabled="true"
-				:style="styles"
-			>
-				<swiper-slide class="card-body" v-for="(testimonial, index) in users" :key="index">
-					<p>{{ testimonial.testimonial }}</p>
-					<div class="avatar">
-						<img :src="testimonial.image" :alt="testimonial.name" />
-						<div class="user-info">
-							<h3>{{ testimonial.name }}</h3>
-							<h4>{{ testimonial.age }} Anos</h4>
+
+			<div class="swiper" :style="styles">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="(testimonial, index) in users" :key="index">
+						<p>{{ testimonial.testimonial }}</p>
+						<div class="avatar">
+							<img :src="testimonial.image" :alt="testimonial.name" />
+							<div class="user-info">
+								<h3>{{ testimonial.name }}</h3>
+								<h4>{{ testimonial.age }} Anos</h4>
+							</div>
 						</div>
 					</div>
-				</swiper-slide>
-			</swiper-container>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 		</div>
 	</section>
 </template>
 
 <script>
-import { SwiperSlide } from 'swiper/vue';
+import Swiper from 'swiper';
+import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper';
-
 export default {
 	name: 'ComentariosSection',
-	components: {
-		SwiperSlide
-	},
 	setup() {
 		return {
 			modules: [Keyboard, Scrollbar, Navigation, Pagination]
@@ -56,17 +47,18 @@ export default {
 				'--swiper-pagination-align-items': 'center',
 				'--swiper-pagination-justify-content': 'center',
 				'--swiper-pagination-color': '#ffba08',
-
 				'--swiper-pagination-bullet-width': '47.46px',
 				'--swiper-pagination-bullet-height': '4px',
 				'--swiper-pagination-bullet-horizontal-gap': '3.8px',
 				'--swiper-pagination-bullet-border-radius': '0',
 				'--swiper-pagination-bullet-background': '#fff',
-
 				'--swiper-pagination-bullet-inactive-color': '#fff',
 				'--swiper-pagination-bullet-inactive-opacity': 1
 			}
 		};
+	},
+	mounted() {
+		this.initSwiper();
 	},
 	methods: {
 		async getTestimonials() {
@@ -75,6 +67,38 @@ export default {
 				.then((resp) => {
 					this.users = resp;
 				});
+		},
+		initSwiper() {
+			this.swiper = new Swiper('.swiper', {
+				slidesPerView: 'auto',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				keyboard: {
+					enabled: true
+				},
+				breakpoints: {
+					0: {
+						slidesPerGroup: 1,
+						pagination: {
+							enabled: false
+						}
+					},
+					658: {
+						slidesPerGroup: 2,
+						pagination: {
+							enabled: true
+						}
+					},
+					947: {
+						slidesPerGroup: 3,
+						pagination: {
+							enabled: true
+						}
+					}
+				}
+			});
 		}
 	},
 	created() {
@@ -84,80 +108,114 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.swiper-pagination-bullet {
+	background: red;
+}
+
 .nossa-realeza {
 	display: flex;
 	margin: 0 auto;
 	padding-top: 64px;
 
 	.container {
-		h1 {
-			font-family: 'Lilita One', cursive;
-			font-weight: 400;
-			font-size: clamp(25px, 3.4vw, 32px);
-			line-height: 110%;
-			color: rgba(29, 6, 5, 0.9);
-		}
-
 		p {
 			font: 400 16px/22px 'Lato', sans-serif;
 			color: rgba(29, 6, 5, 0.69);
 		}
 
-		.card {
-			width: 100%;
+		.swiper {
+			width: calc(100% + 120px);
+			position: relative;
+			left: -12px;
 
-			.card-body {
-				flex-basis: 378px;
-				height: 177.83px;
-				padding: 12.4px 16.8px;
-				background: #fff;
-				border-radius: 10px;
-				margin-top: 16px;
-				margin-right: 12px;
-				margin-bottom: 32px;
-				opacity: 0.6;
-				transition: all 0.3s;
+			&::after {
+				content: '';
+				display: flex;
+				padding: 89px 66px;
+				border-radius: 10px 0px 0px 10px;
+				background: linear-gradient(to right, #fff0 0%, #faf3f2 100%);
+				position: absolute;
+				top: 16px;
+				right: 0;
+				z-index: 1;
+			}
 
-				&:hover {
-					box-shadow: 0px 4px 25px 0px rgba(60, 35, 13, 0.1);
-					opacity: 1;
-					cursor: pointer;
-				}
+			.swiper-wrapper {
+				width: 1290px;
+				margin-left: 12px;
 
-				p {
-					display: -webkit-box;
-					-webkit-line-clamp: 4;
-					-webkit-box-orient: vertical;
-					overflow: hidden;
-					max-width: 334.19px;
-					height: 90px;
-					margin-bottom: 12.67px;
-					color: #635352;
-				}
-
-				.avatar {
+				.swiper-slide {
 					display: flex;
-					align-items: center;
+					flex-direction: column;
+					justify-content: space-between;
+					width: 370px !important;
+					height: 177.83px;
+					gap: 0;
+					margin: 16px 12px 32px 0;
+					padding: 12.4px 16.8px;
+					background: #fff;
+					border-radius: 10px;
+					opacity: 0.6;
+					transition: all 0.3s;
 
-					img {
-						height: 48.5px;
-						width: 48.5px;
-						margin-right: 8px;
-						-webkit-clip-path: circle(50%);
-						clip-path: circle(50%);
-						-o-object-fit: cover;
-						object-fit: cover;
+					&:hover {
+						box-shadow: 0px 4px 25px 0px rgba(60, 35, 13, 0.1);
+						opacity: 1;
+						cursor: pointer;
 					}
-					h3 {
-						font: 400 18px/ 25px 'Lilita One', cursive;
-						color: rgba(29, 6, 5, 0.9);
+
+					p {
+						display: -webkit-box;
+						-webkit-line-clamp: 4;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+						width: 334px;
+						color: #635352;
 					}
-					h4 {
-						font: 400 12px/17px 'Lato', sans-serif;
-						color: rgba(29, 6, 5, 0.69);
+
+					.avatar {
+						display: flex;
+						align-items: center;
+
+						img {
+							height: 48.5px;
+							width: 48.5px;
+							margin-right: 8px;
+							-webkit-clip-path: circle(50%);
+							clip-path: circle(50%);
+							-o-object-fit: cover;
+							object-fit: cover;
+						}
+						h3 {
+							font: 400 18px/ 25px 'Lilita One', cursive;
+							color: rgba(29, 6, 5, 0.9);
+						}
+						h4 {
+							font: 400 12px/17px 'Lato', sans-serif;
+							color: rgba(29, 6, 5, 0.69);
+						}
 					}
 				}
 			}
+
+			.swiper-pagination {
+				.swiper-pagination-bullet {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 657.98px) {
+	.nossa-realeza .container .swiper .swiper-wrapper .swiper-slide {
+		width: 326px !important;
+		height: 212px;
+		margin-bottom: 0;
+
+		p {
+			width: 286px;
+			-webkit-line-clamp: 5;
 		}
 	}
 }
@@ -165,6 +223,26 @@ export default {
 @media screen and (max-width: 946.98px) {
 	.nossa-realeza {
 		padding-top: 0;
+	}
+}
+
+@media (max-width: 1220px) {
+	.nossa-realeza .container {
+		width: 100%;
+
+		.swiper {
+			width: 100%;
+			left: 0;
+
+			&::after {
+				display: none;
+			}
+
+			.swiper-wrapper {
+				width: initial;
+				margin-left: 0;
+			}
+		}
 	}
 }
 </style>

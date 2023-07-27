@@ -2,7 +2,7 @@
 	<section id="contato" class="nossas-entregas">
 		<img src="@/assets/card-phone.png" alt="delivery" />
 		<div class="informacoes">
-			<h1>Nossas entregas</h1>
+			<h1 class="heading">Nossas entregas</h1>
 			<ul>
 				<li>
 					<img src="@/assets/icons/whatsapp.svg" alt="Whatsapp" />
@@ -70,11 +70,6 @@ export default {
 	.informacoes {
 		h1 {
 			margin-bottom: 16px;
-			font-family: 'Lilita One', cursive;
-			font-weight: 400;
-			font-size: clamp(25px, 3.4vw, 32px);
-			line-height: 110%;
-			color: rgba(29, 6, 5, 0.9);
 		}
 
 		ul {

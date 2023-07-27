@@ -1,6 +1,6 @@
 <template>
 	<section class="publicacoes">
-		<h1>Publicações do instagram</h1>
+		<h1 class="heading">Publicações do instagram</h1>
 		<p>
 			Todos os nossos clientes são tratados como rei e rainha, com a nossa culinária
 			artesanal.
@@ -35,12 +35,6 @@ export default {
 		width: 100%;
 		margin-bottom: 4px;
 		padding: 0 24px;
-		font-family: 'Lilita One', cursive;
-		font-weight: 400;
-		font-size: clamp(25px, 3.4vw, 32px);
-		line-height: 110%;
-		text-transform: uppercase;
-		color: rgba(29, 6, 5, 0.9);
 	}
 
 	p {
@@ -95,6 +89,8 @@ export default {
 
 @media screen and (max-width: 657.98px) {
 	.publicacoes {
+		margin: 64px auto 40px;
+
 		.galery img {
 			width: 123.79px;
 			height: 99.95px;
