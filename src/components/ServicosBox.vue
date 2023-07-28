@@ -35,11 +35,11 @@ export default {
 <style lang="scss" scoped>
 .servicos {
 	display: grid;
-	padding: 0 20px;
 	width: 100%;
 	max-width: 970px;
 	height: 118.538px;
 	margin: 0 auto;
+	padding: 0 20px;
 
 	.wrap-content {
 		display: grid;
@@ -101,7 +101,7 @@ export default {
 			div {
 				h3 {
 					grid-area: title;
-					font: 400 20px/22px 'Lilita One', cursive;
+					font-size: 20px;
 					margin: 0 0 5px 0;
 				}
 				p {

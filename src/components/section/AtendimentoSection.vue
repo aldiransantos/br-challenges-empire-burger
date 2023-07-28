@@ -2,7 +2,7 @@
 	<section id="atendimento">
 		<img src="@/assets/card-woman-eating.png" alt="mulher-comendo-hamburger" />
 		<div>
-			<h1>
+			<h1 class="heading-large">
 				<span class="espaco">Atendimento</span>
 				<span class="destaque">personalizado</span>
 			</h1>
@@ -10,7 +10,7 @@
 				Todos os nossos clientes são tratados como rei e rainha, com a nossa colunaria
 				artesanal.
 			</p>
-			<button>Cardápio Imperial</button>
+			<button class="cta">Cardápio Imperial</button>
 		</div>
 	</section>
 </template>
@@ -38,10 +38,6 @@ export default {
 		display: flex;
 		flex-direction: column;
 		width: fit-content;
-		font-family: 'Lilita One', cursive;
-		font-weight: 400;
-		font-size: clamp(25px, 3.6vw, 42px);
-		line-height: 110%;
 		color: #3b200b;
 
 		.espaco {
@@ -59,23 +55,10 @@ export default {
 	p {
 		width: 482.419px;
 		margin-top: 10px;
+		margin-bottom: 20.5px;
 		font-size: clamp(16px, 2.2vw, 21px);
 		line-height: 140%;
 		color: rgba(29, 6, 5, 0.69);
-	}
-	button {
-		background: #f43127;
-		border-radius: 5.21535px;
-		margin-top: 20.53px;
-		padding: 10.43px 20.86px;
-		font-family: 'Lato', sans-serif;
-		font-weight: 700;
-		font-size: clamp(16px, 3.25vw, 24px);
-		color: #fff;
-
-		&:hover {
-			cursor: pointer;
-		}
 	}
 }
 
@@ -117,16 +100,13 @@ export default {
 
 		p {
 			margin-top: 8px;
+			margin-bottom: 8.37px;
 		}
 
 		h1 .destaque {
 			display: block;
 			padding: 2px 5px;
 			left: -5px;
-		}
-
-		button {
-			margin-top: 8.37px;
 		}
 	}
 }

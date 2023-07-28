@@ -26,7 +26,7 @@
 					<img src="@/assets/icons/timer.svg" alt="horario" />
 					<span class="separador"></span>
 					<div class="info">
-						<h2>Horário de Funcionamento</h2>
+						<h2 class="heading-small">Horário de Funcionamento</h2>
 						<p>
 							Segunda<span class="feira">-feira</span> a Sexta<span class="feira"
 								>-feira</span
@@ -131,11 +131,7 @@ export default {
 				border-radius: 10px;
 
 				h1 {
-					font-family: 'Lilita One', cursive;
-					font-weight: 400;
 					font-size: clamp(20px, 2.2vw, 25px);
-					line-height: 110%;
-					color: rgba(29, 6, 5, 0.9);
 				}
 
 				p {
@@ -246,12 +242,8 @@ export default {
 
 				.info {
 					h2 {
-						font-family: 'Lilita One', cursive;
-						font-weight: 400;
-						font-size: 1.313rem;
-						line-height: clamp(25px, 2.2rem, 27.5px);
-						color: rgba(29, 6, 5, 0.69);
 						margin-bottom: 5px;
+						color: rgba(29, 6, 5, 0.69);
 					}
 					p {
 						font-family: 'Lato', sans-serif;
@@ -282,8 +274,6 @@ export default {
 				}
 				h3 {
 					margin: 0;
-					font-family: 'Lilita One', cursive;
-					font-weight: 400;
 					font-size: 1.75rem;
 					line-height: clamp(68%, 84%, 100%);
 					color: #f43127;

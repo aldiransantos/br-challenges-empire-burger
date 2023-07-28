@@ -3,7 +3,9 @@
 		<div class="wrap-content">
 			<div class="left">
 				<div class="ver-cardapio">
-					<h1>Escolha o seu combo imperial, <span>peça agora!</span></h1>
+					<h1 class="heading-large">
+						Escolha o seu combo imperial, <span>peça agora!</span>
+					</h1>
 					<p>
 						Temos vários tipos de pratos para a nossa realeza, fique esperto porque
 						temos sempre promoção!
@@ -13,7 +15,7 @@
 			</div>
 			<div class="right">
 				<div class="cardapio-imperial">
-					<h2>Cardápio imperial <span>| Burger</span></h2>
+					<h2 class="heading">Cardápio imperial <span>| Burger</span></h2>
 					<div class="board">
 						<div class="item" v-for="(burger, index) in cardapio" :key="index">
 							<h3 class="plate">{{ burger.plate }}</h3>
@@ -83,16 +85,12 @@ export default {
 			transition: ease-out 0.2s;
 
 			h1 {
-				font-family: 'Lilita One', cursive;
-				font-weight: 400;
-				font-size: clamp(25px, 3.6vw, 42px);
-				line-height: 100%;
 				color: #3b200b;
 
 				span {
 					background: #f59a1b;
 					border-radius: 8px;
-					padding: 2px 5px;
+					padding: 0 5px 3px;
 				}
 			}
 			p {
@@ -109,9 +107,12 @@ export default {
 				padding: 10.43px 20.86px;
 				font: 700 16px/22px 'Lato', sans-serif;
 				color: #fff;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
 
 				&:hover {
-					cursor: pointer;
+					background-color: #ff0000;
+					transition: all 0.2s ease-in-out;
 				}
 			}
 		}
@@ -127,11 +128,6 @@ export default {
 				width: 100%;
 
 				h2 {
-					font-family: 'Lilita One', cursive;
-					font-weight: 400;
-					font-size: clamp(25px, 2.5vw, 32px);
-					line-height: 110%;
-					text-transform: uppercase;
 					color: #f59a1b;
 					margin-bottom: 16px;
 				}

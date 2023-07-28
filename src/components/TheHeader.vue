@@ -133,6 +133,8 @@ header {
 
 			a {
 				display: flex;
+				align-items: center;
+				justify-content: center;
 				font: 400 18px/25px 'Lato', sans-serif;
 				color: #635352;
 
@@ -181,9 +183,12 @@ header {
 							height: 47.66px;
 							border-left: 1px solid #b50b04;
 						}
-						.logo-ifood,
-						.logo-instagram {
+						a {
 							background-color: #fff;
+
+							&:hover {
+								background-color: #f59a1b;
+							}
 						}
 					}
 
@@ -191,22 +196,43 @@ header {
 						display: flex;
 						align-items: center;
 						justify-content: center;
+						width: 123px;
+						height: 34px;
 						gap: 8px;
 						margin-left: 13px;
-						padding: 4px 16px;
-						height: 34px;
-						background: #f59a1b;
+						background-color: #f59a1b;
 						border-radius: 4px;
 						border-color: transparent;
-						font-weight: 700;
-						font-size: 16px;
-						line-height: 25px;
+						font: 700 16px 'Lato', sans-serif;
 						color: #34201f;
 						cursor: pointer;
+						transition: all 0.2s ease-in-out;
+
+						&:hover {
+							transition: all 0.2s ease-in-out;
+							background-color: #ffa827;
+
+							img {
+								animation: shake 0.8s linear infinite;
+							}
+						}
 
 						img {
 							height: 21px;
 							width: 21.43px;
+						}
+
+						span {
+							margin-top: 2px;
+						}
+					}
+					@keyframes shake {
+						0% {
+						}
+						50% {
+							transform: rotate(18deg);
+						}
+						100% {
 						}
 					}
 				}
@@ -283,8 +309,7 @@ header {
 							border-bottom: 1px solid #b50b04;
 						}
 
-						a.logo-ifood,
-						a.logo-instagram {
+						a {
 							background-color: #f59a1b;
 							margin: 0;
 						}

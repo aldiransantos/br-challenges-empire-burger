@@ -38,7 +38,7 @@
 			<div class="chamada">
 				<img src="@/assets/icons/phone.svg" alt="Phone" />
 				<div>
-					<h3>faça o seu pedido agora mesmo!</h3>
+					<h3 class="heading-small">faça o seu pedido agora mesmo!</h3>
 					<p>
 						Venha saborear a melhor experiência de hamburguenses artesanal do Empires
 						Burger, com temática medieval!
@@ -161,13 +161,8 @@ export default {
 				border-left: 1px solid rgba(29, 6, 5, 0.4);
 
 				h3 {
-					font-family: 'Lilita One', cursive;
-					font-weight: 400;
-					font-size: clamp(18px, 2.7vw, 25px);
-					line-height: 140%;
-					text-transform: uppercase;
-					color: rgba(29, 6, 5, 0.69);
 					margin-bottom: 5.57px;
+					color: rgba(29, 6, 5, 0.69);
 				}
 
 				p {
@@ -191,13 +186,16 @@ export default {
 			background: #fae4d0;
 			border-radius: 4px;
 			font-family: 'Lato', sans-serif;
-			text-transform: uppercase;
 			font-weight: 900;
 			font-size: clamp(16px, 1.95vw, 18px);
+			text-transform: uppercase;
 			color: #f43127;
+			cursor: pointer;
+			transition: all 0.4s ease-in-out;
 
 			&:hover {
-				cursor: pointer;
+				box-shadow: 0 0 30px 5px #fae2cb;
+				transition: all 0.4s ease-in-out;
 			}
 		}
 	}

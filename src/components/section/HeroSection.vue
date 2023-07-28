@@ -5,6 +5,7 @@
 			<h1>King <span>burger</span></h1>
 			<p>Para quem tem um <span>Apetite de um REI!</span></p>
 			<a
+				class="cta"
 				href="https://www.ifood.com.br/delivery/resende-rj/empire-burger-paraiso/5311b12c-54dc-46dc-9349-9537daf4ca74"
 				target="_blank"
 				rel="noopener"
@@ -60,12 +61,8 @@ export default {
 		}
 
 		h1 {
-			font-family: 'Lilita One', cursive;
-			font-weight: 400;
 			font-size: clamp(54px, 8vw, 78px);
-			line-height: clamp(58px, 8vw, 85px);
 			color: #3b200b;
-			inline-size: 326px;
 
 			span {
 				color: #f59a1b;
@@ -73,18 +70,7 @@ export default {
 		}
 
 		a {
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
 			margin-top: 14px;
-			padding: 10.16px 20.321px;
-			border-radius: 5px;
-			background: #f43127;
-			font-family: 'Lato', sans-serif;
-			font-weight: 700;
-			font-size: clamp(16px, 2.5vw, 23px);
-			line-height: clamp(22px, 3.125vw, 32px);
-			color: #fff;
 		}
 	}
 

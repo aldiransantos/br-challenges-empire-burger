@@ -41,26 +41,30 @@ p {
 	margin: 0;
 }
 
-h1,
-h2,
-h3 {
-	text-transform: uppercase;
-}
-
 p {
 	font: 400 18px/25px 'Lato', sans-serif;
 }
 
+h1,
+h2,
 h3 {
-	font: 400 20px/22px 'Lilita One', cursive;
+	font-family: 'Lilita One', cursive;
+	font-weight: 400;
+	line-height: 110%;
+	color: rgba(29, 6, 5, 0.9);
+	text-transform: uppercase;
+}
+
+.heading-large {
+	font-size: clamp(25px, 3.6vw, 42px);
 }
 
 .heading {
-	font-family: 'Lilita One', cursive;
-	font-weight: 400;
 	font-size: clamp(25px, 3.4vw, 32px);
-	line-height: 110%;
-	color: rgba(29, 6, 5, 0.9);
+}
+
+.heading-small {
+	font-size: clamp(18px, 2.7vw, 25px);
 }
 
 ul {
@@ -87,6 +91,35 @@ button {
 	border: transparent;
 }
 
+.cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 53px;
+	padding: 0 20px;
+	border-radius: 5px;
+	background-color: #f43127;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: clamp(16px, 2.8vw, 24px);
+	line-height: 110%;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		background-color: #ff0000;
+		color: #fff;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 657.98px) {
+	.cta {
+		height: 43.32px;
+	}
+}
+
 .container {
 	display: grid;
 	grid-template-columns: minmax(100%, 1170px);
@@ -101,6 +134,12 @@ img {
 
 .medias a {
 	background-color: #f59a1b;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		scale: 1.1;
+		transition: all 0.2s ease-in-out;
+	}
 }
 .logo-ifood {
 	width: 27px;
