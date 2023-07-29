@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: $neutral-bg;
+}
+
+body, ul, li, h1, h2, h3, h4, p { 
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	@extend %heading;
+}
+
+.heading-large {
+	font-size: clamp(25px, 3.6vw, 42px);
+}
+
+.heading {
+	font-size: clamp(25px, 3.4vw, 32px);
+}
+
+.heading-small {
+	font-size: clamp(18px, 2.7vw, 25px);
+}
+
+p {
+	@extend %paragraph;
+}
+
+a {
+	list-style: none;
+	text-decoration: none;
+	color: #635352;
+	transition: 0.2s;
+
+	&:hover,
+	.router-link-exact-active {
+		color: #34201f;
+		transition: 0.2s;
+		font-weight: 700;
+	}
+}
+
+ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.container {
+	@extend %container-size;
+}
+
+.medias a {
+	@extend %medias;
+}
+
+.logo-ifood {
+	width: 27px;
+	height: 14.269px;
+	-webkit-mask: url('@/assets/icons/ifood.svg') no-repeat center;
+	mask: url('@/assets/icons/ifood.svg') no-repeat center;
+}
+
+.logo-instagram {
+	width: 19px;
+	height: 19px;
+
+	-webkit-mask: url('@/assets/icons/instagram.svg') no-repeat center;
+	mask: url('@/assets/icons/instagram.svg') no-repeat center;
+}
+
+button {
+	border: transparent;
+}
+
+.btn-cta {
+	@extend %btn-cta;
+}
+
+@media screen and (max-width: 657.98px) {
+	.btn-cta {
+		@extend %btn-cta;
+		height: 43.32px;
+	}
+}

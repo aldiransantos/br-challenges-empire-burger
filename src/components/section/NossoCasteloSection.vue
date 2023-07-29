@@ -20,31 +20,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.nosso-castelo {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	margin-top: 64px;
-	text-align: center;
-
-	p {
-		font: 400 16px/140% 'Lato', sans-serif;
-		color: rgba(29, 6, 5, 0.69);
-		margin-top: 4px;
-		margin-bottom: 32px;
-	}
-}
-
-@media screen and (max-width: 657.98px) {
-	.nosso-castelo p {
-		margin-top: 2px;
-		margin-bottom: 16px;
-	}
-}
-@media (min-width: 658px) and (max-width: 946.98px) {
-	.nosso-castelo p {
-		margin-bottom: 24px;
-	}
-}
-</style>
+<style lang="scss" scoped></style>

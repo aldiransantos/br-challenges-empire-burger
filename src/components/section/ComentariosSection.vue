@@ -4,7 +4,7 @@
 			<h1 class="heading">Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>
 
-			<div class="swiper" :style="styles">
+			<div class="swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide" v-for="(testimonial, index) in users" :key="index">
 						<p>{{ testimonial.testimonial }}</p>
@@ -41,20 +41,7 @@ export default {
 	},
 	data() {
 		return {
-			users: '',
-			styles: {
-				'--swiper-pagination-display': 'flex',
-				'--swiper-pagination-align-items': 'center',
-				'--swiper-pagination-justify-content': 'center',
-				'--swiper-pagination-color': '#ffba08',
-				'--swiper-pagination-bullet-width': '47.46px',
-				'--swiper-pagination-bullet-height': '4px',
-				'--swiper-pagination-bullet-horizontal-gap': '3.8px',
-				'--swiper-pagination-bullet-border-radius': '0',
-				'--swiper-pagination-bullet-background': '#fff',
-				'--swiper-pagination-bullet-inactive-color': '#fff',
-				'--swiper-pagination-bullet-inactive-opacity': 1
-			}
+			users: ''
 		};
 	},
 	mounted() {
@@ -107,142 +94,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.swiper-pagination-bullet {
-	background: red;
-}
-
-.nossa-realeza {
-	display: flex;
-	margin: 0 auto;
-	padding-top: 64px;
-
-	.container {
-		p {
-			font: 400 16px/22px 'Lato', sans-serif;
-			color: rgba(29, 6, 5, 0.69);
-		}
-
-		.swiper {
-			width: calc(100% + 120px);
-			position: relative;
-			left: -12px;
-
-			&::after {
-				content: '';
-				display: flex;
-				padding: 89px 66px;
-				border-radius: 10px 0px 0px 10px;
-				background: linear-gradient(to right, #fff0 0%, #faf3f2 100%);
-				position: absolute;
-				top: 16px;
-				right: 0;
-				z-index: 1;
-			}
-
-			.swiper-wrapper {
-				width: 1290px;
-				margin-left: 12px;
-
-				.swiper-slide {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-					width: 370px !important;
-					height: 177.83px;
-					gap: 0;
-					margin: 16px 12px 32px 0;
-					padding: 12.4px 16.8px;
-					background: #fff;
-					border-radius: 10px;
-					opacity: 0.6;
-					transition: all 0.3s;
-
-					&:hover {
-						box-shadow: 0px 4px 25px 0px rgba(60, 35, 13, 0.1);
-						opacity: 1;
-						cursor: pointer;
-					}
-
-					p {
-						display: -webkit-box;
-						-webkit-line-clamp: 4;
-						-webkit-box-orient: vertical;
-						overflow: hidden;
-						width: 334px;
-						color: #635352;
-					}
-
-					.avatar {
-						display: flex;
-						align-items: center;
-
-						img {
-							height: 48.5px;
-							width: 48.5px;
-							margin-right: 8px;
-							-webkit-clip-path: circle(50%);
-							clip-path: circle(50%);
-							-o-object-fit: cover;
-							object-fit: cover;
-						}
-						h3 {
-							font: 400 18px/ 25px 'Lilita One', cursive;
-							color: rgba(29, 6, 5, 0.9);
-						}
-						h4 {
-							font: 400 12px/17px 'Lato', sans-serif;
-							color: rgba(29, 6, 5, 0.69);
-						}
-					}
-				}
-			}
-
-			.swiper-pagination {
-				.swiper-pagination-bullet {
-					background-color: #fff;
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 657.98px) {
-	.nossa-realeza .container .swiper .swiper-wrapper .swiper-slide {
-		width: 326px !important;
-		height: 212px;
-		margin-bottom: 0;
-
-		p {
-			width: 286px;
-			-webkit-line-clamp: 5;
-		}
-	}
-}
-
-@media screen and (max-width: 946.98px) {
-	.nossa-realeza {
-		padding-top: 0;
-	}
-}
-
-@media (max-width: 1220px) {
-	.nossa-realeza .container {
-		width: 100%;
-
-		.swiper {
-			width: 100%;
-			left: 0;
-
-			&::after {
-				display: none;
-			}
-
-			.swiper-wrapper {
-				width: initial;
-				margin-left: 0;
-			}
-		}
-	}
-}
-</style>
+<style lang="scss" scoped></style>
