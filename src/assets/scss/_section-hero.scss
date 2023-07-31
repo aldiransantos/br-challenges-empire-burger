@@ -15,15 +15,13 @@
 
 		p {
 			display: flex;
-			font-family: 'Lato', sans-serif;
 			font-weight: 400;
 			font-size: clamp(18px, 2.5vw, 23px);
-			line-height: 32px;
-			color: $brown-90;
 
 			&:first-child {
 				font-weight: 700;
-				line-height: 23px;
+				line-height: 100%;
+				color: $brown-90;
 			}
 
 			span {

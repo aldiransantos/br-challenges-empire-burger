@@ -10,7 +10,7 @@ footer {
 		max-width: 1170px;
 		margin: 0 auto;
 		padding: 28px 0;
-		border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+		border-bottom: 1px solid $brown-15;
 
 		a img.logo {
 			width: 264.715px;
@@ -39,7 +39,7 @@ footer {
 
 				.router-link-exact-active {
 					font-weight: 700;
-					color: $brown-hover;
+					color: $brown-dark;
 				}
 			}
 
@@ -89,7 +89,7 @@ footer {
 			flex-direction: column-reverse;
 			align-items: center;
 			width: 100%;
-			border-top: 1px solid rgba(29, 6, 5, 0.15);
+			border-top: 1px solid $brown-15;
 
 			ul {
 				flex-direction: column;
@@ -97,7 +97,7 @@ footer {
 				gap: 14px;
 				margin: 0;
 				padding: 14px 0;
-				border-top: 1px solid rgba(29, 6, 5, 0.15);
+				border-top: 1px solid $brown-15;
 			}
 
 			.medias {
@@ -117,7 +117,7 @@ footer {
 		nav {
 			width: 100%;
 			padding-top: 16px;
-			border-top: 1px solid rgba(29, 6, 5, 0.15);
+			border-top: 1px solid $brown-15;
 			justify-content: center;
 			position: relative;
 

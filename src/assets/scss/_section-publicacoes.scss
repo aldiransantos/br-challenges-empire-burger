@@ -3,7 +3,7 @@
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	margin: 86px auto 68px;
+	margin: 0 auto 68px;
 	text-align: center;
 
 	h1 {
@@ -33,31 +33,40 @@
 	}
 
 	.marquee {
-		display: flex;
-		align-items: center;
 		width: 100%;
-		height: 50px;
-		background: #f59a1b;
-		font-family: 'Lilita One', cursive;
-		font-size: clamp(14px, 2.8vw, 28px);
-		line-height: 100%;
-		text-transform: uppercase;
-		white-space: nowrap;
-		color: $brown-90;
-		overflow: hidden;
+		height: 49px;
+		background: url('@/assets/empire-burger-marquee.png') repeat -25px center;
+		background-size: contain;
+		$prop-animation: bg-scrolling 12s infinite;
+		
+		-webkit-animation: $prop-animation; /* Safari 4+ */
+		-moz-animation:    $prop-animation; /* Fx 5+ */
+		-o-animation:      $prop-animation; /* Opera 12+ */
+		animation:         $prop-animation; /* IE 10+ */
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function:    linear;
+		-o-animation-timing-function:      linear;
+		animation-timing-function:         linear;
 
-		&::after {
-			content: '• #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger • #empireburger ';
-			animation: marquee 60s linear infinite;
+		@-webkit-keyframes bg-scrolling {
+			0% { background-position: 100%; }
+		}
+		@-moz-keyframes    bg-scrolling {
+			0% { background-position: 100%; }
+		}
+		@-o-keyframes      bg-scrolling {
+			0% { background-position: 100%; }
+		}
+		@keyframes         bg-scrolling {
+			0% { background-position: 100%; }
 		}
 
-		@keyframes marquee {
-			0% {
-				transform: translate(0, 0);
-			}
-			100% {
-				transform: translate(-100%, 0);
-			}
+		&:hover {
+			cursor: pointer;
+			-webkit-animation-play-state:paused;
+			-moz-animation-play-state:paused;
+			-o-animation-play-state:paused;
+			animation-play-state:paused;
 		}
 	}
 }

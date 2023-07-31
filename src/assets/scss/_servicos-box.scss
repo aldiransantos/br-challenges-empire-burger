@@ -2,7 +2,7 @@
 	display: grid;
 	width: 100%;
 	max-width: 970px;
-	height: 118.538px;
+	height: 132.538px;
 	margin: 0 auto;
 	padding: 0 20px;
 
@@ -45,8 +45,8 @@
 				content: '';
 				height: 83.53px;
 				position: absolute;
-				border-left: 1px solid rgba(73, 46, 21, 0.15);
-				border-right: 1px solid rgba(73, 46, 21, 0.15);
+				border-left: 1px solid $brown-15;
+				border-right: 1px solid $brown-15;
 			}
 
 			&:nth-of-type(2):after {
@@ -129,8 +129,8 @@
 					width: 100%;
 					height: inherit;
 					position: absolute;
-					border-top: 1px solid rgba(73, 46, 21, 0.15);
-					border-bottom: 1px solid rgba(73, 46, 21, 0.15);
+					border-top: 1px solid $brown-15;
+					border-bottom: 1px solid $brown-15;
 				}
 
 				&:nth-of-type(2):before {

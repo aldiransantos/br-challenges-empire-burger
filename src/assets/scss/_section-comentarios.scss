@@ -1,7 +1,6 @@
 .nossa-realeza {
 	display: flex;
-	margin: 0 auto;
-	padding-top: 64px;
+	margin: 0 auto 86px;
 
 	.container {
 		p {
@@ -87,6 +86,8 @@
 			}
 
 			.swiper-pagination {
+				left: -65px;
+				
 				.swiper-pagination-bullet {
 					width: 47.46px;
 					height: 4px;

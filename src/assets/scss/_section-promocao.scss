@@ -4,14 +4,8 @@
 	margin: 0 auto 64px;
 
 	.container {
-		> h1 {
-			margin-top: 14px;
-			margin-bottom: 4px;
-		}
-
 		> p {
-			font: 400 16px/22px 'Lato', sans-serif;
-			color: $brown-69;
+			margin-top: 4px;
 			margin-bottom: 16px;
 		}
 		.produtos {
@@ -131,7 +125,7 @@
 					content: '';
 					display: block;
 					height: 82.74px;
-					border: 1px solid rgba(73, 46, 21, 0.15);
+					border: 1px solid $brown-15;
 					margin: 0 15.5px;
 				}
 
@@ -147,7 +141,6 @@
 						font-size: clamp(14px, 1.465vw, 16px);
 						line-height: clamp(19px, 1.953vw, 22px);
 						color: rgba(255, 255, 255, 0.85);
-						margin: 0;
 
 						span.horario {
 							font-weight: 900;
@@ -163,18 +156,14 @@
 
 				p {
 					margin-bottom: 4px;
-					font-family: 'Lato', sans-serif;
-					font-weight: 400;
-					font-size: 1.125rem;
-					line-height: 140%;
-					color: $brown-69;
+					font-size: 18px;
 				}
 
 				h3 {
 					margin: 0;
-					font-size: 1.75rem;
+					font-size: 28px;
 					line-height: clamp(68%, 84%, 100%);
-					color: #f43127;
+					color: $red;
 				}
 			}
 		}
@@ -281,9 +270,15 @@
 }
 
 @media screen and (max-width: 389.98px) {
-	#promocao .container .horario-funcionamento .card img {
-		width: clamp(78px, 8vw, 94.83px);
-		height: clamp(70px, 8vw, 94.83px);
+	#promocao .container .horario-funcionamento .card {
+		img {
+			width: clamp(78px, 8vw, 94.83px);
+			height: clamp(70px, 8vw, 94.83px);
+		}
+
+		.info p span.horario {
+			display: block;
+		}
 	}
 }
 
