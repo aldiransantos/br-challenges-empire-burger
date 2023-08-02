@@ -267,14 +267,20 @@
 }
 
 @media screen and (max-width: 389.98px) {
-	#promocao .container .horario-funcionamento .card {
-		img {
-			width: clamp(78px, 8vw, 94.83px);
-			height: clamp(70px, 8vw, 94.83px);
+	#promocao .container .horario-funcionamento {
+		.card {
+			img {
+				width: clamp(78px, 8vw, 94.83px);
+				height: clamp(70px, 8vw, 94.83px);
+				clip-path: circle(47%);
+			}
+	
+			.info p span.horario {
+				white-space: nowrap;
+			}
 		}
-
-		.info p span.horario {
-			display: block;
+		.seguir h3 {
+			font-size: 2.2rem;
 		}
 	}
 }

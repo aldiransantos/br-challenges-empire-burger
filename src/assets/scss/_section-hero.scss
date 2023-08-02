@@ -60,9 +60,24 @@
             position: relative;
             top: 102px;
 
+			p span {
+				height: 24px;
+			}
+
             a {
                 margin-top: 16px;
             }
         }
     }
+}
+
+@media screen and (max-width: 389.98px) {
+	.hero > div {
+		h1 {
+			font-size: 46px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
 }

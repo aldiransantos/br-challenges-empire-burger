@@ -71,7 +71,7 @@
 				}
 				p {
 					grid-area: description;
-					width: 170px;
+					max-width: 170px;
 					line-height: 120%;
 					opacity: 0.6;
 				}
@@ -118,7 +118,6 @@
 					}
 				}
 
-                
 				&:nth-of-type(2) img {
 					margin-left: 0;
 				}
@@ -136,8 +135,26 @@
 					border-left: 0 solid;
 					border-right: 0 solid;
 				}
+			}
+		}
+	}
+}
 
+@media screen and (max-width: 389.98px) {
+	.servicos .wrap-content {
+		grid-gap: 12px;
+		padding: 12px;
 
+		> div {
+			justify-content: start;
+			
+			img {
+				margin-right: 12px;
+			}
+
+			div p {
+				font-size: 14px;
+				font-weight: 700;
 			}
 		}
 	}
