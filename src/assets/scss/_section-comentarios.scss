@@ -3,11 +3,6 @@
 	margin: 0 auto 86px;
 
 	.container {
-		p {
-			font: 400 16px/22px 'Lato', sans-serif;
-			color: $brown-69;
-		}
-
 		.swiper {
 			width: calc(100% + 120px);
 			position: relative;
@@ -73,8 +68,8 @@
 						}
 
 						h3 {
-							font: 400 18px/ 25px 'Lilita One', cursive;
-							color: $brown-90;
+							font-size: 18px;
+							line-height: 25px;
 						}
 
 						h4 {
@@ -122,13 +117,17 @@
 				width: initial;
 				margin-left: 0;
 			}
+
+			.swiper-pagination {
+				left: 0;
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 946.98px) {
 	.nossa-realeza {
-		padding-top: 0;
+		margin-bottom: 64px;
 	}
 }
 

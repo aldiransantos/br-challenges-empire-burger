@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="horario-funcionamento">
-				<div class="card">
+				<div class="card" :class="isStoreOpened ? 'aberto' : ''">
 					<img src="@/assets/icons/timer.svg" alt="horario" />
 					<span class="separador"></span>
 					<div class="info">
@@ -34,7 +34,7 @@
 						</p>
 						<p>Sábado a Domingo: <span class="horario">18h30 - 23h00</span></p>
 					</div>
-					<div class="tarja">{{ status }}</div>
+					<div class="tarja">{{ isStoreOpened ? 'aberto' : 'fechado' }}</div>
 				</div>
 				<div class="seguir">
 					<p>Não esqueça de marcar a gente no Instagram:</p>
@@ -50,55 +50,48 @@ export default {
 	name: 'PromocaoSection',
 	data() {
 		return {
-			day: 0,
-			hours: 0,
-			minutes: 0,
-			seconds: 0,
-			status: 'fechado'
+			day: '',
+			hour: 0,
+			minute: 0,
+			second: 0,
+			interval: null,
+			isStoreOpened: false
 		};
 	},
-	methods: {
-		dateNow() {
-			const weekday = [
-				'Sunday',
-				'Monday',
-				'Tuesday',
-				'Wednesday',
-				'Thursday',
-				'Friday',
-				'Saturday'
-			];
-			let dayNumber = new Date().getDay();
-			this.day = weekday[dayNumber];
-			this.hours = new Date().getHours();
-			this.minutes = new Date().getMinutes();
-			this.seconds = new Date().getSeconds();
-
-			if (this.day == 'Saturday' || this.day === 'Sunday') {
-				if (
-					this.hours >= 17 &&
-					this.hours <= 22 &&
-					this.minutes < 60 &&
-					this.seconds < 60
-				) {
-					this.status = 'aberto';
-					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
-				}
-			} else {
-				if (
-					this.hours >= 18 &&
-					this.hours <= 22 &&
-					this.minutes < 60 &&
-					this.seconds < 60
-				) {
-					this.status = 'aberto';
-					return (document.querySelector('.card').style.backgroundColor = '#bedd15');
-				}
-			}
-		}
+	beforeUnmount() {
+		clearInterval(this.interval);
 	},
-	mounted() {
-		this.dateNow();
+	created() {
+		this.interval = setInterval(() => {
+			const options = {
+				weekday: 'long',
+				hour: 'numeric',
+				hour12: false,
+				minute: 'numeric',
+				second: 'numeric'
+			};
+
+			const time = Intl.DateTimeFormat('en', options);
+			const date = new Date();
+			const parts = time.formatToParts(date);
+
+			this.day = parts[0].value;
+			this.hour = parts[2].value;
+			this.minute = parts[4].value;
+			this.second = parts[6].value;
+
+			if (this.day == 'Saturday' || this.day == 'Sunday') {
+				if (this.hour >= 18 && this.minute >= 30 && this.second > 0) {
+					if (this.hour <= 22 && this.minute <= 59 && this.second <= 59) {
+						this.isStoreOpened = true;
+					}
+				} else this.isStoreOpened = false;
+			} else {
+				if (this.hour >= 17 && this.hour <= 22 && this.minute <= 59 && this.second <= 59) {
+					this.isStoreOpened = true;
+				} else this.isStoreOpened = false;
+			}
+		}, 1000);
 	}
 };
 </script>

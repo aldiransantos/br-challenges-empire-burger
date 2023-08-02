@@ -40,14 +40,14 @@ p {
 a {
 	list-style: none;
 	text-decoration: none;
-	color: #635352;
+	color: $brown-light;
 	transition: 0.2s;
 
 	&:hover,
 	.router-link-exact-active {
-		color: #34201f;
-		transition: 0.2s;
 		font-weight: 700;
+		color: $brown-dark;
+		transition: 0.2s;
 	}
 }
 

@@ -15,8 +15,6 @@
 	p {
 		margin-bottom: 16px;
 		padding: 0 24px;
-		font: 400 16px/140% 'Lato', sans-serif;
-		color: $brown-69;
 	}
 
 	.galery {
@@ -37,7 +35,7 @@
 		height: 49px;
 		background: url('@/assets/empire-burger-marquee.png') repeat -25px center;
 		background-size: contain;
-		$prop-animation: bg-scrolling 12s infinite;
+		$prop-animation: bg-scrolling 32s infinite;
 		
 		-webkit-animation: $prop-animation; /* Safari 4+ */
 		-moz-animation:    $prop-animation; /* Fx 5+ */
@@ -73,7 +71,7 @@
 
 @media screen and (max-width: 657.98px) {
 	.publicacoes {
-		margin: 64px auto 40px;
+		margin: 0 auto 40px;
 
 		.galery img {
 			width: 123.79px;

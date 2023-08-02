@@ -67,13 +67,12 @@
 				h3 {
 					grid-area: title;
 					font-size: 20px;
-					margin: 0 0 5px 0;
+					margin-bottom: 5px;
 				}
 				p {
 					grid-area: description;
 					width: 170px;
-					font: 400 16px/19px 'Lato', sans-serif;
-					color: $brown-69;
+					line-height: 120%;
 					opacity: 0.6;
 				}
 			}

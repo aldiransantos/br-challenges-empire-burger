@@ -23,10 +23,6 @@
 					font-size: clamp(20px, 2.2vw, 25px);
 				}
 
-				p {
-					color: $brown-69;
-				}
-
 				&:first-child {
 					grid-row: span 2;
 					width: min(100%, 770px);
@@ -54,7 +50,6 @@
 							span {
 								margin-top: 6px;
 								font-family: 'Lilita One', cursive;
-								font-weight: 400;
 								font-size: clamp(20px, 3.516vw, 42px);
 								line-height: 65%;
 								text-transform: uppercase;
@@ -94,6 +89,10 @@
 				border-radius: 10px;
 				padding: 18px 22px;
 				position: relative;
+
+				&.aberto {
+					background-color: #bedd15;
+				}
 
 				.tarja {
 					display: flex;
@@ -136,10 +135,8 @@
 					}
 
 					p {
-						font-family: 'Lato', sans-serif;
 						font-weight: 700;
 						font-size: clamp(14px, 1.465vw, 16px);
-						line-height: clamp(19px, 1.953vw, 22px);
 						color: rgba(255, 255, 255, 0.85);
 
 						span.horario {

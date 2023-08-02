@@ -19,11 +19,9 @@ header {
 				align-items: center;
 				justify-content: center;
 				font: 400 18px/25px 'Lato', sans-serif;
-				color: $brown-light;
 
 				&:hover {
 					font-weight: 700;
-					color: $brown-dark;
 				}
 
 				img.logo {
@@ -83,7 +81,7 @@ header {
 						height: 34px;
 						gap: 8px;
 						margin-left: 13px;
-						background-color: #f59a1b;
+						background-color: $yellow;
 						border-radius: 4px;
 						border-color: transparent;
 						font: 700 16px 'Lato', sans-serif;
