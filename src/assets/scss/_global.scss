@@ -38,16 +38,15 @@ p {
 }
 
 a {
+	font: 400 18px/25px "Lato", sans-serif;
+	color: $brown-light;
 	list-style: none;
 	text-decoration: none;
-	color: $brown-light;
 	transition: 0.2s;
 
 	&:hover,
 	.router-link-exact-active {
-		font-weight: 700;
 		color: $brown-dark;
-		transition: 0.2s;
 	}
 }
 
