@@ -12,7 +12,7 @@
 				<p class="ingredients">{{ burger.ingredients }}</p>
 			</div>
 		</div>
-		<div class="board" v-if="catalog.length == 0">
+		<div class="board" v-else>
 			<div class="item">
 				<h3>Estamos preparando o Cardápio...</h3>
 			</div>

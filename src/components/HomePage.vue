@@ -3,7 +3,7 @@
 		<TheHeader />
 		<HeroSection />
 		<ServicosBox />
-		<PromocaoSection />
+		<OfertasEspeciais />
 		<CardapioSection />
 		<AtendimentoSection />
 		<Comentarios />
@@ -18,7 +18,7 @@
 import TheHeader from '@/components/TheHeader.vue';
 import HeroSection from '@/components/section/HeroSection.vue';
 import ServicosBox from '@/components/ServicosBox.vue';
-import PromocaoSection from '@/components/section/PromocaoSection.vue';
+import OfertasEspeciais from '@/components/section/OfertasEspeciaisSection.vue';
 import CardapioSection from '@/components/section/CardapioSection.vue';
 import AtendimentoSection from '@/components/section/AtendimentoSection.vue';
 import Comentarios from '@/components/section/ComentariosSection.vue';
@@ -33,7 +33,7 @@ export default {
 		TheHeader,
 		HeroSection,
 		ServicosBox,
-		PromocaoSection,
+		OfertasEspeciais,
 		CardapioSection,
 		AtendimentoSection,
 		Comentarios,
