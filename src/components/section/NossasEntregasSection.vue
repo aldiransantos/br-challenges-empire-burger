@@ -45,7 +45,7 @@
 					</p>
 				</div>
 			</div>
-			<button>Solicitar pedido</button>
+			<a href="https://www.ifood.com.br/" target="_blank">Solicitar pedido</a>
 		</div>
 	</section>
 </template>

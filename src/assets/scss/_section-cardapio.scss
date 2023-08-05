@@ -29,18 +29,20 @@
 
 			p {
 				width: 437.88px;
-				margin-top: 9.66px;
+				margin: 9.66px 0 18.16px;
 				font-size: clamp(14px, 1.367vw, 16px);
 				line-height: 110%;
 				color: $brown-90;
 			}
 
 			button {
+				display: flex;
+				align-items: center;
+				height: 43.86px;
 				background: $red;
 				border-radius: 5.21535px;
-				margin-top: 18.16px;
-				padding: 10.43px 20.86px;
-				font: 700 16px/22px 'Lato', sans-serif;
+				padding: 0 20.86px;
+				font: 700 16px 'Lato', sans-serif;
 				color: #fff;
 				cursor: pointer;
 				transition: all 0.2s ease-in-out;
@@ -53,73 +55,10 @@
 		}
 
 		.right {
-			padding-left: 30px;
 			display: flex;
-			align-items: center;
 			height: 575px;
+			padding: 72px 0 72px 30px;
 			background-color: $brown;
-
-			.cardapio-imperial {
-				width: 100%;
-
-				h2 {
-					color: $yellow;
-					margin-bottom: 16px;
-				}
-
-				.board {
-					display: grid;
-					gap: 32px;
-
-					.item {
-						display: grid;
-						grid-template-columns: minmax(380px, auto) 1fr;
-						grid-template-areas:
-							'plate price'
-							'ingredients ingredients';
-
-						&:last-child {
-							margin-bottom: 0;
-						}
-
-						h3 {
-							text-transform: uppercase;
-							color: $neutral-font;
-							float: left;
-							margin-bottom: 4px;
-
-							&.plate {
-								width: 100%;
-								overflow: hidden;
-								white-space: nowrap;
-								grid-area: plate;
-
-								&::after {
-									content: '.........................................................................................................................................................................................';
-									letter-spacing: 1px;
-									margin-left: 4px;
-								}
-							}
-
-							&.price {
-								display: grid;
-								grid-area: price;
-								justify-content: end;
-								width: 84px;
-								background-color: $brown;
-							}
-						}
-
-						p {
-							grid-area: ingredients;
-							width: 464px;
-							font-size: clamp(14px, 1.367vw, 16px);
-							line-height: 140%;
-							color: rgba(255, 255, 255, 0.9);
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -165,29 +104,7 @@
 			.right {
 				height: auto;
 				padding: 54px 24px 48px;
-
-				.cardapio-imperial {
-					h2 {
-						margin-bottom: 24px;
-						span {
-							display: none;
-						}
-					}
-                    
-					.board {
-						gap: 16px;
-
-						.item {
-							grid-template-columns: auto;
-
-							p {
-								width: initial;
-							}
-						}
-					}
-				}
 			}
 		}
 	}
 }
-

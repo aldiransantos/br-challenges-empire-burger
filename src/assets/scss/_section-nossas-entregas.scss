@@ -111,15 +111,18 @@
 			}
 		}
 
-		button {
-			padding: 9px 16px 7px 16px;
+		a {
+			display: flex;
+			align-items: center;
+			height: 42px;
+			padding: 0 16px;
 			background: $neutral-font;
 			border-radius: 4px;
-			font-family: 'Lato', sans-serif;
-			font-weight: 900;
 			font-size: clamp(16px, 1.95vw, 18px);
-			text-transform: uppercase;
+			font-weight: 900;
+			line-height: initial;
 			color: $red;
+			text-transform: uppercase;
 			cursor: pointer;
 
 			&:hover {

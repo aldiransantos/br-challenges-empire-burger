@@ -34,9 +34,10 @@ header {
 			width: 724px;
 			height: 489px;
 			padding: 48px;
-			position: relative;
+			position: fixed;
 			background: url('@/assets/banner-modal-contato.png') no-repeat center center;
 			border-radius: 10px;
+			box-shadow: 0px 4px 40px rgba(179, 155, 132, 0.5);
 			animation: fadeIn .3s forwards;
 			z-index: 901;
 
@@ -49,6 +50,16 @@ header {
 				background: $brown-15;
 				border-radius: 3px;
 				cursor: pointer;
+				transition: 0.3s;
+
+				&:hover {
+					box-shadow: 0px 0px 20px rgba(179, 155, 132, 0.6);
+
+					svg .line {
+						stroke: $yellow;
+						transition: 0.3s;
+					}
+				}
 			}
 		
 			.modal-info {
@@ -56,18 +67,30 @@ header {
 				gap: 24px;
 		
 				h1 {
-					color: $brown-dark;
+					color: $brown;
 					text-align: center;
 				}
 		
 				div {
 					display: grid;
 					gap: 4px;
+
+					h2 {
+						color: $yellow;
+					}
+
+					a {
+						width: fit-content;
+
+						&:hover {
+							text-decoration: underline;
+							text-decoration-color: $yellow-light;
+							transition: 0s;
+						}
+					}
 				}
 		
-				a:hover {
-					text-decoration: underline;
-				}
+
 			}
 		
 		}
@@ -86,8 +109,6 @@ header {
 		}
 	}
 	
-	
-
 	.container {
 		nav {
 			display: grid;
@@ -371,7 +392,7 @@ header {
 		padding: 24px;
 		
 		.modal-container {
-			width: 100%;
+			width: calc(100% - 48px);
 			height: auto;
 			padding: 24px;
 
@@ -380,6 +401,7 @@ header {
 
 				div a {
 					font-size: 16px;
+					line-height: 20px;
 					word-break: break-word;
 				}
 			}

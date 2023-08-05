@@ -1,0 +1,104 @@
+.modal-catalog {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, .5);
+		z-index: 500;
+	}
+
+	.modal-catalog-container {
+		width: 724px;
+		padding: 48px;
+		position: fixed;
+		background: url('@/assets/banner-catalog-modal.png') no-repeat center;
+		border-radius: 10px;
+		box-shadow: 0px 4px 40px $brown-90;
+		animation: fadeIn .3s forwards;
+		z-index: 901;
+
+		.btn-close {
+			display: flex;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			padding: 0;
+			background: rgba(250, 228, 208, 0.25);
+			border-radius: 3px;
+			cursor: pointer;
+
+			svg .line {
+				stroke: $yellow;
+			}
+		}
+	
+		.cardapio-imperial {
+			display: grid;
+			gap: 24px;
+	
+			.board {
+				gap: 32px; 
+
+				.item {
+					.price {
+						background-color: transparent;
+					}
+			
+					a:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -50px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@media screen and (max-width: 763.98px) {
+	.modal-catalog {
+		padding: 24px;
+		
+		.modal-catalog-container {
+			width: calc(100% - 48px);
+			height: auto;
+			padding: 24px;
+
+			.cardapio-imperial {
+				gap: 0;
+
+				h2 {
+					margin-bottom: 28px;
+				}
+				
+				.board {
+					gap: 20px;
+				}
+			}
+		}
+	}
+}

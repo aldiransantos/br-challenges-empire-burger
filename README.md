@@ -72,7 +72,7 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 -   [x] Na seção **Cardápio** os preços devem ser formatados com o método Intl.NumberFormat;
 
--   [x] O card **Horário de Funcionamento** deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
+-   [ ] O card **Horário de Funcionamento** deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
 
 ### Nível Difícil
 
@@ -82,11 +82,11 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
     -   [x] Tablet
     -   [x] Mobile
 
--   [ ] Criar as seguintes seções: **Nossa Realeza** e **Publicações do Instagram**;
+-   [x] Criar as seguintes seções: **Nossa Realeza** e **Publicações do Instagram**;
 
     -   [x] Desktop
-    -   [ ] Tablet
-    -   [ ] Mobile
+    -   [x] Tablet
+    -   [x] Mobile
 
 -   [x] Buscar a lista de itens do cardápio via [API](https://api.brchallenges.com/api/empire-burger/menu);
 

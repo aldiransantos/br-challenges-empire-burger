@@ -1,0 +1,84 @@
+.cardapio-imperial {
+	width: 100%;
+
+	h2 {
+		color: $yellow;
+		margin-bottom: 16px;
+	}
+
+	.board {
+		display: grid;
+		gap: 32px;
+
+		.item {
+			display: grid;
+			grid-template-columns: minmax(380px, auto) 1fr;
+			grid-template-areas:
+				'plate price'
+				'ingredients ingredients';
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			h3 {
+				text-transform: uppercase;
+				color: $neutral-font;
+				float: left;
+				margin-bottom: 4px;
+
+				&.plate {
+					width: 100%;
+					overflow: hidden;
+					white-space: nowrap;
+					grid-area: plate;
+
+					&::after {
+						content: '.........................................................................................................................................................................................';
+						letter-spacing: 1px;
+						margin-left: 4px;
+					}
+				}
+
+				&.price {
+					display: grid;
+					grid-area: price;
+					justify-content: end;
+					width: 84px;
+					background-color: $brown;
+				}
+			}
+
+			p {
+				grid-area: ingredients;
+				width: 464px;
+				font-size: clamp(14px, 1.367vw, 16px);
+				line-height: 140%;
+				color: rgba(255, 255, 255, 0.9);
+			}
+		}
+	}
+}
+
+@media (max-width: 1023.98px) {
+	.cardapio-imperial {
+		h2 {
+			margin-bottom: 24px;
+			span {
+				display: none;
+			}
+		}
+
+		.board {
+			gap: 16px;
+
+			.item {
+				grid-template-columns: auto;
+
+				p {
+					width: initial;
+				}
+			}
+		}
+	}
+}

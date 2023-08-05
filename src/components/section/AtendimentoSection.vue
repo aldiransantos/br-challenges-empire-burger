@@ -10,15 +10,20 @@
 				Todos os nossos clientes são tratados como rei e rainha, com a nossa colunaria
 				artesanal.
 			</p>
-			<button class="btn-cta">Cardápio Imperial</button>
+			<button @click="showModal" class="btn-cta">Cardápio Imperial</button>
 		</div>
 	</section>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
-	name: 'AtendimentoSection'
+	name: 'AtendimentoSection',
+	methods: {
+		...mapMutations(['showModal'])
+	}
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>
