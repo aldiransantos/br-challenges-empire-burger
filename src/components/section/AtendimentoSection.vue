@@ -1,6 +1,15 @@
 <template>
 	<section class="atendimento">
-		<img src="@/assets/card-woman-eating.png" alt="mulher-comendo-hamburger" />
+		<img
+			src="@/assets/eating-empire-burger-2x.webp"
+			srcset="
+				@/assets/eating-empire-burger.webp    657.98w,
+				@/assets/eating-empire-burger-2x.webp 946.98w
+			"
+			width="571"
+			height="476"
+			alt="Comendo Empire Burger"
+		/>
 		<div>
 			<h1 class="heading-large">
 				<span class="espaco">Atendimento</span>

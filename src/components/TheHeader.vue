@@ -154,7 +154,7 @@ export default {
 	mounted() {
 		this.getWidthElements();
 		this.$nextTick(() => {
-			document.addEventListener('click', this.handleClickOutside);
+			document.addEventListener('click', this.handleClickOutside, { passive: true });
 		});
 	},
 	beforeUnmount() {

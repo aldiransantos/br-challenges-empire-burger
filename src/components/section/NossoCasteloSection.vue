@@ -7,6 +7,7 @@
 			width="100%"
 			height="207.28"
 			style="border: 0"
+			title="Nosso Castelo Google Maps"
 			allowfullscreen=""
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"

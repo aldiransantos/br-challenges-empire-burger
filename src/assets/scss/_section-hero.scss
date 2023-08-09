@@ -1,6 +1,7 @@
 .hero {
 	height: 545px;
-	background: url('@/assets/banner-hero.png') no-repeat center center;
+	background: url('@/assets/banner-hero.webp') no-repeat center;
+	background-size: cover;
 	padding: 0 20px;
 
 	> div {
@@ -52,7 +53,7 @@
 @media screen and (max-width: 763.98px) {
     .hero {
         height: 855.465px;
-        background: url('@/assets/banner-hero-mobile.png') no-repeat center center;
+        background: url('@/assets/banner-hero-mobile.webp') no-repeat center;
         background-size: cover;
 
         > div {

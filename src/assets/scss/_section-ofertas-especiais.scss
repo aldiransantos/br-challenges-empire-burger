@@ -14,7 +14,9 @@
 			gap: 30px;
 			margin-bottom: 64px;
 
-			div {
+
+
+			.burger {
 				position: relative;
 				padding: 12.43px 20.37px;
 				border-radius: 10px;
@@ -23,11 +25,17 @@
 					font-size: clamp(20px, 2.2vw, 25px);
 				}
 
+				@for $i from 1 through 3 {
+					&:nth-child(#{$i}) {
+						background: url('@/assets/ofertas/oferta-especial-#{$i}.webp') no-repeat center;
+						background-size: cover;
+					}
+				}
+
 				&:first-child {
 					grid-row: span 2;
 					width: min(100%, 770px);
 					height: 430px;
-					background: url('@/assets/ofertas/oferta-1.png') no-repeat center center;
 
 					h1 {
 						color: rgba(255, 255, 255, 0.9);
@@ -62,14 +70,6 @@
 				&:nth-child(2),	&:last-child {
 					width: 370.96px;
 					height: 200px;
-				}
-
-				&:nth-child(2) {
-					background: url('@/assets/ofertas/oferta-2.png') no-repeat center center;
-				}
-
-				&:last-child {
-					background: url('@/assets/ofertas/oferta-3.png') no-repeat center center;
 				}
 			}
 		}
@@ -192,12 +192,11 @@
 			grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
 			justify-items: center;
 
-			> div {
-				width: 100%;
-
-				&:first-child, &:nth-child(2), &:last-child {
-					width: 100%;
-					background-size: cover;
+			.burger {
+				@for $i from 1 through 3 {
+					&:nth-child(#{$i}) {
+						width: 100%;
+					}
 				}
 
 				&:first-child {
@@ -217,11 +216,12 @@
 			gap: 8px;
 			margin-bottom: 38px;
 
-			div {
-				&:first-child, &:nth-child(2), &:last-child {
-					width: 100%;
+			.burger {
+				@for $i from 1 through 3 {
+					&:nth-child(#{$i}) {
+						width: 100%;
 					height: 205px;
-					background-size: cover;
+					}
 				}
 
 				&:first-child p.destaque {

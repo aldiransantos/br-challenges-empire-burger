@@ -7,16 +7,16 @@
 				nosso cardápio.
 			</p>
 			<div class="produtos">
-				<div>
+				<div class="burger">
 					<h1>Burger imperial+batata</h1>
 					<p>250kg</p>
 					<p class="destaque">Apenas <span>hoje</span></p>
 				</div>
-				<div>
+				<div class="burger">
 					<h1>Batata</h1>
 					<p>150kg</p>
 				</div>
-				<div>
+				<div class="burger">
 					<h1>Sorvete</h1>
 					<p>50kg</p>
 				</div>
