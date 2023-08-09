@@ -61,7 +61,16 @@
 		<div id="home" class="container">
 			<nav>
 				<router-link to="/">
-					<img src="@/assets/logo.svg" class="logo" alt="Empire Burger logo" />
+					<img
+						src="@/assets/logo.svg"
+						class="logo"
+						alt="Empire Burger logo"
+						@click="
+							{
+								scrollToTop();
+							}
+						"
+					/>
 				</router-link>
 
 				<button
@@ -152,6 +161,12 @@ export default {
 		document.removeEventListener('click', this.handleClickOutside);
 	},
 	methods: {
+		scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		},
 		getWidthElements() {
 			const anchorsList = document.querySelectorAll('.header-menu ul li a');
 			anchorsList.forEach((anchor) => {

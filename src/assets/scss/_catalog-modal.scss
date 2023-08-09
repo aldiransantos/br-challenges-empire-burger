@@ -38,10 +38,20 @@
 			padding: 0;
 			background: rgba(250, 228, 208, 0.25);
 			border-radius: 3px;
+			transition: .3s;
 			cursor: pointer;
 
 			svg .line {
 				stroke: $yellow;
+			}
+
+			&:hover {
+				box-shadow: 0 0 20px 0px rgba(250, 226, 203, 0.671);
+				transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+
+				svg .line {
+					stroke: $yellow-light;
+				}
 			}
 		}
 	

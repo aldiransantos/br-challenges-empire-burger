@@ -3,7 +3,16 @@
 		<div class="container">
 			<div class="footer-menu">
 				<router-link to="/">
-					<img src="@/assets/logo-colorida.svg" class="logo" alt="Empire Burger logo" />
+					<img
+						src="@/assets/logo-colorida.svg"
+						class="logo"
+						alt="Empire Burger logo"
+						@click="
+							{
+								scrollToTop();
+							}
+						"
+					/>
 				</router-link>
 				<nav>
 					<ul>
@@ -48,6 +57,12 @@ export default {
 		};
 	},
 	methods: {
+		scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		},
 		getWidthElements() {
 			const anchorsList = document.querySelectorAll('.footer-menu nav ul li a');
 			anchorsList.forEach((anchor) => {

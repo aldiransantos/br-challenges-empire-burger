@@ -1,5 +1,5 @@
 <template>
-	<section id="atendimento">
+	<section class="atendimento">
 		<img src="@/assets/card-woman-eating.png" alt="mulher-comendo-hamburger" />
 		<div>
 			<h1 class="heading-large">
