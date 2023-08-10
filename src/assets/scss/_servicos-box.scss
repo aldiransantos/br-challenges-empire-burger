@@ -64,12 +64,12 @@
 			}
 
 			div {
-				h3 {
+				.title {
 					grid-area: title;
 					font-size: 20px;
 					margin-bottom: 5px;
 				}
-				p {
+				.description {
 					grid-area: description;
 					max-width: 170px;
 					line-height: 120%;

@@ -6,10 +6,15 @@
 
 			<div class="swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(testimonial, index) in users" :key="index">
+					<div
+						class="swiper-slide"
+						lazy="true"
+						v-for="(testimonial, index) in users"
+						:key="index"
+					>
 						<p>{{ testimonial.testimonial }}</p>
 						<div class="avatar">
-							<img :src="testimonial.image" :alt="testimonial.name" />
+							<img :src="testimonial.image" loading="lazy" :alt="testimonial.name" />
 							<div class="user-info">
 								<h3>{{ testimonial.name }}</h3>
 								<h4>{{ testimonial.age }} Anos</h4>

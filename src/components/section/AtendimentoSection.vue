@@ -1,15 +1,15 @@
 <template>
 	<section class="atendimento">
-		<img
-			src="@/assets/eating-empire-burger-2x.webp"
-			srcset="
-				@/assets/eating-empire-burger.webp    657.98w,
-				@/assets/eating-empire-burger-2x.webp 946.98w
-			"
-			width="571"
-			height="476"
-			alt="Comendo Empire Burger"
-		/>
+		<picture>
+			<source media="(min-width: 658px)" srcset="@/assets/eating-empire-burger-2x.webp" />
+			<img
+				loading="lazy"
+				src="@/assets/eating-empire-burger.webp"
+				width="571"
+				height="476"
+				alt="Empire Burger comendo hamburguer"
+			/>
+		</picture>
 		<div>
 			<h1 class="heading-large">
 				<span class="espaco">Atendimento</span>

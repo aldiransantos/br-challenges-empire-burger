@@ -1,12 +1,15 @@
 <template>
 	<section id="contato" class="nossas-entregas">
-		<img
-			src="@/assets/card-phone-2x.webp"
-			srcset="@/assets/card-phone.webp 657.98w, @/assets/card-phone-2x.webp 946.98w"
-			width="570"
-			height="536"
-			alt="delivery"
-		/>
+		<picture>
+			<source media="(min-width: 658px)" srcset="@/assets/card-phone-2x.webp" />
+			<img
+				loading="lazy"
+				src="@/assets/card-phone.webp"
+				width="570"
+				height="536"
+				alt="Nossas Entregas smartphone"
+			/>
+		</picture>
 		<div class="informacoes">
 			<h1 class="heading">Nossas entregas</h1>
 			<ul>

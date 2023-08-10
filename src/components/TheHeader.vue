@@ -74,6 +74,8 @@
 				</router-link>
 
 				<button
+					id="menu-button"
+					title="Botão do Menu"
 					@click="toggleMenu"
 					data-menu="button"
 					aria-expanded="false"
