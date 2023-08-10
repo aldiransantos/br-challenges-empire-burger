@@ -72,7 +72,7 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 -   [x] Na seção **Cardápio** os preços devem ser formatados com o método Intl.NumberFormat;
 
--   [ ] O card **Horário de Funcionamento** deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
+-   [x] O card **Horário de Funcionamento** deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário.
 
 ### Nível Difícil
 

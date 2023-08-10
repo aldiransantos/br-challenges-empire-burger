@@ -115,14 +115,14 @@
 								href="https://www.ifood.com.br/"
 								class="logo-ifood"
 								target="_blank"
-								rel="noopener"
+								aria-label="Link para o iFood"
 							>
 							</a>
 							<a
 								href="https://www.instagram.com/"
 								class="logo-instagram"
 								target="_blank"
-								rel="noopener"
+								aria-label="Link para o Instagram"
 							>
 							</a>
 						</div>

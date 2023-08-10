@@ -14,10 +14,16 @@
 					>
 						<p>{{ testimonial.testimonial }}</p>
 						<div class="avatar">
-							<img :src="testimonial.image" loading="lazy" :alt="testimonial.name" />
+							<img
+								loading="lazy"
+								width="48.5"
+								height="48.5"
+								:src="testimonial.image"
+								:alt="testimonial.name"
+							/>
 							<div class="user-info">
-								<h3>{{ testimonial.name }}</h3>
-								<h4>{{ testimonial.age }} Anos</h4>
+								<p class="name">{{ testimonial.name }}</p>
+								<p class="age">{{ testimonial.age }} Anos</p>
 							</div>
 						</div>
 					</div>

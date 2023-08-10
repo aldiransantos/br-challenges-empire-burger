@@ -8,9 +8,12 @@
 		<div class="galery">
 			<img
 				v-for="i in 8"
+				loading="lazy"
+				width="270"
+				height="218"
 				:src="require('@/assets/publicacoes/empire-burger-' + i + '.webp')"
 				:alt="'Empire Burger ' + i"
-				:key="i"
+				:key="'empire-burger-' + i"
 			/>
 		</div>
 		<div class="marquee"></div>

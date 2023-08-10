@@ -44,7 +44,7 @@
 						cursor: pointer;
 					}
 
-					p {
+					> p {
 						display: -webkit-box;
 						-webkit-line-clamp: 4;
 						-webkit-box-orient: vertical;
@@ -67,12 +67,15 @@
 							object-fit: cover;
 						}
 
-						h3 {
+						.name {
+							font-family: Lilita One,cursive;
 							font-size: 18px;
 							line-height: 25px;
+							color: rgba(29,6,5,.9);
+							text-transform: uppercase;
 						}
 
-						h4 {
+						.age {
 							font: 400 12px/17px 'Lato', sans-serif;
 							color: $brown-69;
 						}
@@ -137,7 +140,7 @@
 		height: 212px;
 		margin-bottom: 0;
 
-		p {
+		> p {
 			width: 286px;
 			-webkit-line-clamp: 5;
 		}
