@@ -1,10 +1,10 @@
 <template>
 	<section class="atendimento">
 		<picture>
-			<source media="(min-width: 658px)" srcset="@/assets/eating-empire-burger-2x.webp" />
+			<source media="(max-width: 657.98px)" srcset="@/assets/eating-empire-burger.webp" />
 			<img
 				loading="lazy"
-				src="@/assets/eating-empire-burger.webp"
+				src="@/assets/eating-empire-burger-2x.webp"
 				width="571"
 				height="476"
 				alt="Comendo Empire Burger"

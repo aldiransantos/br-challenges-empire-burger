@@ -105,11 +105,23 @@
 			img {
 				width: 123.79px;
 				height: 99.95px;
+
+				&:first-child, &:last-child {
+					display: none;
+				}
 			}
 		}
 
 		.marquee {
 			height: 24.39px;
+		}
+	}
+}
+
+@media screen and (max-width: 519.98px) {
+	.publicacoes .galery img {
+		&:first-child, &:nth-child(2), &:nth-last-child(2), &:last-child {
+			display: none;
 		}
 	}
 }

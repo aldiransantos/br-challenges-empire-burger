@@ -1,10 +1,10 @@
 <template>
 	<section id="contato" class="nossas-entregas">
 		<picture>
-			<source media="(min-width: 658px)" srcset="@/assets/card-phone-2x.webp" />
+			<source media="(max-width: 657.98px)" srcset="@/assets/card-phone.webp" />
 			<img
 				loading="lazy"
-				src="@/assets/card-phone.webp"
+				src="@/assets/card-phone-2x.webp"
 				width="570"
 				height="536"
 				alt="Nossas Entregas smartphone"
