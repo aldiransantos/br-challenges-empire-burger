@@ -21,8 +21,30 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		position: relative;
 		margin-bottom: -1px;
 		overflow: hidden;
+
+		&::before,
+		&::after {
+			content: '';
+			display: flex;
+			padding: 109px 205.56px;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}
+
+		&::before {
+			left: 0;
+			background: linear-gradient(to left, rgba(33, 32, 27, 0) 0%, rgba(33, 32, 27, 1));
+		}
+
+		&::after {
+			right: 0;
+			background: linear-gradient(to right, rgba(33, 32, 27, 0) 0%, rgba(33, 32, 27, 1));
+		}
+
 
 		img {
 			width: 270px;
@@ -35,6 +57,7 @@
 		height: 49px;
 		background: url('@/assets/empire-burger-marquee.webp') repeat -25px center;
 		background-size: contain;
+		z-index: 1;
 		$prop-animation: bg-scrolling 32s infinite;
 		
 		-webkit-animation: $prop-animation; /* Safari 4+ */
@@ -73,9 +96,16 @@
 	.publicacoes {
 		margin: 0 auto 40px;
 
-		.galery img {
-			width: 123.79px;
-			height: 99.95px;
+		.galery {
+			&::before,
+			&::after {
+				padding: 50px 44.46px;
+			}
+			
+			img {
+				width: 123.79px;
+				height: 99.95px;
+			}
 		}
 
 		.marquee {

@@ -40,7 +40,7 @@
 					object-fit: none;
 				}
 
-				.descricao {
+				.info {
 					display: flex;
 					justify-content: center;
 					flex-direction: column;
@@ -49,12 +49,12 @@
 					padding-left: 24px;
 					border-left: 1px solid $brown-40;
 
-					h3 {
+					.title {
 						margin-bottom: 4px;
 						font-size: clamp(18px, 2.7vw, 20px);
 					}
 
-					p {
+					.description {
 						font-size: clamp(14px, 2vw, 16px);
 					}
 				}
@@ -93,7 +93,7 @@
 				padding-left: 15.45px;
 				border-left: 1px solid $brown-40;
 
-				h3 {
+				.title {
 					margin-bottom: 5.57px;
 					color: $brown-69;
 				}
@@ -133,6 +133,69 @@
 	}
 }
 
+@media screen and (max-width: 946.98px) {
+	.nossas-entregas {
+		grid-template-columns: 1fr;
+		max-width: calc(100% - 48px);
+
+		> img {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.informacoes ul li {
+			width: 100%;
+		}
+
+		.pedido {
+			grid-column: 1;
+		}
+	}
+}
+
+@media (min-width: 658px) and (max-width: 946.98px) {
+	.nossas-entregas {
+		.informacoes ul {
+			grid-template-columns: 1fr 1fr;
+			gap: 12px;
+		}
+
+		.pedido {
+			flex-wrap: wrap;
+			padding: 24px;
+
+			.chamada {
+				img {
+					clip-path: circle(48%);
+					height: 83.83px;
+					width: 100.83px;
+				}
+				div {
+					width: 100%;
+
+					p {
+						width: 300px;
+						padding: 0;
+					}
+				}
+			}
+
+			a {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 658px) and (max-width: 814.98px) {
+	.nossas-entregas .pedido .chamada div p {
+		width: 466.27px;
+	}
+	.nossas-entregas .pedido a {
+		margin: 16px auto 0;
+	}
+}
+
 @media screen and (max-width: 657.98px) {
 	.nossas-entregas .pedido,
 	.nossas-entregas .pedido .chamada {
@@ -142,7 +205,7 @@
 	.nossas-entregas {
 		gap: 40px;
 
-		.informacoes ul li .descricao {
+		.informacoes ul li .info {
 			height: 69.558px;
 		}
 
@@ -160,70 +223,19 @@
 				border-top: 1px solid $brown-40;
 				text-align: center;
 
+				.title {
+					margin-bottom: 4px;
+				}
+
 				p {
-					width: 300px;
+					width: 100%;
 					padding: 0 0 16px;
 				}
 			}
 
-			button {
+			a {
 				width: 100%;
-			}
-		}
-	}
-}
-
-@media (min-width: 658px) and (max-width: 946.98px) {
-	.nossas-entregas {
-		.informacoes ul {
-			grid-template-columns: 1fr 1fr;
-			gap: 12px;
-		}
-
-		.pedido {
-			flex-wrap: wrap;
-
-			.chamada {
-				img {
-					clip-path: circle(48%);
-					height: 83.83px;
-					width: 100.83px;
-				}
-				div {
-					width: 100%;
-
-					p {
-						padding: 0;
-					}
-				}
-			}
-
-			button {
-				margin: 12px auto 0;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 946.98px) {
-	.nossas-entregas {
-		grid-template-columns: 1fr;
-		max-width: calc(100% - 48px);
-
-		> img {
-			max-width: 600px;
-			margin: 0 auto;
-		}
-
-		.informacoes ul li {
-			width: 100%;
-		}
-
-		.pedido {
-			grid-column: 1;
-
-			.chamada div p {
-				width: 100%;
+				justify-content: center;
 			}
 		}
 	}

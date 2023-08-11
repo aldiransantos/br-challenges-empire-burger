@@ -112,3 +112,10 @@
 		}
 	}
 }
+
+@media screen and (max-width: 359.98px) {
+	.cardapio-imperial .board .item p {
+		height: 40px;
+		overflow-y: scroll;
+	}
+}

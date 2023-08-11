@@ -26,6 +26,8 @@
 			}
 
 			span {
+				display: flex;
+    			align-items: center;
 				height: 30.67px;
 				margin-left: 2px;
 				padding: 0 4px;
@@ -72,7 +74,7 @@
     }
 }
 
-@media screen and (max-width: 389.98px) {
+@media screen and (max-width: 360px) {
 	.hero > div {
 		h1 {
 			font-size: 46px;

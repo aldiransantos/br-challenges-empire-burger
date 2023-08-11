@@ -124,7 +124,7 @@ header {
 					font-weight: 700;
 				}
 
-				img.logo {
+				.logo {
 					width: 264.69px;
 					height: 35.187px;
 					margin-left: 0;
@@ -409,8 +409,17 @@ header {
 	}
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 359.98px) {
+	header .container nav {
+		grid-template-columns: auto auto;
+
+		a .logo {
+			width: 244.69px;
+			margin-right: 0;
+		}
+	}
+
 	header .modal .modal-container .modal-info div a {
-		width: 260px;
+		font-size: 15px;
 	}
 }

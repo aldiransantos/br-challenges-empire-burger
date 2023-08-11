@@ -7,7 +7,7 @@
 				src="@/assets/eating-empire-burger.webp"
 				width="571"
 				height="476"
-				alt="Empire Burger comendo hamburguer"
+				alt="Comendo Empire Burger"
 			/>
 		</picture>
 		<div>
