@@ -138,7 +138,7 @@
 		grid-template-columns: 1fr;
 		max-width: calc(100% - 48px);
 
-		> img {
+		picture img {
 			max-width: 600px;
 			margin: 0 auto;
 		}
@@ -189,7 +189,7 @@
 
 @media (min-width: 658px) and (max-width: 814.98px) {
 	.nossas-entregas .pedido .chamada div p {
-		width: 466.27px;
+		width: 410px;
 	}
 	.nossas-entregas .pedido a {
 		margin: 16px auto 0;
