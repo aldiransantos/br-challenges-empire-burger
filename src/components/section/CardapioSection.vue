@@ -1,5 +1,5 @@
 <template>
-	<section id="cardapio">
+	<section id="cardapio" aria-label="Cardápio Imperial">
 		<CatalogModal />
 
 		<div class="wrap-content">

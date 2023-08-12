@@ -1,5 +1,5 @@
 <template>
-	<section id="promocao">
+	<section id="promocao" aria-label="Ofertas Especiais">
 		<div class="container">
 			<h1 class="heading">Ofertas Especiais</h1>
 			<p>

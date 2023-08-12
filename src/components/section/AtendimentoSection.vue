@@ -1,5 +1,5 @@
 <template>
-	<section class="atendimento">
+	<section class="atendimento" aria-label="Atendimento Personalizado">
 		<picture>
 			<source media="(max-width: 657.98px)" srcset="@/assets/eating-empire-burger.webp" />
 			<img

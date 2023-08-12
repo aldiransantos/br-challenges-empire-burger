@@ -1,5 +1,5 @@
 <template>
-	<header ref="menuContainer">
+	<header ref="menuContainer" role="banner">
 		<div class="modal" v-if="isModalOpen" @click="modalClose">
 			<div class="modal-container">
 				<button class="modal-btn-close" @click="isModalOpen = false">
@@ -59,7 +59,7 @@
 		</div>
 
 		<div id="home" class="container">
-			<nav>
+			<nav role="navigation">
 				<router-link to="/">
 					<img
 						src="@/assets/logo.svg"

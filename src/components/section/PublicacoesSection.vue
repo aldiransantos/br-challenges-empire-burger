@@ -1,6 +1,6 @@
 <template>
-	<section class="publicacoes">
-		<h1 class="heading">Publicações do instagram</h1>
+	<section class="publicacoes" aria-label="Publicações do Instagram">
+		<h1 class="heading">Publicações do Instagram</h1>
 		<p>
 			Todos os nossos clientes são tratados como rei e rainha, com a nossa culinária
 			artesanal.

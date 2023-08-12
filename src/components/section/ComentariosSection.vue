@@ -1,5 +1,5 @@
 <template>
-	<section id="comentarios" class="nossa-realeza">
+	<section id="comentarios" class="nossa-realeza" aria-label="Comentários">
 		<div class="container">
 			<h1 class="heading">Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>

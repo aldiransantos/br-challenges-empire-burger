@@ -1,5 +1,5 @@
 <template>
-	<section id="contato" class="nossas-entregas">
+	<section id="contato" class="nossas-entregas" aria-label="Nossas Entregas">
 		<picture>
 			<source media="(max-width: 657.98px)" srcset="@/assets/card-phone.webp" />
 			<img
