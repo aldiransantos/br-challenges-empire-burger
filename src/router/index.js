@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomePage from '@/components/HomePage';
 
 Vue.use(VueRouter);
 
@@ -8,8 +7,35 @@ const routes = [
 	{
 		path: '/',
 		name: 'home',
-		component: HomePage,
-		meta: { toTop: true, smoothScroll: true }
+		component: () => import('@/components/HomePage'),
+		meta: { toTop: true, smoothScroll: true },
+		children: [
+			{
+				path: '/#promocao',
+				name: 'promocao',
+				component: () => import('@/components/section/OfertasEspeciaisSection')
+			},
+			{
+				path: '/#cardapio',
+				name: 'cardapio',
+				component: () => import('@/components/section/CardapioSection')
+			},
+			{
+				path: '/#comentarios',
+				name: 'comentarios',
+				component: () => import('@/components/section/ComentariosSection')
+			},
+			{
+				path: '/#contato',
+				name: 'contato',
+				component: () => import('@/components/section/NossasEntregasSection')
+			},
+			{
+				path: '/#localizacao',
+				name: 'localizacao',
+				component: () => import('@/components/section/NossoCasteloSection')
+			}
+		]
 	}
 ];
 
