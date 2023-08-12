@@ -4,34 +4,32 @@
 			<h1 class="heading">Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>
 
-			<KeepAlive>
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<div
-							class="swiper-slide"
-							lazy="true"
-							v-for="(testimonial, index) in users"
-							:key="index"
-						>
-							<p>{{ testimonial.testimonial }}</p>
-							<div class="avatar">
-								<img
-									loading="lazy"
-									width="48.5"
-									height="48.5"
-									:src="testimonial.image"
-									:alt="testimonial.name"
-								/>
-								<div class="user-info">
-									<p class="name">{{ testimonial.name }}</p>
-									<p class="age">{{ testimonial.age }} Anos</p>
-								</div>
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div
+						class="swiper-slide"
+						lazy="true"
+						v-for="(testimonial, index) in users"
+						:key="index"
+					>
+						<p>{{ testimonial.testimonial }}</p>
+						<div class="avatar">
+							<img
+								loading="lazy"
+								width="48.5"
+								height="48.5"
+								:src="testimonial.image"
+								:alt="testimonial.name"
+							/>
+							<div class="user-info">
+								<p class="name">{{ testimonial.name }}</p>
+								<p class="age">{{ testimonial.age }} Anos</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
-			</KeepAlive>
+				<div class="swiper-pagination"></div>
+			</div>
 		</div>
 	</section>
 </template>
