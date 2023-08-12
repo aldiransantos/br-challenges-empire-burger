@@ -1,5 +1,5 @@
 <template>
-	<section v-once class="publicacoes" aria-label="Publicações do Instagram">
+	<section class="publicacoes" aria-label="Publicações do Instagram">
 		<h1 class="heading">Publicações do Instagram</h1>
 		<p>
 			Todos os nossos clientes são tratados como rei e rainha, com a nossa culinária
