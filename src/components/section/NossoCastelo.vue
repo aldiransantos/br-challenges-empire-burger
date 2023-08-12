@@ -1,5 +1,5 @@
 <template>
-	<section id="localizacao" class="nosso-castelo" aria-label="Endereço">
+	<section v-once id="localizacao" class="nosso-castelo" aria-label="Endereço">
 		<h1 class="heading">Onde fica o nosso castelo</h1>
 		<p>Estaremos de portas abertas para a nossa realeza.</p>
 		<iframe
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-	name: 'NossoCasteloSection'
+	name: 'NossoCastelo'
 };
 </script>
 

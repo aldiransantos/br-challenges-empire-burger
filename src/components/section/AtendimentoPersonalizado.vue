@@ -1,5 +1,5 @@
 <template>
-	<section class="atendimento" aria-label="Atendimento Personalizado">
+	<section v-once class="atendimento" aria-label="Atendimento Personalizado">
 		<picture>
 			<source media="(max-width: 657.98px)" srcset="@/assets/eating-empire-burger.webp" />
 			<img
@@ -28,7 +28,7 @@
 import { mapMutations } from 'vuex';
 
 export default {
-	name: 'AtendimentoSection',
+	name: 'AtendimentoPersonalizado',
 	methods: {
 		...mapMutations(['showModal'])
 	}

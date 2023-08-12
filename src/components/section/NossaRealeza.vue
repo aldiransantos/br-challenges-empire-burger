@@ -1,5 +1,5 @@
 <template>
-	<section id="comentarios" class="nossa-realeza" aria-label="Comentários">
+	<section v-once id="comentarios" class="nossa-realeza" aria-label="Comentários">
 		<div class="container">
 			<h1 class="heading">Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>
@@ -34,7 +34,7 @@
 	</section>
 </template>
 
-<script>
+<script defer>
 import Swiper from 'swiper';
 import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 
@@ -44,7 +44,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default {
-	name: 'ComentariosSection',
+	name: 'NossaRealeza',
 	setup() {
 		return {
 			modules: [Keyboard, Scrollbar, Navigation, Pagination]

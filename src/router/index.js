@@ -13,27 +13,27 @@ const routes = [
 			{
 				path: '/#promocao',
 				name: 'promocao',
-				component: () => import('@/components/section/OfertasEspeciaisSection')
+				component: () => import('@/components/section/OfertasEspeciais')
 			},
 			{
 				path: '/#cardapio',
 				name: 'cardapio',
-				component: () => import('@/components/section/CardapioSection')
+				component: () => import('@/components/section/CardapioImperial')
 			},
 			{
 				path: '/#comentarios',
 				name: 'comentarios',
-				component: () => import('@/components/section/ComentariosSection')
+				component: () => import('@/components/section/NossaRealeza')
 			},
 			{
 				path: '/#contato',
 				name: 'contato',
-				component: () => import('@/components/section/NossasEntregasSection')
+				component: () => import('@/components/section/NossasEntregas')
 			},
 			{
 				path: '/#localizacao',
 				name: 'localizacao',
-				component: () => import('@/components/section/NossoCasteloSection')
+				component: () => import('@/components/section/NossoCastelo')
 			}
 		]
 	}

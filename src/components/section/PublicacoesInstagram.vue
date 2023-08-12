@@ -1,5 +1,5 @@
 <template>
-	<section class="publicacoes" aria-label="Publicações do Instagram">
+	<section v-once class="publicacoes" aria-label="Publicações do Instagram">
 		<h1 class="heading">Publicações do Instagram</h1>
 		<p>
 			Todos os nossos clientes são tratados como rei e rainha, com a nossa culinária
@@ -108,7 +108,7 @@
 
 <script>
 export default {
-	name: 'PublicacoesSection'
+	name: 'PublicacoesInstagram'
 };
 </script>
 

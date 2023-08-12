@@ -45,7 +45,7 @@
 	</section>
 </template>
 
-<script>
+<script defer>
 export default {
 	name: 'OfertasEspeciais',
 	data() {

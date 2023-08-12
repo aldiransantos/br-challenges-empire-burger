@@ -1,6 +1,6 @@
 <template>
 	<section id="cardapio" aria-label="Cardápio Imperial">
-		<CatalogModal />
+		<CatalogModal v-once />
 
 		<div class="wrap-content">
 			<div class="left">
@@ -16,22 +16,20 @@
 				</div>
 			</div>
 			<div class="right">
-				<CatalogSlot> Cardápio imperial <span>| Burger</span> </CatalogSlot>
+				<CatalogSlot v-once> Cardápio imperial <span>| Burger</span> </CatalogSlot>
 			</div>
 		</div>
 	</section>
 </template>
 
 <script>
-import CatalogModal from '@/components/CatalogModal.vue';
-import CatalogSlot from '@/components/CatalogSlot.vue';
 import { mapMutations } from 'vuex';
 
 export default {
-	name: 'CardapioSection',
+	name: 'CardapioImperial',
 	components: {
-		CatalogModal,
-		CatalogSlot
+		CatalogModal: () => import('@/components/CatalogModal.vue'),
+		CatalogSlot: () => import('@/components/CatalogSlot.vue')
 	},
 	methods: {
 		...mapMutations(['showModal'])

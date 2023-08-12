@@ -1,5 +1,5 @@
 <template>
-	<section id="contato" class="nossas-entregas" aria-label="Nossas Entregas">
+	<section v-once id="contato" class="nossas-entregas" aria-label="Nossas Entregas">
 		<picture>
 			<source media="(max-width: 657.98px)" srcset="@/assets/card-phone.webp" />
 			<img
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-	name: 'NossasEntregasSection'
+	name: 'NossasEntregas'
 };
 </script>
 

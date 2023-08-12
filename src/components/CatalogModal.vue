@@ -18,19 +18,18 @@
 				</svg>
 			</button>
 
-			<CatalogSlot />
+			<CatalogSlot v-once />
 		</div>
 	</div>
 </template>
 
 <script>
-import CatalogSlot from './CatalogSlot.vue';
 import { mapState, mapMutations } from 'vuex';
 
 export default {
 	name: 'CatalogModal',
 	components: {
-		CatalogSlot
+		CatalogSlot: () => import('@/components/CatalogSlot.vue')
 	},
 	computed: {
 		...mapState(['isModalOpen'])

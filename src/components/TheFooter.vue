@@ -43,7 +43,7 @@
 	</footer>
 </template>
 
-<script>
+<script defer>
 export default {
 	name: 'TheFooter',
 	data() {

@@ -4,43 +4,31 @@
 		<HeroSection />
 		<ServicosBox />
 		<OfertasEspeciais />
-		<CardapioSection />
-		<AtendimentoSection />
-		<Comentarios />
-		<PublicacoesSection />
-		<NossasEntregasSection />
-		<NossoCasteloSection />
+		<CardapioImperial />
+		<AtendimentoPersonalizado />
+		<NossaRealeza />
+		<PublicacoesInstagram />
+		<NossasEntregas />
+		<NossoCastelo />
 		<TheFooter />
 	</div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue';
-import HeroSection from '@/components/section/HeroSection.vue';
-import ServicosBox from '@/components/ServicosBox.vue';
-import OfertasEspeciais from '@/components/section/OfertasEspeciaisSection.vue';
-import CardapioSection from '@/components/section/CardapioSection.vue';
-import AtendimentoSection from '@/components/section/AtendimentoSection.vue';
-import Comentarios from '@/components/section/ComentariosSection.vue';
-import PublicacoesSection from '@/components/section/PublicacoesSection.vue';
-import NossasEntregasSection from '@/components/section/NossasEntregasSection.vue';
-import NossoCasteloSection from '@/components/section/NossoCasteloSection.vue';
-import TheFooter from '@/components/TheFooter.vue';
-
 export default {
 	name: 'HomePage',
 	components: {
-		TheHeader,
-		HeroSection,
-		ServicosBox,
-		OfertasEspeciais,
-		CardapioSection,
-		AtendimentoSection,
-		Comentarios,
-		PublicacoesSection,
-		NossasEntregasSection,
-		NossoCasteloSection,
-		TheFooter
+		TheHeader: () => import('@/components/TheHeader.vue'),
+		TheFooter: () => import('@/components/TheFooter.vue'),
+		ServicosBox: () => import('@/components/ServicosBox.vue'),
+		HeroSection: () => import('@/components/section/HeroSection.vue'),
+		OfertasEspeciais: () => import('@/components/section/OfertasEspeciais.vue'),
+		CardapioImperial: () => import('@/components/section/CardapioImperial.vue'),
+		AtendimentoPersonalizado: () => import('@/components/section/AtendimentoPersonalizado.vue'),
+		NossaRealeza: () => import('@/components/section/NossaRealeza.vue'),
+		PublicacoesInstagram: () => import('@/components/section/PublicacoesInstagram.vue'),
+		NossasEntregas: () => import('@/components/section/NossasEntregas.vue'),
+		NossoCastelo: () => import('@/components/section/NossoCastelo.vue')
 	}
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-	<div class="servicos" aria-label="Serviços">
+	<div v-once class="servicos" aria-label="Serviços">
 		<div class="wrap-content">
 			<div>
 				<img src="../assets/icons/burger.svg" alt="artesanal" />

@@ -1,5 +1,5 @@
 <template>
-	<section class="hero" role="main">
+	<section v-once class="hero" role="main">
 		<div>
 			<p>Uma nova experiência!</p>
 			<h1>King <span>burger</span></h1>
