@@ -8,34 +8,7 @@ const routes = [
 		path: '/',
 		name: 'home',
 		component: () => import('@/components/HomePage'),
-		meta: { toTop: true, smoothScroll: true },
-		children: [
-			{
-				path: '/#promocao',
-				name: 'promocao',
-				component: () => import('@/components/section/OfertasEspeciais')
-			},
-			{
-				path: '/#cardapio',
-				name: 'cardapio',
-				component: () => import('@/components/section/CardapioImperial')
-			},
-			{
-				path: '/#comentarios',
-				name: 'comentarios',
-				component: () => import('@/components/section/NossaRealeza')
-			},
-			{
-				path: '/#contato',
-				name: 'contato',
-				component: () => import('@/components/section/NossasEntregas')
-			},
-			{
-				path: '/#localizacao',
-				name: 'localizacao',
-				component: () => import('@/components/section/NossoCastelo')
-			}
-		]
+		meta: { toTop: true, smoothScroll: true }
 	}
 ];
 

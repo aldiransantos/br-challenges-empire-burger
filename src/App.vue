@@ -1,10 +1,16 @@
 <template>
 	<div id="app">
-		<router-view></router-view>
+		<HomePage />
 	</div>
 </template>
 
-<script></script>
+<script>
+export default {
+	components: {
+		HomePage: () => import('@/components/HomePage.vue')
+	}
+};
+</script>
 
 <style lang="scss">
 @import '@/assets/scss/main.scss';
