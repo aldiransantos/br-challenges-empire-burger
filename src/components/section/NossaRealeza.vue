@@ -1,35 +1,37 @@
 <template>
-	<section v-once id="comentarios" class="nossa-realeza" aria-label="Comentários">
+	<section id="comentarios" class="nossa-realeza" aria-label="Comentários">
 		<div class="container">
 			<h1 class="heading">Nossa realeza</h1>
 			<p>A satisfação de nossos clientes em primeiro lugar!</p>
 
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<div
-						class="swiper-slide"
-						lazy="true"
-						v-for="(testimonial, index) in users"
-						:key="index"
-					>
-						<p>{{ testimonial.testimonial }}</p>
-						<div class="avatar">
-							<img
-								loading="lazy"
-								width="48.5"
-								height="48.5"
-								:src="testimonial.image"
-								:alt="testimonial.name"
-							/>
-							<div class="user-info">
-								<p class="name">{{ testimonial.name }}</p>
-								<p class="age">{{ testimonial.age }} Anos</p>
+			<KeepAlive>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div
+							class="swiper-slide"
+							lazy="true"
+							v-for="(testimonial, index) in users"
+							:key="index"
+						>
+							<p>{{ testimonial.testimonial }}</p>
+							<div class="avatar">
+								<img
+									loading="lazy"
+									width="48.5"
+									height="48.5"
+									:src="testimonial.image"
+									:alt="testimonial.name"
+								/>
+								<div class="user-info">
+									<p class="name">{{ testimonial.name }}</p>
+									<p class="age">{{ testimonial.age }} Anos</p>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="swiper-pagination"></div>
-			</div>
+			</KeepAlive>
 		</div>
 	</section>
 </template>

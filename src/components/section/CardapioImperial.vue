@@ -1,6 +1,8 @@
 <template>
 	<section id="cardapio" aria-label="Cardápio Imperial">
-		<CatalogModal v-once />
+		<KeepAlive>
+			<CatalogModal />
+		</KeepAlive>
 
 		<div class="wrap-content">
 			<div class="left">
@@ -16,7 +18,9 @@
 				</div>
 			</div>
 			<div class="right">
-				<CatalogSlot v-once> Cardápio imperial <span>| Burger</span> </CatalogSlot>
+				<KeepAlive>
+					<CatalogSlot> Cardápio imperial <span>| Burger</span> </CatalogSlot>
+				</KeepAlive>
 			</div>
 		</div>
 	</section>
