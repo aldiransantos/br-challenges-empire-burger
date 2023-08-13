@@ -105,4 +105,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 657.98px) {
+	.nossa-realeza .container .swiper .swiper-wrapper .swiper-slide {
+		width: 326px !important;
+		height: 212px;
+		margin-bottom: 0;
+
+		> p {
+			width: 286px;
+			-webkit-line-clamp: 5;
+		}
+	}
+}
+</style>

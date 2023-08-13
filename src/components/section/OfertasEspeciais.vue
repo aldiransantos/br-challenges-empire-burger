@@ -89,4 +89,82 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@media screen and (max-width: 657.98px) {
+	#promocao .container {
+		width: 100%;
+
+		.produtos {
+			grid-template-columns: 1fr;
+			gap: 8px;
+			margin-bottom: 38px;
+
+			.burger {
+				@for $i from 1 through 3 {
+					&:nth-child(#{$i}) {
+						width: 100%;
+						height: 205px;
+					}
+				}
+
+				&:first-child p.destaque {
+					right: 16.13px;
+					bottom: 16.84px;
+				}
+			}
+		}
+
+		.horario-funcionamento {
+			gap: 64px;
+
+			.card {
+				height: auto;
+				padding: 20px 16px;
+
+				img {
+					padding: 14px;
+				}
+				.separador::before {
+					margin: 0 8px;
+				}
+
+				.info {
+					h2 {
+						font-size: 1.125rem;
+					}
+					p {
+						font-weight: 400;
+
+						span.feira {
+							display: none;
+						}
+
+						span.horario {
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 389.98px) {
+	#promocao .container .horario-funcionamento {
+		.card {
+			img {
+				width: clamp(78px, 8vw, 94.83px);
+				height: clamp(70px, 8vw, 94.83px);
+				clip-path: circle(47%);
+			}
+
+			.info p span.horario {
+				white-space: nowrap;
+			}
+		}
+		.seguir h3 {
+			font-size: 2.2rem;
+		}
+	}
+}
+</style>
