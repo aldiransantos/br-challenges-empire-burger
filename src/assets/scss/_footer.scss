@@ -90,3 +90,46 @@ footer {
 		}
 	}
 }
+
+@media (max-width: 657.98px) {
+	footer .footer-menu {
+		grid-template-columns: 1fr;
+		flex-direction: column;
+		align-items: center;
+		padding: 18px 0 0;
+
+		> a {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 14px;
+		}
+
+		nav {
+			flex-direction: column-reverse;
+			align-items: center;
+			width: 100%;
+			border-top: 1px solid $brown-15;
+
+			ul {
+				flex-direction: column;
+				width: 100%;
+				gap: 14px;
+				margin: 0;
+				padding: 14px 0;
+				border-top: 1px solid $brown-15;
+			}
+
+			.medias {
+				padding: 14px;
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 389.98px) {
+	footer .copyright {
+		display: flex;
+		flex-direction: column;
+	}
+}

@@ -97,3 +97,41 @@
 		}
 	}
 }
+
+@media screen and (max-width: 657.98px) {
+	.publicacoes {
+		margin: 0 auto 40px;
+
+		.galery {
+			&::before,
+			&::after {
+				padding: 50px 44.46px;
+			}
+
+			.picture img {
+				width: 123.79px;
+				height: 99.95px;
+
+				&:first-child img,
+				&:last-child img {
+					display: none;
+				}
+			}
+		}
+
+		.marquee {
+			height: 24.39px;
+		}
+	}
+}
+
+@media screen and (max-width: 519.98px) {
+	.publicacoes .galery .picture {
+		&:first-child img,
+		&:nth-child(2) img,
+		&:nth-last-child(2) img,
+		&:last-child img {
+			display: none;
+		}
+	}
+}

@@ -21,37 +21,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@media screen and (max-width: 763.98px) {
-	.hero {
-		height: 855.465px;
-		background: url('@/assets/banner-hero-mobile.webp') no-repeat center;
-		background-size: cover;
-
-		> div {
-			height: auto;
-			position: relative;
-			top: 102px;
-
-			p span {
-				height: 24px;
-			}
-
-			a {
-				margin-top: 16px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 360px) {
-	.hero > div {
-		h1 {
-			font-size: 46px;
-		}
-		p {
-			font-size: 16px;
-		}
-	}
-}
-</style>
+<style></style>
