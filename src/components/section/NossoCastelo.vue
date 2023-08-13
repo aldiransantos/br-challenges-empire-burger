@@ -11,7 +11,6 @@
 			allowfullscreen=""
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
-			v-once
 		></iframe>
 	</section>
 </template>
