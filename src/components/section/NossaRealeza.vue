@@ -18,7 +18,7 @@
 								loading="lazy"
 								width="48.5"
 								height="48.5"
-								:src="testimonial.image"
+								:src="require(`@/assets/people/person-${index + 1}.webp`)"
 								:alt="testimonial.name"
 							/>
 							<div class="user-info">
