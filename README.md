@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <img src=".github/preview.jpeg" width="100%" />
+    <img src=".github/preview.png" width="100%" />
 </p>
 
 ## 📝 Conteúdo
@@ -11,6 +11,9 @@
 -   [Visão Geral do Projeto](#-visão-geral-do-projeto)
     -   [Tecnologias](#-tecnologias)
     -   [Critérios de Aceite](#-critérios-de-aceite)
+        -   [Nível Fácil](#nível-fácil)
+        -   [Nível Médio](#nível-médio)
+        -   [Nível Difícil](#nível-difícil)
 -   [Configurações do Projeto](#-configurações-do-projeto)
     -   [Informações Iniciais](#informações-iniciais)
     -   [Clonando o Repositório](#clonando-o-repositório)
@@ -23,7 +26,7 @@
 
 Esse projeto é uma Landing Page de uma hamburgueria fictícia chamada [**Empire Burger**](https://www.brchallenges.com/desafio/empire-burger). Nela há seções sobre as Ofertas Especiais, Horário de Funcionamento, cardápio contendo os ingredientes e preços, cards com os feedbacks dos clientes e a localização do estabelecimento.
 
-Para facilitar a codificação do projeto foi usado um protótipo do Figma como base, o autor do layout é o Designer [**Tiago Alves**](https://www.behance.net/tiagoalvesuiux). [Clique aqui](https://www.figma.com/file/ag4Az50adOF53pBrwI0wFg/Empire-Burger?node-id=0%3A1) para abrir o protótipo no Figma.
+Para facilitar a codificação do projeto foi usado um protótipo do Figma como base, o autor do layout é o Designer [**Tiago Alves**](https://www.linkedin.com/in/tiagoalvesuiux/). [Clique aqui](https://www.figma.com/file/ag4Az50adOF53pBrwI0wFg/Empire-Burger?node-id=0%3A1) para abrir o protótipo no Figma.
 
 Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netlify.app/](https://aldiransantos-empireburger.netlify.app/)
 
@@ -96,7 +99,13 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 -   [x] O texto de cada depoimento deverá estar limitado em quatro linhas. Você pode usar a propriedade "clamp" do CSS.
 
----
+### Bônus feito
+
+-   [x] Versão do site para Tablet
+-   [x] Menu Dropdown animado para as versões Mobile e Tablet
+-   [x] Hover para os botões Contato, Comprar Agora, Cardáio e Solicitar Pedido
+-   [x] Modal ao clicar no botão de Contato
+-   [x] Modal ao clicar no botão de Ver Cardápio Completo
 
 ## 🔧 Configurações do Projeto
 
@@ -139,12 +148,4 @@ Digite o comando abaixo para compilar and minificar os arquivos para produção:
 
 ```
 npm run build
-```
-
-### Executar testes
-
-Digite o comando abaixo para executar testes unitários do projeto em sua máquina:
-
-```
-npm run test:unit
 ```
