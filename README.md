@@ -14,6 +14,7 @@
         -   [Nível Fácil](#nível-fácil)
         -   [Nível Médio](#nível-médio)
         -   [Nível Difícil](#nível-difícil)
+        -   [Bônus Feito](#bônus-feito)
 -   [Configurações do Projeto](#-configurações-do-projeto)
     -   [Informações Iniciais](#informações-iniciais)
     -   [Clonando o Repositório](#clonando-o-repositório)
@@ -103,7 +104,7 @@ Veja como está ficando o projeto aqui: [https://aldiransantos-empireburger.netl
 
 -   [x] Versão do site para Tablet
 -   [x] Menu Dropdown animado para as versões Mobile e Tablet
--   [x] Hover para os botões Contato, Comprar Agora, Cardáio e Solicitar Pedido
+-   [x] Hover e animação para os botões Contato, Comprar Agora, Cardápio e Solicitar Pedido
 -   [x] Modal ao clicar no botão de Contato
 -   [x] Modal ao clicar no botão de Ver Cardápio Completo
 
@@ -128,7 +129,7 @@ git clone <url-do-repositorio>
 
 ### Instalando as Dependências
 
-Ainda no terminal, digite o comando:
+Ainda no terminal digite o comando:
 
 ```
 npm install
